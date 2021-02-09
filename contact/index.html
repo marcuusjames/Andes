@@ -15,6 +15,7 @@
 
 
     <link href="../css/main.css" rel="stylesheet" />
+    <link href="../css/bootstrap-multiselect.min.css" rel="stylesheet" />
     <link href="./css/contact.css" rel="stylesheet" />
     <meta charset="utf-8">
     <title>ANDES Creation</title>
@@ -46,7 +47,7 @@
                           </div>
                           <div class="form-group">
                             <label for="formSolution">Quais soluções você precisa?</label>
-                            <select class="form-control" id="formSolution">
+                            <select id="formSolution" multiple="multiple">
                               <option>1</option>
                               <option>2</option>
                               <option>3</option>
@@ -106,21 +107,11 @@
         
         <!-- Footer -->
 
-        <div class="footer-second">
-            <div style="float: left;">
-            <p class="m-0">All Right Reserved 2020 - <a href="http://andescreation.com/"
-                target="_blank">Andes Creation CAPITAL</a></p>
-            </div>
-            <div class="redessociais_fot" style="float: right;padding-top:5%">
-                <p class="m-0">SIGA A GENTE</p>
-                <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
-                <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
-                <i class="fab fa-whatsapp fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
-            </div>
-        </div>
+        <div id=footer_div></div>
 
 </body>
 
 </html>
 
 <script src="..\js\tabs.js"></script>
+<script src="../js/bootstrap-multiselect.min.js"></script>

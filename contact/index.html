@@ -17,97 +17,99 @@
     <link href="../css/main.css" rel="stylesheet" />
     <link href="../css/bootstrap-multiselect.min.css" rel="stylesheet" />
     <link href="./css/contact.css" rel="stylesheet" />
+    <link href="../css/msfmultiselect.min.css" rel="stylesheet" />
     <meta charset="utf-8">
     <title>ANDES Creation</title>
 </head>
 
 <body>
-    </div>
     
         <div id='nav-placeholder'></div>
 
-        <div class="banner_main_about">
-            <div id='column1' style="width: 50%;float: left;">
-                <div>
-                    <div class="maintext"><spam>Vamos gerar valor juntos?<br><br></spam></div>
-                </div>
-            <div style="width: 98%;">
-                    <div style="font-size: 20px;">
-                    <p>Use o formulário abaixo para nos contar um pouco sobre suas necessidades e sobre como você acredita que podemos ajudar a gerar valor para o seu negócio.
-                <br><br></p>
-                       </div>
-                       <form>
-                        <div class="form-group">
-                          <label for="formName">Seu Nome</label>
-                          <input type="text" class="form-control" id="formName" placeholder="Nome">
-                        </div>
-                        <div class="form-group">
-                            <label for="formNeed">Fale sobre sua necessidade</label>
-                            <textarea class="form-control" id="formNeed" rows="10"></textarea>
-                          </div>
-                          <div class="form-group">
-                            <label for="formSolution">Quais soluções você precisa?</label>
-                            <select id="formSolution" multiple="multiple">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                          <div class="form-group">
-                            <label for="formCompany">Nome da sua empresa</label>
-                            <input type="text" class="form-control" id="formCompany" placeholder="Digite">
-                          </div>
-                          <div class="form-group">
-                            <label for="formEmail">E-mail</label>
-                            <input type="email" class="form-control" id="formEmail" placeholder="Digite">
-                          </div>
-                          <div class="form-group">
-                            <label for="formTel">Telefone para contato</label>
-                            <input type="text" class="form-control" id="formTel" placeholder="Digite">
-                          </div>
-
-                          <fieldset class="form-group">
-                            <div class="row">
-                              <legend class="col-form-label pt-0">Como você prefere ser contatado?</legend>
-                              <div class="col-sm-10">
-                                <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                                  <label class="form-check-label" for="gridRadios1">
-                                    E-mail
-                                  </label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                  <label class="form-check-label" for="gridRadios2">
-                                    WhatsApp
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                          </fieldset>
-
-                        <button type="submit" class="btn btn-primary" style="float:right;background-color:#000">Solicitar Orçamento</button>
-                      </form>
-                    </div>
+        <div class="contact_s1 row" style="padding-top: 10vw;">
+            <div class='column1'>
+                    <p class="h3">Vamos gerar valor para o seu negócio?<br><br></p>
             </div>
-            <div id='column2' style="width: 30%;float: right;">
-            <div class="valores"><p class="valoresmaintext"> PARA OUTROS ASSUNTOS</p>
-            <p class="valorestext"><spam><img src="./images/vector.png"></img></spam><spam style="font-size: 1.8vw;">   contato@andescreation.com</spam></p>
-            <p class="valorestext"><spam><img src="./images/vector.png"></img></spam><spam style="font-size: 1.8vw;">   47 99658 6023</spam></p>
-            </div>
-
-
-            </div>
-
         </div>
 
-        <div class="linebreak" style="margin-left:25%;width: 50%;"></div>
+        <div class="contact_s1 row">
+          <div class='column1'>
+                  <p class="p2">Use o formulário abaixo para nos contar um pouco sobre suas necessidades e sobre como você acredita que podemos ajudar a gerar valor para o seu negócio.
+                  <br><br></p>
+                     <form id="formAndes">
+                      <div class="form-group">
+                        <label for="formName">Seu Nome</label>
+                        <input type="text" class="form-control formAndes" id="formName" placeholder="Nome">
+                      </div>
+                      <div class="form-group">
+                          <label for="formNeed">Fale sobre sua necessidade</label>
+                          <textarea class="form-control formAndes" id="formNeed" rows="10"></textarea>
+                      </div>
+                      <div class="form-group">
+                          <label for="formSolution">Quais soluções você precisa?</label>
+                          <select id="formSolution" multiple="multiple" class="formAndes" style="border-color: black;">
+                            <option>Identidade Visual</option>
+                            <option>Atualização de marca</option>
+                            <option>Naming</option>
+                            <option>Estratégia de Marca</option>
+                            <option>Pesquisa</option>
+                            <option>Design de Interface</option>
+                            <option>Teste de Usuabilidade</option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label for="formCompany">Nome da sua empresa</label>
+                          <input type="text" class="form-control formAndes" id="formCompany" placeholder="Digite">
+                      </div>
+                      <div class="form-group">
+                          <label for="formEmail">E-mail</label>
+                          <input type="email" class="form-control formAndes" id="formEmail" placeholder="Digite">
+                      </div>
+                      <div class="form-group">
+                          <label for="formTel">Telefone para contato</label>
+                          <input type="text" class="form-control formAndes" id="formTel" placeholder="Digite">
+                      </div>
+                      <div class="form-group">
+                          <div>
+                            <label class="col-form-label pt-0">Como você prefere ser contatado?</label>
+                            <div class="col-sm-10" style="padding:0;">
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input formAndes" type="radio" name="gridRadios" id="gridRadios1" value="Ligação" checked>
+                                <label class="form-check-label formAndes" for="gridRadios1">
+                                  Ligação
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
+                                <label class="form-check-label" for="gridRadios2">
+                                  WhatsApp
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      <button id='formEnd' type="button" class="btn btn-primary button_orc" style="float:left;background-color:#000;border-color:#000">Solicitar Orçamento</button>
+                    </form>
+          </div>
+          <div class='column2'>
+            <div>
+            <p class="h2"> PARA OUTROS ASSUNTOS</p>
+            <p class="p2"><spam><img src="./images/envelope.png"></img></spam><spam style="font-size: 1.8vw;">   contato@andescreation.com</spam></p>
+            <p class="p2"><spam><img src="./images/phone.png"></img></spam><spam style="font-size: 1.8vw;">   47 99658 6023</spam></p>
+          </div>
+          
+          <div>
+            <p class="h2"><br><br> CO-CRIE COM A GENTE</p>
+            <p class="p2"><spam><img src="./images/vector.png"></img></spam><spam style="font-size: 1.8vw;">   Seja um Co-Criador</spam></p>
+          </div>
+
+          </div>
+      </div>
+
         
         <!-- Footer -->
 
-        <div id=footer_div></div>
+        <div id=footer></div>
 
 </body>
 
@@ -115,3 +117,35 @@
 
 <script src="..\js\tabs.js"></script>
 <script src="../js/bootstrap-multiselect.min.js"></script>
+<script src="../js/msfmultiselect.min.js"></script>
+<script>
+  $("#nav_contact").addClass('actual')
+</script>
+<script>
+  var mySelect = new MSFmultiSelect(
+    document.querySelector('#formSolution'),
+    {
+      width:350,
+      height:30,
+      className: 'formAndes'
+    }
+);
+
+$("#formEnd").click(function(){
+  dict = {"name":$("#formName").val(),
+"need":$("#formNeed").val(),
+"solutions":mySelect.getData().toString(),
+"company":$("#formCompany").val(),
+"email":$("#formEmail").val(),
+"contact":$('input[name=\'gridRadios\']:checked').val()
+}
+
+$.ajax({
+  type: "POST",
+  url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/sendEmailContact",
+  data: dict
+});
+
+alert("Obrigado por nos contatar! Logo entraremos em contato e vamos criar valor juntos!")
+});
+</script>

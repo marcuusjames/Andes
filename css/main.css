@@ -4,12 +4,12 @@
 
 font-family: Archivo;
 font-style: normal;
-font-weight: normal;
-font-size: 3.2vw;
-line-height: 110%;
+font-weight: Regular;
+font-size: 4vw;
+line-height: 100%;
 /* or 64px */
 
-letter-spacing: 0.1em;
+letter-spacing: 0em;
 font-feature-settings: 'liga' off;
 
 color: #F8F8F8;
@@ -32,7 +32,7 @@ color: #F8F8F8;
 }
 .aftertext{top: 50%;
   transform: translate(0%,200%);
-font-family: Montserrat;
+font-family: Archivo;
 font-style: normal;
 font-weight: 500;
 font-size: 16px;
@@ -49,7 +49,24 @@ color: #F8F8F8;
 .banner_main{
   padding: 10%;
   background-color: #000;
+  background-image: url("../images/banner_main.png");
   height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.text_main{
+  text-align: center;
+  width: 15%;
+  height: 15%;
+  color: white;
+  /* Center vertically and horizontally */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -7.5% 0 0 -7.5%;
+  line-height: 1rem;
 }
 .banner_img{
   position: absolute;
@@ -62,21 +79,11 @@ color: #F8F8F8;
  }
 
 
-.vfooter {
-  color: rgba(255,255,255,1);
-  top: 40px;
-  left: 752px;
-  font-family: Rubik;
-  font-weight: Regular;
-  font-size: 16px;
-  opacity: 1;
-  text-align: left;
-  padding:10%
-}
+
 
 .textmenu {
   color: rgba(255,255,255,1);
-  font-family: Rubik;
+  font-family: Archivo;
   font-weight: Regular;
   font-size: 1rem;
   opacity: 1;
@@ -85,15 +92,6 @@ color: #F8F8F8;
 
 
 
-.footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #000000!important;
-  color: white;
-  text-align: center;
-  margin-top: 20px;
-}
 
 .column {
   flex: 50%;
@@ -109,7 +107,7 @@ color: #F8F8F8;
 
 
 .casetext{
-  font-family: Epilogue;
+  font-family: Archivo;
 font-style: normal;
 font-weight: 500;
 font-size: 1.2rem;
@@ -124,7 +122,7 @@ border: 1px solid #000000;
 }
 .div_orc{
   top: 50%;
-    transform: translate(0%,70%);
+  transform: translate(0%,70%);
 }
 .text_orc{
   font-family:Archivo;
@@ -139,53 +137,58 @@ border: 1px solid #000000;
   /* or 64px */
   
   text-align: center;
-  letter-spacing: 0.1em;
+  letter-spacing: 0em;
   font-feature-settings: 'liga' off;
+  padding-right:10%;
+  padding-left: 10%;
   
 }
+.navbar-nav > li{
+  padding-left:30px;
+}
+.banner_main_about{
+  background-color: #FFF;
+  padding: 10vw 10.79vw 0vw 10.79vw;
+  padding-bottom: 0%;
+  height: auto;
+  position: relative;
+  display: inline-block;
+  text-justify: inter-word;
+  font-family: Archivo;
+}
 .button_orc{
-  margin-bottom: 2vw;
+  margin-bottom: 1vw;
   background-color: #000;
   text-transform: uppercase;
+  border-radius: 0px;
+  padding-top: min(4%,14px); 
+  padding-left: min(15%,32px);
+  padding-bottom:  min(4%,14px);
+  padding-right: min(15%,32px);
+  font-family: Archivo;
 }
 .gallery {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(12, 5vw);
+  grid-template-columns: repeat(2, 38vw);
+  grid-template-rows: repeat(2,38vw);
   grid-gap: 15px;
 }
 
 .gallery__img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .gallery__item--1 {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 7;
 }
 
 .gallery__item--2 {
-  grid-column-start: 5;
-  grid-column-end: 9;
-  grid-row-start: 1;
-  grid-row-end: 7;
 }
 
 .gallery__item--3 {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 7;
-  grid-row-end: 13;
 }
 .gallery__item--4 {
-  grid-column-start: 5;
-  grid-column-end: 9;
-  grid-row-start: 7;
-  grid-row-end: 13;
 }
 .img__wrap {
   position: relative
@@ -230,14 +233,14 @@ border: 1px solid #000000;
   text-transform: uppercase;
   font-size: 1.5vw;
   float: left;
-  font-family: 'Archivo';
+  font-family: Archivo;
 }
 .casetextcompany{
   color: #000;
   float:left;
   font-size: 4vw;
   font-style: bold;
-  font-family: 'Archivo';
+  font-family: Archivo;
   line-height: 1;
 }
 .gallery__item:hover .img__description {
@@ -246,31 +249,160 @@ border: 1px solid #000000;
 }
 
 .logoimage {
-    width: 70%;
+    width: 60%;
     height: auto;
 }
 
-.footer-second{
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: black;
-  color: white;
-  text-align: left;
-  font-family:'Archivo';
-  padding: 5%;
-  display: block;
-}
-.redessociais_fot{
-  position: relative;
-  top:1%
-}
-.footer-second p{
-  color: white;
-  
-}
+
+
 
 figure {
   margin: 0 0 0rem;
 }
 
+.column1{
+  width: 39.64vw;
+  float: left;
+}
+.column2{
+  width: 32.64vw;
+  float: right;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.display-1{
+  font-family: Archivo;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.2em;
+}
+
+.display-2{
+  font-family: Archivo;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+}
+
+.h1{
+  font-family: Archivo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+  letter-spacing: 0.06em;
+  
+  color: #000000;
+}
+
+.h2{
+  font-family: Archivo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+  
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-feature-settings: 'liga' off;
+  
+  /* B3 */
+  
+  color: #000000;
+}
+
+.f1{
+  font-family: Archivo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+  
+  letter-spacing: 0.1em;
+  font-feature-settings: 'liga' off;
+  
+  /* B3 */
+  
+  color: white;
+}
+
+.h3{
+/* .display-1 */
+
+font-family: Archivo;
+font-style: normal;
+font-weight: normal;
+font-size: 3.625rem;
+line-height: 100%;
+
+font-feature-settings: 'liga' off;
+
+color: #000000;
+}
+
+.p1{
+  font-family: Archivo;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0.545em;
+  color: #000000;
+}
+.p2{
+  font-family: Archivo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 150%;
+  /* or 36px */
+  
+  letter-spacing: 0.06em;
+  
+  color: #000000;
+}
+.p3{
+  font-family: Archivo;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0.34em;
+  color: #000000;
+}
+
+.p4{
+  font-family: Archivo;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0.30em;
+  color: #000000;
+}
+
+
+.p5{
+  font-family: Archivo;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0.26em;
+}
+
+.footer {
+  height: 20vw;
+  background-color: black;
+  color: white;
+  padding-left: 10.79vw;
+  padding-right: 20.79vw;
+  padding-top: 8%;
+}
+
+a:hover {
+  color: #ccc !important;
+}
+
+.actual{
+  text-decoration: underline;
+}

@@ -3,7 +3,7 @@
   height: 30%;
 }
 .text_case{
-  padding: 10% 20% 10% 20%;
+  padding: 10% 10% 10% 10%;
   font-family: Archivo;
   font-style: normal;
   font-weight: normal;
@@ -183,11 +183,7 @@ border: 1px solid #000000;
   font-feature-settings: 'liga' off;
   
 }
-.button_orc{
-  margin-bottom: 2vw;
-  background-color: #000;
-  text-transform: uppercase;
-}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

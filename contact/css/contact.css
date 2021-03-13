@@ -279,3 +279,7 @@ figure {
   -o-background-size: cover;
   background-size: cover;
 }
+
+.formAndesMulti{
+  width: 100% !important;
+}

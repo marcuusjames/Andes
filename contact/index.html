@@ -26,13 +26,13 @@
     
         <div id='nav-placeholder'></div>
 
-        <div class="contact_s1 row" style="padding-top: 10vw;">
+        <div class="contact_s1 rowcol" style="padding-top: 10vw;">
             <div class='column1'>
                     <p class="h3">Vamos gerar valor para o seu negócio?<br><br></p>
             </div>
         </div>
 
-        <div class="contact_s1 row">
+        <div class="contact_s1 rowcol">
           <div class='column1'>
                   <p class="p2">Use o formulário abaixo para nos contar um pouco sobre suas necessidades e sobre como você acredita que podemos ajudar a gerar valor para o seu negócio.
                   <br><br></p>
@@ -125,9 +125,8 @@
   var mySelect = new MSFmultiSelect(
     document.querySelector('#formSolution'),
     {
-      width:350,
-      height:30,
-      className: 'formAndes'
+      width:'39.64vw',
+      className: 'formAndesMulti'
     }
 );
 
@@ -137,9 +136,18 @@ $("#formEnd").click(function(){
 "solutions":mySelect.getData().toString(),
 "company":$("#formCompany").val(),
 "email":$("#formEmail").val(),
+"phone":$("#formTel").val(),
 "contact":$('input[name=\'gridRadios\']:checked').val()
 }
-
+filled = true
+$.each( dict, function( key, value ) {
+  if (value==""){
+  alert("Preecha todos os campos!");
+  filled=false
+  return false;
+  };
+});
+if (filled){
 $.ajax({
   type: "POST",
   url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/sendEmailContact",
@@ -147,5 +155,6 @@ $.ajax({
 });
 
 alert("Obrigado por nos contatar! Logo entraremos em contato e vamos criar valor juntos!")
+}
 });
 </script>

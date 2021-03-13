@@ -249,7 +249,7 @@ border: 1px solid #000000;
 }
 
 .logoimage {
-    width: 60%;
+    width: 100%;
     height: auto;
 }
 
@@ -269,7 +269,7 @@ figure {
   float: right;
 }
 
-.row:after {
+.rowcol:after {
   content: "";
   display: table;
   clear: both;
@@ -368,17 +368,27 @@ color: #000000;
 }
 .p3{
   font-family: Archivo;
-  font-weight: normal;
   font-style: normal;
-  font-size: 0.34em;
+  font-weight: normal;
+  font-size: 0.938rem;
+  line-height: 150%;
+  /* or 36px */
+  
+  letter-spacing: 0.06em;
+  
   color: #000000;
 }
 
 .p4{
   font-family: Archivo;
-  font-weight: normal;
   font-style: normal;
-  font-size: 0.30em;
+  font-weight: normal;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  /* or 36px */
+  
+  letter-spacing: 0.06em;
+  
   color: #000000;
 }
 

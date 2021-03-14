@@ -20,9 +20,9 @@
 .banner_main_services{
   padding: 10%;
   background-color: #000;
-  background-image: url("../images/banner_main.png");
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+  /* background-image: url("../images/banner_main.png"); */
+  height: 75vh;
+  /* background-repeat: no-repeat; */
+  /* background-attachment: fixed; */
+  /* background-position: center; */
 }

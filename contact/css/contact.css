@@ -126,10 +126,7 @@ letter-spacing: 0.06em;
 color: #000000;
 }
 
-.linebreak{
-width: 100%;
-border: 1px solid #000000;
-}
+
 .text_orc{
   font-family:Archivo;
   font-size:4vw;
@@ -269,15 +266,14 @@ figure {
   display: inline-block;
   
 }
-.banner_main_sobre{
+.banner_main_contact{
   padding: 10%;
   background-color: #000;
-  background-image: url("../images/banner_main.png");
-  height: 100vh;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  /* background-image: url("../images/banner_main.png"); */
+  height: 75vh;
+  /* background-repeat: no-repeat; */
+  /* background-attachment: fixed; */
+  /* background-position: center; */
 }
 
 .formAndesMulti{

@@ -93,15 +93,7 @@ color: #000;
 
 
 
-.footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #000000!important;
-  color: white;
-  text-align: center;
-  margin-top: 20px;
-}
+
 
 .column {
   flex: 50%;
@@ -126,10 +118,6 @@ letter-spacing: 0.06em;
 color: #000000;
 }
 
-.linebreak{
-width: 100%;
-border: 1px solid #000000;
-}
 
 .button_orc{
   margin-bottom: 2vw;
@@ -248,9 +236,9 @@ figure {
 .banner_main_sobre{
   padding: 10%;
   background-color: #000;
-  background-image: url("../images/banner_main.png");
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+  /* background-image: url("../images/banner_main.png"); */
+  height: 75vh;
+  /* background-repeat: no-repeat; */
+  /* background-attachment: fixed; */
+  /* background-position: center; */
 }

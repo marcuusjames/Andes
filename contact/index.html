@@ -19,22 +19,24 @@
     <link href="./css/contact.css" rel="stylesheet" />
     <link href="../css/msfmultiselect.min.css" rel="stylesheet" />
     <meta charset="utf-8">
-    <title>ANDES Creation</title>
 </head>
 
 <body>
     
         <div id='nav-placeholder'></div>
 
-        <div class="contact_s1 rowcol" style="padding-top: 10vw;">
-            <div class='column1'>
-                    <p class="h3">Vamos gerar valor para o seu negócio?<br><br></p>
-            </div>
-        </div>
+        <div class="banner_main_contact">
+          <div class="text_main">
+          <p class="h3" style="color: white;">Vamos gerar valor <br>
+            para o seu negócio?</p>
+              
+          </div>
+          <!-- <div class="imagemain"></div> -->
+      </div>
 
-        <div class="contact_s1 rowcol">
+        <div class="contact_s1 rowcol" style="padding-top: 10vw;padding-bottom: 10vw;">
           <div class='column1'>
-                  <p class="p2">Use o formulário abaixo para nos contar um pouco sobre suas necessidades e sobre como você acredita que podemos ajudar a gerar valor para o seu negócio.
+                  <p class="p3">Use o formulário abaixo para nos contar um pouco sobre suas necessidades e sobre como você acredita que podemos ajudar a gerar valor para o seu negócio.
                   <br><br></p>
                      <form id="formAndes">
                       <div class="form-group">
@@ -69,7 +71,7 @@
                           <label for="formTel">Telefone para contato</label>
                           <input type="text" class="form-control formAndes" id="formTel" placeholder="Digite">
                       </div>
-                      <div class="form-group">
+                      <div class="form-group" style="padding-bottom: 5vh">
                           <div>
                             <label class="col-form-label pt-0">Como você prefere ser contatado?</label>
                             <div class="col-sm-10" style="padding:0;">
@@ -88,19 +90,22 @@
                             </div>
                           </div>
                       </div>
-                      <button id='formEnd' type="button" class="btn btn-primary button_orc" style="float:left;background-color:#000;border-color:#000">Solicitar Orçamento</button>
+                      <button id='formEnd' type="button" class="btn btn-primary button_orc" style="float:left;background-color:#000;border-color:#000;">Solicitar Orçamento</button>
                     </form>
           </div>
           <div class='column2'>
             <div>
             <p class="h2"> PARA OUTROS ASSUNTOS</p>
-            <p class="p2"><spam><img src="./images/envelope.png"></img></spam><spam style="font-size: 1.8vw;">   contato@andescreation.com</spam></p>
-            <p class="p2"><spam><img src="./images/phone.png"></img></spam><spam style="font-size: 1.8vw;">   47 99658 6023</spam></p>
+            <br>
+            <p class="p2"><spam style="padding-right: 2vw;"><img src="./images/envelope.png" width="30vw"></img></spam><spam style="font-size: 1.8vw;">   contato@andescreation.com</spam></p>
+            <p class="p2"><spam style="padding-right: 2vw;"><img src="./images/phone.png"  width="30vw"></img></spam><spam style="font-size: 1.8vw;">   47 99658 6023</spam></p>
           </div>
           
           <div>
+            <br>
             <p class="h2"><br><br> CO-CRIE COM A GENTE</p>
-            <p class="p2"><spam><img src="./images/vector.png"></img></spam><spam style="font-size: 1.8vw;">   Seja um Co-Criador</spam></p>
+            <br>
+            <p class="p2"><spam style="padding-right: 2vw;"><img src="./images/vector.png"  width="30vw"></img></spam><spam style="font-size: 1.8vw;">   Seja um Climber</spam></p>
           </div>
 
           </div>
@@ -154,7 +159,7 @@ $.ajax({
   data: dict
 });
 
-alert("Obrigado por nos contatar! Logo entraremos em contato e vamos criar valor juntos!")
+alert("Obrigado por nos contatar! Logo entraremos em contato para criarmos valor juntos!")
 }
 });
 </script>

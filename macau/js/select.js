@@ -1,4 +1,0 @@
-$(function(){
-    $('#formSolution').multiselect();
-});
-    

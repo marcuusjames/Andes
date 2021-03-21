@@ -20,7 +20,7 @@ $("#nav-placeholder").append('\
                         <a href="http://andescreation.com/services" class="nav-link m-2 menu-item textmenu">Serviços</a>\
                     </li>\
                     <li class="nav-item">\
-                        <a href="http://andescreation.com/jobmate" class="nav-link m-2 menu-item textmenu">Seja um Climber</a>\
+                        <a href="http://andescreation.com/beclimber" class="nav-link m-2 menu-item textmenu">Seja um Climber</a>\
                     </li>\
                 </ul>\
             </div>\

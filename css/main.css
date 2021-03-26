@@ -47,13 +47,17 @@ color: #F8F8F8;
 }
 
 .banner_main{
-  padding: 10%;
+  padding-top: 0;
+  padding-left: 10.79vw;
+  padding-right: 10.79vw;
+  background-size: 172vh;
   background-color: #000;
   background-image: url("../images/banner_main.png"); 
   height: 75vh;
+  width: 100vw;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
+  background-position: 80% 33%;
 }
 .text_main{
   /* text-align: left; */
@@ -408,9 +412,15 @@ color: #000000;
 
 .p5{
   font-family: Archivo;
-  font-weight: normal;
   font-style: normal;
-  font-size: 0.26em;
+  font-weight: normal;
+  font-size: 0.938rem;
+  line-height: 200%;
+  /* or 30px */
+  
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
 }
 
 .l1{
@@ -419,7 +429,17 @@ color: #000000;
   font-style: normal;
   font-size: 1.125rem;
 }
+.l2{
+  font-family: Archivo;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 150%;
+  /* identical to box height, or 27px */
+  letter-spacing: 0.01em;
 
+  color: #160F1F;
+}
 .footer {
   height: 20vw;
   background-color: black;
@@ -465,3 +485,13 @@ a:hover {
   0% {opacity:0;}
   100% {opacity:1;}
   }
+
+  .background {
+    position: fixed;
+    top: 0;
+    left: 60vw;
+    z-index: -2000;
+    width: 40vw;
+    height: 100%;
+    background-color: black; 
+}

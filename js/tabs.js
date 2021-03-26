@@ -1,5 +1,5 @@
 $("head").append('\
-<link rel="icon" href="http://andescreation.com/images/logo_footer.png" type="image/ico" sizes="16x16">\
+<link rel="icon" href="http://andescreation.com/images/andesblack.png" type="image/ico" sizes="16x16">\
     <title>Andes Creation Capital</title>\
     ')
 $("#nav-placeholder").append('\
@@ -17,10 +17,10 @@ $("#nav-placeholder").append('\
                         <a id="nav_contact" href="http://andescreation.com/contact" class="nav-link m-2 menu-item textmenu">Contato</a>\
                     </li>\
                     <li class="nav-item">\
-                        <a href="http://andescreation.com/services" class="nav-link m-2 menu-item textmenu">Serviços</a>\
+                        <a id="nav_services" href="http://andescreation.com/services" class="nav-link m-2 menu-item textmenu">Serviços</a>\
                     </li>\
                     <li class="nav-item">\
-                        <a href="http://andescreation.com/beclimber" class="nav-link m-2 menu-item textmenu">Seja um Climber</a>\
+                        <a id="nav_climber" href="http://andescreation.com/beclimber" class="nav-link m-2 menu-item textmenu">Seja um Climber</a>\
                     </li>\
                 </ul>\
             </div>\
@@ -38,7 +38,7 @@ $("#footer").append('\
             </div>\
             <div style="float: right;text-align: left;display:inline-block">\
                 <p class="f1" style="color: white;">\
-                <span style="padding-right:1vw">SIGA A GENTE</span></a>\
+                <span style="padding-right:1vw">Siga a gente</span></a>\
                 <a href="https://www.facebook.com/andescreation/"><span><img src="http://andescreation.com/images/facebook.png"></span></a>\
                 <a href="https://www.instagram.com/andescreation/"><span><img src="http://andescreation.com/images/instagram.png"></span></a>\
                 <a href="https://www.linkedin.com/company/andesdesign/"><span><img src="http://andescreation.com/images/LinkedIn.png"></span></a></p>\

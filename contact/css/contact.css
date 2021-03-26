@@ -279,3 +279,22 @@ figure {
 .formAndesMulti{
   width: 100% !important;
 }
+
+
+.vscomp-ele {
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.vscomp-toggle-button{
+  display: block;
+  position: relative;
+  align-items: center;
+  background-color: #fff;
+  cursor: pointer;
+  border-color: black;
+  border-width: 2px;
+  width: 80%;
+  padding: 20px;
+}

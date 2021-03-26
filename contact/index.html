@@ -14,6 +14,7 @@
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 
+        <link rel="stylesheet" href="./js/virtual-select-master/dist/virtual-select.min.css" />
     <link href="../css/main.css" rel="stylesheet" />
     <link href="../css/bootstrap-multiselect.min.css" rel="stylesheet" />
     <link href="./css/contact.css" rel="stylesheet" />
@@ -36,44 +37,39 @@
 
         <div class="contact_s1 rowcol" style="padding-top: 10vw;padding-bottom: 10vw;">
           <div class='column1'>
+                  <p class="h2" style="padding-bottom: 10vh;">Fale sobre nosso próximo desafio</p>
                   <p class="p3">Use o formulário abaixo para nos contar um pouco sobre suas necessidades e sobre como você acredita que podemos ajudar a gerar valor para o seu negócio.
                   <br><br></p>
                      <form id="formAndes">
                       <div class="form-group">
-                        <label for="formName">Seu Nome</label>
-                        <input type="text" class="form-control formAndes" id="formName" placeholder="Nome">
+                        <label for="formName" style="font-weight: bold;">Seu Nome</label>
+                        <input type="text" class="invite" id="formName" placeholder="Nome" style="border-color: black; width: 80%; padding: 20px;display: block">
                       </div>
                       <div class="form-group">
-                          <label for="formNeed">Fale sobre sua necessidade</label>
-                          <textarea class="form-control formAndes" id="formNeed" rows="10"></textarea>
+                          <label for="formNeed" style="font-weight: bold;">Fale sobre sua necessidade</label>
+                          <textarea class="invite" id="formNeed" rows="10" style="border-color: black; width: 80%; padding: 20px;display: block"></textarea>
                       </div>
                       <div class="form-group">
-                          <label for="formSolution">Quais soluções você precisa?</label>
-                          <select id="formSolution" multiple="multiple" class="formAndes" style="border-color: black;">
-                            <option>Identidade Visual</option>
-                            <option>Atualização de marca</option>
-                            <option>Naming</option>
-                            <option>Estratégia de Marca</option>
-                            <option>Pesquisa</option>
-                            <option>Design de Interface</option>
-                            <option>Teste de Usuabilidade</option>
-                          </select>
+                          <label for="formSolution" style="font-weight: bold;">Quais soluções você precisa?</label>
+                          <div id="formSolution"></div>
                       </div>
                       <div class="form-group">
-                          <label for="formCompany">Nome da sua empresa</label>
-                          <input type="text" class="form-control formAndes" id="formCompany" placeholder="Digite">
+                          <label for="formCompany" style="font-weight: bold;">Nome da sua empresa</label>
+                          <input type="text" class="invite" id="formCompany" placeholder="Empresa" style="border-color: black; width: 80%; padding: 20px;display: block">
+                          
                       </div>
                       <div class="form-group">
-                          <label for="formEmail">E-mail</label>
-                          <input type="email" class="form-control formAndes" id="formEmail" placeholder="Digite">
+                          <label for="formEmail" style="font-weight: bold;">E-mail</label>
+                          <input type="text" class="invite" id="formEmail" placeholder="E-mail" style="border-color: black; width: 80%; padding: 20px;display: block">
+
                       </div>
                       <div class="form-group">
-                          <label for="formTel">Telefone para contato</label>
-                          <input type="text" class="form-control formAndes" id="formTel" placeholder="Digite">
+                          <label for="formTel" style="font-weight: bold;">Telefone para contato</label>
+                          <input type="text" class="invite" id="formTel" placeholder="(DDD) 00000-0000" style="border-color: black; width: 80%; padding: 20px;display: block">
                       </div>
                       <div class="form-group" style="padding-bottom: 5vh">
                           <div>
-                            <label class="col-form-label pt-0">Como você prefere ser contatado?</label>
+                            <label class="col-form-label pt-0"style="font-weight: bold;" style="font-weight: bold;">Como você prefere ser contatado?</label>
                             <div class="col-sm-10" style="padding:0;">
                               <div class="form-check form-check-inline">
                                 <input class="form-check-input formAndes" type="radio" name="gridRadios" id="gridRadios1" value="Ligação" checked>
@@ -103,9 +99,11 @@
           
           <div>
             <br>
+            <a href="http://andescreation.com/beclimber/">
             <p class="h2"><br><br> CO-CRIE COM A GENTE</p>
             <br>
             <p class="p2"><spam style="padding-right: 2vw;"><img src="./images/vector.png"  width="30vw"></img></spam><spam style="font-size: 1.8vw;">   Seja um Climber</spam></p>
+          </a>
           </div>
 
           </div>
@@ -123,22 +121,36 @@
 <script src="..\js\tabs.js"></script>
 <script src="../js/bootstrap-multiselect.min.js"></script>
 <script src="../js/msfmultiselect.min.js"></script>
+<script src="./js/virtual-select-master/dist/virtual-select.min.js"></script>
 <script>
   $("#nav_contact").addClass('actual')
 </script>
 <script>
-  var mySelect = new MSFmultiSelect(
-    document.querySelector('#formSolution'),
-    {
-      width:'39.64vw',
-      className: 'formAndesMulti'
-    }
-);
+
+
+
+myOptions = [
+  { label: 'Identidade Visual', value: 'Identidade Visual', alias: 'custom label for search' },
+  { label: 'Atualização de Marca', value: 'Atualização de Marca', description: 'custom description for label'},
+  { label: 'Naming', value: 'Naming' },
+  { label: 'Estratégia de Marca', value: 'Estratégia de Marca' },
+  { label: 'Pesquisa', value: 'Pesquisa' },
+  { label: 'Design de Interface', value: 'Design de Interface' },
+  { label: 'Teste de Usuabilidade', value: 'Teste de Usuabilidade' },
+]
+
+  VirtualSelect.init({
+  ele: '#formSolution',
+  options: myOptions,
+  multiple: true,
+});
+
+;
 
 $("#formEnd").click(function(){
   dict = {"name":$("#formName").val(),
 "need":$("#formNeed").val(),
-"solutions":mySelect.getData().toString(),
+"solutions":$('#formSolution').val().toString(),
 "company":$("#formCompany").val(),
 "email":$("#formEmail").val(),
 "phone":$("#formTel").val(),

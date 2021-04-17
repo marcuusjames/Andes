@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html>
+  <meta charset="utf-8" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
+   
 
+  <!-- smart phone css  -->
+  <link href="assets/phone.css" rel="stylesheet" type="text/css" media="all and (min-width: 0px) and (max-width: 480px)" />
+
+  <!-- Tablet -->
+  <link href="assets/tablet.css" rel="stylesheet" type="text/css" media="all and (min-width: 481px) and (max-width: 800px)" />
+
+  <!-- Desktop -->
+  <link href="assets/desktop.css" rel="stylesheet" type="text/css" media="only screen and (min-width:801px)">
 <head>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
@@ -8,8 +21,13 @@
     <link href="https://fonts.googleapis.com/css?family=Syne&display=swap" rel="stylesheet" />
 
     <link href='https://fonts.googleapis.com/css?family=Archivo' rel='stylesheet'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> </script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
@@ -35,8 +53,8 @@
             <center><div class="image_old"><img src="./images/image_old.png"></div></center>
             <p class='p2'>A fim de identificar o que a Lunix entrega como valor aos seus clientes e entender como faz isso, nossa equipe elaborou um fluxo que explica essa dinâmica. Assim, a estratégia adotada foi desenvolver uma marca que comunica eficiência, economia e crescimento, enquanto expressa movimento.</p>
         </div>
-          <div style="padding: 0% 10% 0% 10%">
-              <div class="gallerycase">
+          <div class="padding_std">
+              <div class="gallerycase2">
                   <figure class="gallery__item gallery__item--1">
                       <img src="./images/image1.png" alt="Gallery image 1" class="gallery__img">
                   </figure>
@@ -46,8 +64,8 @@
                   </figure>
                 </div>
                 <div class="gallerycase" style="padding-top: 15vh;">
-                  <figure class="gallery__item gallery__item--2">
-                      <div class="text_case_title">
+                  <figure class="gallery__item gallery__item--2_only">
+                      <div class="text_case_title padding_text">
                           <p class="p4">Um requisito trazido pelo cliente foi que fossem representadas no logotipo a primeira e a última letra do nome da empresa. A solução foi criar um palíndromo da letra L rotacionada, formando um X. Essa junção, por sua vez, simboliza o crescimento do negócio através da economia e eficiência gerada pela tecnologia Lunix</p>
                           <p class="text_mid_case_signature">Brunna Casagrande — Designer do Projeto </p>
                       </div>
@@ -59,14 +77,14 @@
                   </figure>
                 </div>
                 <div class="gallerycase" style="padding-top: 15vh;">
-                  <figure class="gallery__item gallery__item--2">
-                    <div class="text_case_title">
+                  <figure class="gallery__item gallery__item--2_only">
+                    <div class="text_case_title padding_text">
                         <p class="p4">Por ser uma empresa de tecnologia que atende o varejo, a nova Identidade Visual propõe uma aparência minimalista e vibrante, além de identificação pela cor laranja, comum ao setor varejista.</p>
                         <p class="text_mid_case_signature">Guilherme Behling — Designer do Projeto </p>
                     </div>
                 </figure>
                 </div>
-                <div class="gallerycase" style="padding-top: 0;">
+                <div class="gallerycase2" style="padding-top: 0;">
                 <figure class="gallery__item gallery__item--1">
                     <img src="./images/image4.jpg" alt="Gallery image 5" class="gallery__img">
                   </figure>
@@ -87,7 +105,7 @@
                 </div>
                 <div class="gallerycase" style="padding-top: 15vh;">
                   <figure class="gallery__item gallery__item--1">
-                    <div class="text_case_title">
+                    <div class="text_case_title padding_text">
                         <p class="h2">PROJETO ASSINADO POR</p>
                         <p class="text_mid_case_signature">Brunna Casagrande<br>
                             Guilherme Behling</p>
@@ -95,7 +113,7 @@
                 </figure>
 
                 <figure class="gallery__item gallery__item--2">
-                    <div class="text_case_title">
+                    <div class="text_case_title padding_text">
                         <p class="h2">PALAVRA DO CLIENTE</p>
                         <p class="p4">A marca representou muito bem o que buscávamos: tecnologia, inovação e ao mesmo tempo seriedade. Ficou sensacional! Gostamos muito do resultado porque refletiu nossa essência (movimento e inovação).</p>
                         <p class="text_mid_case_signature">Jader Stefanello — COO Lunix Tecnologia</p>
@@ -111,7 +129,7 @@
                     <center>
                     <div class="text_orc" style="width: 50vw;padding-bottom: 5vh;"><spam>Vamos gerar valor juntos?</spam></div>
                     <br>
-                    <a type="button" href="http://andescreation.com/contact" class="btn btn-dark button_orc" style="width: 20vw;">Solicite Orçamento</a>
+                    <a type="button" href="http://andescreation.com/contact" class="btn btn-dark button_orc">Solicite Orçamento</a>
                     </center>
                 </div>
             </div>

@@ -1,0 +1,29 @@
+.services_s1{
+  padding:0vw 10.79vw 0vw 10.79vw
+}
+.services_cols{
+  display: grid;
+  grid-template-columns: 25.71vw 25.71vw 25.71vw;
+  grid-gap: 2.1vw;
+}
+
+.services_col{
+  width: 25.71vw;
+  float: left;
+}
+
+.services_gap{
+  width: 2.1vw;
+  float: left;
+}
+
+.banner_main_howwework{
+  padding: 10%;
+  background-color: #000;
+  background-image: url("../images/banner_main.png");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 60%;
+  background-size: 120vh;
+}

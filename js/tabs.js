@@ -3,15 +3,21 @@ $("head").append('\
     <title>Andes Creation Capital</title>\
     ')
 $("#nav-placeholder").append('\
-    <nav class="vis_desktop navbar fixed-top navbar-expand-lg py-md-3" style="padding-left: 8%;padding-right: 11%;justify-content: space-between;background-color: #000000;font-size:1.125rem;height:12vh">\
+    <nav class="vis_desktop navbar fixed-top navbar-expand-lg py-md-3" style="padding-left: 8%;padding-right: 11%;justify-content: space-between;background-color: #000000;font-size:1.125rem;height:12vh;    margin-bottom: -20px;">\
         <a class="navbar-brand" href="http://andescreation.com/" style="padding-left:2rem;">\
             <img src="http://andescreation.com/images/logo.png" class="d-inline-block align-top logoimage" alt="">\
         </a>\
-        <div id="_pages">\
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">\
+        <span class="icon-bar" style="color:#FFF;z-index=1000"><img src="http://andescreation.com/images/menu.png" height=30px></span>\
+      </button>\
+        <div class="nav_andes collapse navbar-collapse"  id="myNavbar">\
             <div>\
-                <ul class="nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap">\
+                <ul class="nav_andesul nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap">\
                     <li class="nav-item">\
-                        <a id="nav_about" href="http://andescreation.com/about" class="nav-link m-2 menu-item textmenu">Sobre</a>\
+                        <a id="nav_about" href="http://andescreation.com/about" class="nav-link m-2 menu-item textmenu">Quem somos</a>\
+                    </li>\
+                    <li class="nav-item">\
+                        <a id="nav_howwework" href="http://andescreation.com/howwework" class="nav-link m-2 menu-item textmenu">Como Fazemos</a>\
                     </li>\
                     <li class="nav-item">\
                         <a id="nav_contact" href="http://andescreation.com/contact" class="nav-link m-2 menu-item textmenu">Contato</a>\

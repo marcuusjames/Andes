@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html>
+    <meta charset="utf-8" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
+     
 
+    <!-- smart phone css  -->
+    <link href="assets/phone.css" rel="stylesheet" type="text/css" media="all and (min-width: 0px) and (max-width: 480px)" />
+
+    <!-- Tablet -->
+    <link href="assets/tablet.css" rel="stylesheet" type="text/css" media="all and (min-width: 481px) and (max-width: 800px)" />
+
+    <!-- Desktop -->
+    <link href="assets/desktop.css" rel="stylesheet" type="text/css" media="only screen and (min-width:801px)">
 <head>
     
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -11,8 +24,13 @@
     
 
     <link href='https://fonts.googleapis.com/css?family=Archivo' rel='stylesheet'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
@@ -35,23 +53,14 @@
                     
                 </div>
         </div>
-        <div id='cases' style="padding-left:10.79vw;padding-right:10.79vw;padding-top:10vh;padding-bottom: 2.5vh;">
+        <div id='cases' class="padding_std" style="padding-top:10vh;padding-bottom: 2.5vh;">
             <div>
                 <spam class="h2 rowcol">CASES</spam><br>
                 <div class="gallery">
+                    
                     <figure class="gallery__item gallery__item--1">
-                        <a href="http://andescreation.com/richter"><img src="./images/image1.png" alt="Gallery image 2" class="gallery__img">
-                            <div class="img__description gallery__item gallery__item--1">
-                                <div class="casehover">
-                                <span class="h2">ESTRATÉGIA E ID. VISUAL</span><br>
-                                <span class="casetextcompany">DudaKalef</span>
-                                </div>
-                            </div>
-                        </a>
-                    </figure>
-                    <figure class="gallery__item gallery__item--2">
                         <a href="http://andescreation.com/richter"><img src="./images/image2.png" alt="Gallery image 2" class="gallery__img">
-                            <div class="img__description gallery__item gallery__item--2">
+                            <div class="img__description gallery__item gallery__item--1">
                                 <div class="casehover">
                                     <span class="h2">ATUALIZAÇÃO DE MARCA</span><br>
                                     <span class="casetextcompany">Construtora Richter</span>
@@ -59,9 +68,9 @@
                             </div>
                         </a>
                     </figure>
-                    <figure class="gallery__item gallery__item--3">
+                    <figure class="gallery__item gallery__item--2">
                         <a href="http://andescreation.com/macaw"><img src="./images/image3.png" alt="Gallery image 3" class="gallery__img">
-                            <div class="img__description gallery__item gallery__item--3">
+                            <div class="img__description gallery__item gallery__item--2">
                                 <div class="casehover">
                                     <span class="h2">Identidade visual</span><br>
                                     <span class="casetextcompany">Macaw Business</span>
@@ -69,12 +78,22 @@
                             </div>
                         </a>
                     </figure>
-                    <figure class="gallery__item gallery__item--4">
+                    <figure class="gallery__item gallery__item--3">
                         <a href="http://andescreation.com/lunix"><img src="./images/image4.png" alt="Gallery image 3" class="gallery__img">
-                            <div class="img__description gallery__item gallery__item--4">
+                            <div class="img__description gallery__item gallery__item--3">
                                 <div class="casehover">
                                     <span class="h2">ATUALIZAÇÃO DE MARCA</span><br>
                                     <span class="casetextcompany">Lunix Tecnologia</span>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                    <figure class="gallery__item gallery__item--4">
+                        <a href="http://andescreation.com/dudakalef"><img src="./images/image1.png" alt="Gallery image 2" class="gallery__img">
+                            <div class="img__description gallery__item gallery__item--4">
+                                <div class="casehover">
+                                <span class="h2">ESTRATÉGIA E ID. VISUAL</span><br>
+                                <span class="casetextcompany">DudaKalef</span>
                                 </div>
                             </div>
                         </a>
@@ -90,7 +109,7 @@
                     <center>
                     <div class="text_orc" style="width: 50vw;padding-bottom: 5vh;"><spam>Vamos gerar valor juntos?</spam></div>
                     <br>
-                    <a type="button" href="http://andescreation.com/contact" class="btn btn-dark button_orc" style="width: 20vw;">Solicite Orçamento</a>
+                    <a type="button" href="http://andescreation.com/contact" class="btn btn-dark button_orc" style="color:white">Solicite Orçamento</a>
                     </center>
                 </div>
             </div>

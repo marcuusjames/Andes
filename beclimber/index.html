@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html>
+    <meta charset="utf-8" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
+     
 
+    <!-- smart phone css  -->
+    <link href="assets/phone.css" rel="stylesheet" type="text/css" media="all and (min-width: 0px) and (max-width: 480px)" />
+
+    <!-- Tablet -->
+    <link href="assets/tablet.css" rel="stylesheet" type="text/css" media="all and (min-width: 481px) and (max-width: 800px)" />
+
+    <!-- Desktop -->
+    <link href="assets/desktop.css" rel="stylesheet" type="text/css" media="only screen and (min-width:801px)">
 <head>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Epilogue&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Syne&display=swap" rel="stylesheet" />
 
-    <link href='https://fonts.googleapis.com/css?family=Archivo' rel='stylesheet'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> </script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
@@ -19,29 +38,66 @@
     <meta charset="utf-8">
 </head>
 
-<body style="background-color: #000;">
+<body>
     
         <div id='nav-placeholder'></div>
 
-        <div class="banner_main_services">
-            <div class="column1" style="top: 10%;">
+        <div class="banner_main_services rowcol" style="height: 100vh;padding-top:20vh">
+            <div class="column1 rowcol" style="top: 0%;">
                 <p class="h3" style="color: white;">O design só move<br>
                     montanhas quando<br>
                     escalamos juntos.
                     </p>
-                <p class='p2' style="color: white;padding-top: 5vh;">
+                <!-- <p class='p2' style="color: white;padding-top: 5vh;">
                     Você está prestes a entrar numa nova dimensão e abraçar uma nova ideia do que é trabalhar com criação. Bora criar juntos?
-                </p>
+                </p> -->
+                
                 <p class='l1' style="color: white;padding-top: 10vh;"> Insira seu Código-Convite:</p>
                 <div style="display: inline-block;width: 100%;">
                 <input class='invite' type="text" style="width: 52%;">
                 <button class='invite_but' id='button_invite' style="width: 45%;">PARTICIPAR</button>
                 </div>
                     
-                </div>
+            </div>
             <!-- <div class="imagemain"></div> -->
         </div>
+        <div class="services_s1 rowcol" style="padding-top: 10vw;">
+            <div class="column1">
+                
+                <p class='h2'>WE ARE CREATIVE-CENTERED </p>
+                <p class='h3'>Colocamos criativos no centro.</p>
+                <p class='p3'><br>Nosso modelo de negócio foi construído pondo no centro as dores dos profissionais criativos. Entendemos que o tempo é o recurso mais valioso de quem trabalha com criação, mas é também o mais escasso. Acreditamos que remuneração justa, valorização profissional, confiança e autonomia potencializam a performance criativa. Clique nas tags abaixo para entender um pouco do que fizemos a partir dessas premissas:</p>            
+            </div>
+        </div>
 
+        <div class="services_s1 row col" style="padding-top: 10vw;display: block;padding: 0;">
+            <div style="padding-top: 5vw;">
+            <img src="./images/platform.png" alt="Gallery image 2" class="gallery__img">
+            </div>
+        </div>
+
+        <div class="services_s1 rowcol" style="padding-top: 0vw;padding-bottom: 10vw;">
+            <div class="column1">
+                
+                <p class='h2'>NOSSOS FEATURES</p>
+                <p class='h3'>Estamos com você antes, durante e depois da criação.</p>
+                <p class='p3'><br>Na Andes você tem autonomia para criar e trabalhar no seu ritmo, mas por trás da nossa plataforma, tem gente sempre pronta para te dar suporte criativo. Em cliques, você avisa nossa equipe que está passando por bloqueio criativo, que está disponível e disposto a aceitar futuros projetos e também pode ler nossos feedbacks construtivos sobre os trabalhos que você realiza com a gente! A ideia é que a gente crie, cresça e evolua juntos continuamente!</p>            
+            </div>
+            <div class="column2">
+                <p class='p5' style="font-weight: bold;"><span><img src='./images/flag.png'></span></p>            
+                <p class='p5'>Com sede de criação? Acene a bandeira para a gente identificar sua predispoção para algum projeto. </p>            
+                <div class="linebreak" style="margin-left:0vw;width: 100%;"></div>
+                <p class='p5' style="font-weight: bold;"><br>Bloqueio Criativo</p>            
+                <p class='p5'>Não consegue progredir na criação? Avisa que a gente dá uma mão. </p>            
+                <div class="linebreak" style="margin-left:0vw;width: 100%;"></div>
+                <p class='p5' style="font-weight: bold;"><br>Feedback</p>            
+                <p class='p5'>Elogios e opiniões construtivas sobre o seu trabalho!</p>     
+
+            </div>
+
+        </div>
+        
+        
         
         <div class="modal-content" style="display: none;position: fixed;top: 20vh;left:25vw;width: 50vw;" id='modalFirst'>
             <div class="modal-header" style="border-bottom:0px">

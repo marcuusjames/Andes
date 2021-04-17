@@ -88,7 +88,7 @@ color: #F8F8F8;
   color: rgba(255,255,255,1);
   font-family: Archivo;
   font-weight: Regular;
-  font-size: 1rem;
+  font-size: 16px;
   opacity: 1;
   text-align: left;
 }
@@ -176,23 +176,20 @@ border: 0.1px solid #000000;
   grid-template-rows: repeat(2,38vw);
   grid-gap: 1.21vw;
 }
-
+.padding_std{
+  padding-left:10.79vw;
+  padding-right:10.79vw;
+}
+.padding_std_2{
+  padding-left:10.79vw;
+  padding-right:10.79vw;
+}
 .gallery__img {
   width: 100%;
   height: 100%;
   object-fit: fill;
 }
 
-.gallery__item--1 {
-}
-
-.gallery__item--2 {
-}
-
-.gallery__item--3 {
-}
-.gallery__item--4 {
-}
 .img__wrap {
   position: relative
 }
@@ -264,11 +261,11 @@ figure {
 }
 
 .column1{
-  width: 39.64vw;
+  width: 37.64vw;
   float: left;
 }
 .column2{
-  width: 32.64vw;
+  width: 29.64vw;
   float: right;
 }
 
@@ -296,8 +293,8 @@ figure {
   font-family: Archivo;
   font-style: normal;
   font-weight: normal;
-  font-size: 2.5rem;
-  line-height: 2.75rem;
+  font-size: 40px;
+  line-height: 44px;
   letter-spacing: 0.06em;
   
   color: #000000;
@@ -307,7 +304,7 @@ figure {
   font-family: Archivo;
   font-style: normal;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 100%;
   /* identical to box height, or 16px */
   
@@ -324,7 +321,7 @@ figure {
   font-family: Archivo;
   font-style: normal;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 100%;
   /* identical to box height, or 16px */
   
@@ -342,7 +339,7 @@ figure {
 font-family: Archivo;
 font-style: normal;
 font-weight: normal;
-font-size: 3.625rem;
+font-size: 58px;
 line-height: 100%;
 
 font-feature-settings: 'liga' off;
@@ -356,7 +353,7 @@ color: #000000;
   font-family: Archivo;
   font-style: normal;
   font-weight: bold;
-  font-size: 2.875rem;
+  font-size: 46px;
   line-height: 100%;
   
   font-feature-settings: 'liga' off;
@@ -375,7 +372,7 @@ color: #000000;
   font-family: Archivo;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 150%;
   /* or 36px */
   
@@ -387,8 +384,8 @@ color: #000000;
   font-family: Archivo;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.938rem;
-  line-height: 150%;
+  font-size: 15px !important;
+  line-height: 22.5px;
   /* or 36px */
   
   letter-spacing: 0.06em;
@@ -400,8 +397,8 @@ color: #000000;
   font-family: Archivo;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.75rem;
-  line-height: 2.5rem;
+  font-size: 28px;
+  line-height: 40px;
   /* or 36px */
   
   letter-spacing: 0.06em;
@@ -414,7 +411,7 @@ color: #000000;
   font-family: Archivo;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.938rem;
+  font-size: 15px;
   line-height: 200%;
   /* or 30px */
   
@@ -427,13 +424,13 @@ color: #000000;
   font-family: Archivo;
   font-weight: normal;
   font-style: normal;
-  font-size: 1.125rem;
+  font-size: 18px;
 }
 .l2{
   font-family: Archivo;
   font-style: normal;
   font-weight: 600;
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 150%;
   /* identical to box height, or 27px */
   letter-spacing: 0.01em;
@@ -441,12 +438,12 @@ color: #000000;
   color: #160F1F;
 }
 .footer {
-  height: 20vw;
+  height: 10vw;
   background-color: black;
   color: white;
   padding-left: 10.79vw;
   padding-right: 10.79vw;
-  padding-top: 8%;
+  padding-top: 4%;
 }
 
 a:hover {
@@ -495,3 +492,53 @@ a:hover {
     height: 100%;
     background-color: black; 
 }
+.nav_andes{background-color: black;
+  width: 80%; 
+  z-index: 10000;
+  float: right;
+}
+.nomobile{
+  
+}
+.nav_andesul{
+  float: right;
+}
+@media (max-width: 1000px) {
+.nav_andes{background-color: black;
+  width: 100vw; 
+  z-index: 10000;
+  float: left;
+}
+
+.nav_andesul{background-color: black;
+  float: left;
+}
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 100vw);
+    grid-template-rows: repeat(4,100vw);
+    grid-gap: 1.21vw;
+   }
+
+   .padding_std{
+    padding-left:0vw;
+    padding-right:0vw;
+  }
+  .padding_std_2{
+    padding-left:5vw;
+    padding-right:5vw;
+  }
+
+  .nomobile{
+    display:none;
+  }
+  .column1{
+    width: 100%;
+  }
+  .column2{
+    width: 100%;
+  }
+
+}
+
+html,body { -webkit-text-size-adjust:none; }

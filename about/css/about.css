@@ -229,6 +229,7 @@ figure {
   padding:0vw 10.79vw 0vw 10.79vw
 }
 
+
 .about_s3{
   padding:0 0 0 0;
   
@@ -241,4 +242,13 @@ figure {
   /* background-repeat: no-repeat; */
   /* background-attachment: fixed; */
   /* background-position: center; */
+}
+
+@media (max-width: 1000px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 100vw);
+    grid-template-rows: repeat(3, 100vw);
+    grid-gap: 0px;
+  }
 }

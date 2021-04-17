@@ -1,6 +1,10 @@
 
 $( "#button_invite" ).click(function() {
-    $('#modalFirst').show('slow')
+    if ($('.invite').val()=='TESTE'){
+      $('#modalFirst').show('slow')
+    } else {
+      alert ("Convite incorreto! Favor tentar novamente")
+    }
   });
 
   $(".exit").click(function(){

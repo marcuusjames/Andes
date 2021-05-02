@@ -18,12 +18,11 @@
 }
 
 .banner_main_howwework{
-  padding: 10%;
   background-color: #000;
   background-image: url("../images/banner_main.png");
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 60%;
-  background-size: 120vh;
+  height: 80vh;
+  background-size:     contain;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;              /* optional, center the image */
+
 }

@@ -23,18 +23,17 @@
     <link href='https://fonts.googleapis.com/css?family=Archivo' rel='stylesheet'>
     <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="../css/bootstrap.min.css" >
   <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+  <link rel="stylesheet" href="../css/bootstrap-theme.min.css" >
   <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> </script>
+  <script src="../js/bootstrap.min.js"></script> </script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 
         <link rel="stylesheet" href="./js/virtual-select-master/dist/virtual-select.min.css" />
     <link href="../css/main.css" rel="stylesheet" />
-    <link href="../css/bootstrap-multiselect.min.css" rel="stylesheet" />
     <link href="./css/contact.css" rel="stylesheet" />
     <link href="../css/msfmultiselect.min.css" rel="stylesheet" />
     <meta charset="utf-8">
@@ -45,7 +44,7 @@
         <div id='nav-placeholder'></div>
 
         <div class="banner_main_contact">
-          <div class="text_main">
+          <div class="text_main_only">
           <p class="h3" style="color: white;">Vamos gerar valor <br>
             para o seu negócio?</p>
               
@@ -87,40 +86,40 @@
                       </div>
                       <div class="form-group" style="padding-bottom: 5vh">
                           <div>
-                            <label class="col-form-label pt-0"style="font-weight: bold;" style="font-weight: bold;">Como você prefere ser contatado?</label>
-                            <div class="col-sm-10" style="padding:0;">
-                              <div class="form-check form-check-inline">
-                                <input class="form-check-input formAndes" type="radio" name="gridRadios" id="gridRadios1" value="Ligação" checked>
-                                <label class="form-check-label formAndes" for="gridRadios1">
+                            <label style="font-weight: bold;" style="font-weight: bold;">Como você prefere ser contatado?</label>
+                            <div style="padding:0;display: inline-flex">
+                              <div style="    margin-right: 10px;">
+                                <input  type="radio" name="gridRadios" id="gridRadios1" value="Ligação" checked>
+                                <label  for="gridRadios1">
                                   Ligação
                                 </label>
                               </div>
-                              <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
-                                <label class="form-check-label" for="gridRadios2">
+                              <div>
+                                <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
+                                <label  for="gridRadios2">
                                   WhatsApp
                                 </label>
                               </div>
                             </div>
                           </div>
                       </div>
-                      <button id='formEnd' type="button" class="btn btn-primary button_orc" style="float:left;background-color:#000;border-color:#000;">Solicitar Orçamento</button>
+                      <div style="padding-top: 5vh;"><button id='formEnd' type="button" class="btn btn-primary button_orc" style="float:left;background-image:none;background-color:#000;border-color:#000;">Solicitar Orçamento</button></div>
                     </form>
           </div>
           <div class='column2'>
             <div>
-            <p class="h2"> PARA OUTROS ASSUNTOS</p>
+            <p class="h2"><span class='justmobile'><br><br></span> PARA OUTROS ASSUNTOS</p>
             <br>
-            <p class="p2"><spam style="padding-right: 2vw;"><img src="./images/envelope.png" width="30vw"></img></spam><spam style="font-size: 1.8vw;">   contato@andescreation.com</spam></p>
-            <p class="p2"><spam style="padding-right: 2vw;"><img src="./images/phone.png"  width="30vw"></img></spam><spam style="font-size: 1.8vw;">   47 99658 6023</spam></p>
+            <p class="p2"><a href="mailto:contato@andescreation.com" class='text_contact'><spam style="text-decoration: underline;">   contato@andescreation.com</spam></a></p>
+            <p class="p2"><a href="tel:47996586023" class='text_contact'><spam style="text-decoration: underline;">   47 99658 6023</spam></a></p>
           </div>
           
-          <div>
+          <div style="padding-bottom: 20vh;">
             <br>
             <a href="http://andescreation.com/beclimber/">
             <p class="h2"><br><br> CO-CRIE COM A GENTE</p>
             <br>
-            <p class="p2"><spam style="padding-right: 2vw;"><img src="./images/vector.png"  width="22vw"></img></spam><spam style="font-size: 1.8vw;text-decoration: underline;padding-left: 1px;">Seja um Climber</spam></p>
+            <p class="p2 text_contact"><spam style="text-decoration: underline;padding-left: 1px;">Seja um Climber</spam></p>
           </a>
           </div>
 
@@ -137,7 +136,6 @@
 </html>
 
 <script src="..\js\tabs.js"></script>
-<script src="../js/bootstrap-multiselect.min.js"></script>
 <script src="../js/msfmultiselect.min.js"></script>
 <script src="./js/virtual-select-master/dist/virtual-select.min.js"></script>
 <script>
@@ -161,6 +159,8 @@ myOptions = [
   ele: '#formSolution',
   options: myOptions,
   multiple: true,
+  placeholder: 'Selecionar',
+  searchPlaceholderText:'Procurar...'
 });
 
 ;

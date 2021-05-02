@@ -27,13 +27,14 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
   <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 
     <link href="../css/main.css" rel="stylesheet" />
-    <link href="./css/about.css" rel="stylesheet" />
+    <link href="./css/register.css" rel="stylesheet" />
     <meta charset="utf-8">
 </head>
 
@@ -46,35 +47,289 @@
         Seja um Climber  </span>   <span style="padding:0 0.5vw;">   >   </span> Cadastro</p>
     </div>
         <div class="rowcol" style="padding-top: 10vw;padding-left: 10.79vw;">
-            <div class='column1'>
-                    <p class='h1'>Obrigada por acreditar nessa ideia. Você é um membro-fundador!</p>
-                    <br><br>
-                    <p class='p3'>Isso quer dizer que nossa cordilheira vai crescer e se constituir a partir de você, tendo para sempre uma herança sua. Essa é a magia dos Andes, ou melhor, da Andes: não sonhamos em ser a maior montanha, queremos ser a maior cordilheira, onde cada um enriquece o todo com seu monte.
-                    <br><br><br></p>
-                    <div class="page1">
-                    <p class='h2'>Complete seu cadastro<br><br><br></p>
-                    
-                    <p class='l2'> Seu nome*</p>
-                    <input class='invite' id='name' type="text" style="border-color: black; width: 80%; padding: 20px;">
-                    
-                    <p class='l2' style="padding-top: 3vh;"> Nome Social*</p>
-                    <input class='invite' id='socialname' type="text" style="border-color: black; width: 80%; padding: 20px;">
-                    
-                    <p class='l2' style="padding-top: 3vh;"> Senha*</p>
-                    <input class='invite' id='socialname' type="password" style="border-color: black; width: 80%; padding: 20px;">
-                    
-                    <p class='l2' style="padding-top: 3vh;"> Telefone*</p>
-                    <input class='invite' id='socialname' type="text" style="border-color: black; width: 80%; padding: 20px;">
-                    
-                    <p class='l2' style="padding-top: 3vh;"> Aniversário*</p>
-                    <input class='invite' id='socialname' type="date" style="border-color: black; width: 80%; padding: 20px;">
-                    <div style="padding:10vh 0vh;">
-                        <button class="btn btn-dark button_orc">Avançar</button>
-                    
-                    </div>
-                    </div>
+
+
+            <div class='column1' id="page1" >
+                <p class='h1'>Obrigada por acreditar nessa ideia. Você é um membro-fundador!</p>
+                <br><br>
+                <p class='p3'>Isso quer dizer que nossa cordilheira vai crescer e se constituir a partir de você, tendo para sempre uma herança sua. Essa é a magia dos Andes, ou melhor, da Andes: não sonhamos em ser a maior montanha, queremos ser a maior cordilheira, onde cada um enriquece o todo com seu monte.
+                <br><br><br></p>
+                <div>
+                <p class='h2'>Complete seu cadastro<br><br><br></p>
                 
+                <p class='l2'> Seu nome*</p>
+                <input class='invite' id='name' type="text" style="border-color: black; width: 100%; padding: 20px;">
+                
+                <p class='l2' style="padding-top: 3vh;"> Nome Social*</p>
+                <input class='invite' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;">
+                
+                <p class='l2' style="padding-top: 3vh;"> Senha*</p>
+                <input class='invite' id='password' type="password" style="border-color: black; width: 100%; padding: 20px;">
+                
+                <p class='l2' style="padding-top: 3vh;"> Confirmar Senha*</p>
+                <input class='invite' id='password_conf' type="password" style="border-color: black; width: 100%; padding: 20px;">
+                
+                <p class='l2' style="padding-top: 3vh;"> Telefone*</p>
+                <input class='invite' id='telefone' type="text" style="border-color: black; width: 100%; padding: 20px;">
+                
+                <p class='l2' style="padding-top: 3vh;"> Aniversário*</p>
+                <input class='invite' id='birthday' type="date" style="border-color: black; width: 100%; padding: 20px;">
+                <div style="padding:10vh 0vh;">
+                    <button class="button_orc button_av">Avançar</button>
+                
+                </div>
+                </div>
+            
+        </div>
+
+        <div class='column1' id="page2" style="display: none;">
+            <p class='h1'>Sua conta está criada, Climber!</p>
+            <br><br>
+            <p class='p3'>Agora só vamos dar à ela um pouquinho de alma. Para isso, comece nos contando um pouco sobre suas habilidades, os softwares com os quais você costuma executar seus projetos e com o que você gosta de trabalhar.
+            <br><br><br></p>
+            <div>            
+            <p class='l2'> Qual tipo de Climber você quer ser?*</p>
+            <div style="    margin-right: 10px;">
+                <input  type="radio" name="gridRadios" id="gridRadios1" value="Ligação" checked>
+                <label  for="gridRadios1">
+                  Designer
+                </label>
+              </div>
+              <div>
+                <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
+                <label  for="gridRadios2">
+                  Ilustrador
+                </label>
+              </div>
+              <div>
+                <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
+                <label  for="gridRadios2">
+                  Fotógrafo
+                </label>
+              </div>
+            
+            <p class='l2' style="padding-top: 3vh;">Técnicas*</p>
+            <p class='p3' style="padding-bottom:5vh">Você pode escolher quantas opções quiser, mas pedimos para que só escolha os tipos de trabalho que compõe seu portfólio.</p>
+            <input class='invite' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;">
+            
+            <p class='l2' style="padding-top: 3vh;"> Etapas*</p>
+            <p class='p3' style="padding-bottom:5vh">Quais dessas etapas do processo você estaria disposta a executar pontualmente ou considera que tem mais domínio?</p>
+            <p class='h2'>DESIGN DE MARCA/IDENTIDADE VISUAL</p>
+            <p class='h2'>UX / UI</p>
+
+            <p class='l2' style="padding-top: 3vh;"> Softwares*</p>
+            <p class='l2' style="padding-top: 3vh;">Estilo de Ilustração*</p>
+            <p class='p3' style="padding-bottom:5vh">Selecione abaixo os estilos de ilustração com os quais você esbanja talento.</p>
+            <p class='l2' style="padding-top: 3vh;"> Seu Portfólio*</p>
+                <input class='invite' id='portfolio' style="border-color: black; width: 100%; padding: 20px;">
+            
+            <p class='l2' style="padding-top: 3vh;"> LinkedIn</p>
+                <input class='invite' id='portfolio' style="border-color: black; width: 100%; padding: 20px;">
+            <p class='l2' style="padding-top: 3vh;"> Formação*</p>
+            <p class='p3' style="padding-bottom:5vh">Formação, seja técnica ou acadêmica, não é um pré-requisito para a gente. Essa, como todas as perguntas a seguir, tem a simples função de entender melhor seu repertório.</p>
+
+                <p class='l2' style="padding-top: 3vh;"> Formação</p>
+                <input class='invite' id='curso' style="border-color: black; width: 100%; padding: 20px;">
+                <p class='l2' style="padding-top: 3vh;"> Nível</p>
+                <input class='invite' id='curso_nivel' style="border-color: black; width: 100%; padding: 20px;">
+
+                <div style="padding: 5vh 0;">
+                    <input type="checkbox" id="noformation" name="noformation" value="No_Formation">
+                    <label for="noformation"> Não tenho formação</label><br>
+                </div>
+                    
+            <p class='l2' style="padding-top: 3vh;"> Qual é o seu Registro MEI?*</p>
+            <input class='invite' id='password_conf' type="password" style="border-color: black; width: 100%; padding: 20px;">
+            <div style="padding: 5vh 0;">
+                <input type="checkbox" id="noformation" name="noformation" value="No_Formation">
+                <label for="noformation"> Não tenho formação</label><br>
             </div>
+
+
+            <div style="padding:10vh 0vh;">
+                <button class="button_orc button_av">Avançar</button>
+            
+            </div>
+            </div>
+        
+    </div>
+
+    <div class='column1' id="page3" style="display: none;">
+        <p class='h1'>Mais empatia.<br>
+            Menos perrengue.</p>
+        <br><br>
+        <p class='p3'>Na Andes, nossa missão é descomplicar e tornar mais eficiênte o processo criativo. Um dos meios que encontramos para isso é encurtar a etapa de empatia, diminuindo o abismo entre criador e usuário. Ou seja, trazemos para o projeto profissionais que se aproximem do público-alvo e também dos valores do cliente. Desta forma, conseguimos reduzir as chances de ruídos de comunicação e seu tempo de trabalho!
+<br><br>
+            Então daqui em diante, iremos fazer algumas perguntas para entender um pouco dos seus interesses, seu repertório e com quais tipos de negócio você se identifica e interage mais.
+            
+        <br><br><br></p>
+        <div>            
+        <p class='l2'> Onde você nasceu?*</p>
+        <input class='invite' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;">
+        
+        <p class='l2' style="padding-top: 3vh;"> Onde você mora e/ou já morou?*</p>
+        <input class='invite' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;">
+        
+        <p class='l2' style="padding-top: 3vh;"> Quem mora com você?*</p>
+        <p class='p2'>Tags</p>
+
+        <p class='l2' style="padding-top: 3vh;"> Gênero*</p>
+        <input class='invite' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;">
+        
+        <p class='l2' style="padding-top: 3vh;"> Estado Civil*</p>
+        <input class='invite' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;">
+        
+        <p class='l2' style="padding-top: 3vh;"> Você tem filhos? Se sim, qual a faixa etária?*</p>
+        <p class='p2'>Tags</p>
+
+        <p class='l2' style="padding-top: 3vh;"> Ei, pet também é filho... Você tem? Se sim, qual?*</p>
+        <p class='p2'>Tags</p>
+        <div style="padding:10vh 0vh;">
+            <button class="button_orc button_av">Avançar</button>
+        
+        </div>
+        </div>
+    
+</div>
+
+<div class='column1' id="page4" style="display: none;">
+    <p class='h1'>Menos perrengue.<br>
+        Mais tempo livre.
+    <br><br>
+    <p class='p3'>Então daqui em diante, iremos fazer algumas perguntas para entender um pouco dos seus interesses, seu repertório e com quais tipos de negócio você se identifica e interage mais.
+
+    <br><br><br></p>
+    <div>            
+    <p class='l2'> Para você, o que é sucesso?*</p>
+    <textarea class="invite" id="formNeed" rows="10" style="border-color: black; width: 100%; padding: 20px;display: block;border-width: 2px;"></textarea>
+    
+    <p class='l2' style="padding-top: 3vh;"> Escolha 2 dos temas que você mais gosta*</p>
+    <p class='p2'>Tags</p>
+
+    <p class='l2' style="padding-top: 3vh;"> Você não consome algum dos alimentos abaixo?*</p>
+    <p class='p2'>Tags</p>
+
+
+    <p class='l2' style="padding-top: 3vh;"> Quais meios de locomoção você costuma usar?*</p>
+    <p class='p2'>Tags</p>
+
+    <p class='l2' style="padding-top: 3vh;"> Com que frequência você compra online?</p>
+    <div style="display: block;">
+    <div style="padding-bottom:2vh">
+        <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
+        <label  for="gridRadios2" style="padding-right: 30%;">
+            Nunca
+        </label>
+
+        <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
+        <label  for="gridRadios2">
+            Raramente
+        </label>
+    </div>
+    <div>
+        <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
+        <label  for="gridRadios2" style="padding-right: 26.8%;">
+            Às vezes
+        </label>
+
+        <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
+        <label  for="gridRadios2">
+            Sempre
+        </label>
+    </div>
+    </div>
+
+
+
+    
+    <p class='l2' style="padding-top: 3vh;"> Com que frequência você costuma comprar produtos artesanais?*</p>
+
+    <div style="display: block;">
+        <div style="padding-bottom:2vh">
+            <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
+            <label  for="gridRadios2" style="padding-right: 30%;">
+                Nunca
+            </label>
+    
+            <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
+            <label  for="gridRadios2">
+                Raramente
+            </label>
+        </div>
+        <div>
+            <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
+            <label  for="gridRadios2" style="padding-right: 26.8%;">
+                Às vezes
+            </label>
+    
+            <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
+            <label  for="gridRadios2">
+                Sempre
+            </label>
+        </div>
+        </div>
+
+
+    <p class='l2' style="padding-top: 3vh;"> Com que frequência você faz as compras de mercado na sua casa?*</p>
+
+    <div style="display: block;">
+        <div style="padding-bottom:2vh">
+            <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
+            <label  for="gridRadios2" style="padding-right: 30%;">
+                Nunca
+            </label>
+    
+            <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
+            <label  for="gridRadios2">
+                Raramente
+            </label>
+        </div>
+        <div>
+            <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
+            <label  for="gridRadios2" style="padding-right: 26.8%;">
+                Às vezes
+            </label>
+    
+            <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
+            <label  for="gridRadios2">
+                Sempre
+            </label>
+        </div>
+        </div>
+
+        
+    <p class='l2' style="padding-top: 3vh;"> Mais ou menos quantos dias por semana você pede delivery?*</p>
+    <p class='p2'>Linha</p>
+
+    <p class='l2' style="padding-top: 3vh;"> Mais ou menos quantos dias por semana você se exercita?*</p>
+    <p class='p2'>Linha</p>
+
+    <p class='l2' style="padding-top: 3vh;"> E como você costuma mexer esse esqueleto?*</p>
+    <p class='p2'>Tags</p>
+
+    <p class='l2' style="padding-top: 3vh;">Insira o @ de até três personalidades que mais te influenciam digitalmente:*</p>
+    <input class='invite' id='password_conf' type="password" style="border-color: black; width: 100%; padding: 20px;">
+            
+    <p class='l2' style="padding-top: 3vh;"> Quais são suas redes sociais preferidas?*</p>
+    <p class='p2'>Tags</p>
+
+    <p class='l2' style="padding-top: 3vh;">Cite os perfis, canais ou sites aos quais você mais recorre para se informar sobre o mundo?* </p>
+    <input class='invite' id='password_conf' type="password" style="border-color: black; width: 100%; padding: 20px;">
+     
+
+
+    <div style="padding:10vh 0vh;">
+        <button class="button_orc button_finish">Concluir</button>
+    
+    </div>
+    </div>
+
+</div>
+            </div>
+        </div>
+        <div style="background-color: black;position: fixed;top:0;left:60%;height: 100%;" class="nomobile">
+            <div style="padding-top: 25vh;">
+                <img src="./images/banner.png" style="width:40vw">
             </div>
         </div>
                 
@@ -82,7 +337,36 @@
 
         <!-- Footer -->
 
-        <div id="footer">
+        
+
+        <div class="modal-content modalAndes" id='modalClimber'>
+            <div class="modal-header" style="border-bottom:0px">
+              <button type="button" class="close exit" data-dismiss="modal">&times;</button>
+            </div>
+            <div style="padding-left: 12%;padding-right: 12%;">
+                <p class="h1">It’s done, Climber!<br><br></p>
+                <p class="p3 firstSession">Você já faz parte da nossa comunidade. Agora temos um convite: como a Andes preza pela relação humana, gostaríamos de fazer um Call e bater um papo com você. O que acha? 
+                  <br><br>
+              </p>
+              <div style="padding-bottom:2vh">
+                <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
+                <label  for="gridRadios2" style="padding-right: 30%;">
+                    Legal, me chama no Whats e vamos combinar!
+                </label>
+            </div>
+            <div>
+                <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
+                <label  for="gridRadios2" style="padding-right: 26.8%;">
+                    Prefiro conversar só por texto!
+                </label>
+            </div>
+            </div>
+
+            <div class="firstSession" style="padding-left: 12%;padding-top: 10vh;">
+              <button id='ok_button' type="button" class="btn btn-dark button_orc okbut" data-dismiss="modal">ENVIAR</button>
+            </div>
+
+
         </div>
 
         
@@ -95,3 +379,4 @@
 <script>
     $("#nav_about").addClass('actual')
 </script>
+<script src="./js/register.js"></script> 

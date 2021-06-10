@@ -6,8 +6,8 @@ $("head").append('\
 $("#nav-placeholder").addClass('navbar_fixed')
 
 $("#nav-placeholder").append('\
-    <nav class="vis_desktop navbar fixed-top navbar-expand-lg py-md-3" style="padding-left: 8%;padding-right: 11%;justify-content: space-between;background-color: #000000;font-size:1.125rem;height:12vh;    margin-bottom: -20px;">\
-        <a class="navbar-brand" href="http://andescreation.com/" style="padding-left:2rem;">\
+    <nav class="padding_std_2 vis_desktop navbar fixed-top navbar-expand-lg py-md-3" style="border-radius: 0;justify-content: space-between;background-color: #000000;font-size:1.125rem;height:12vh;    margin-bottom: -20px;">\
+        <a class="navbar-brand" href="http://andescreation.com/" >\
             <img src="http://andescreation.com/images/logo.png" class="d-inline-block align-top logoimage" alt="">\
         </a>\
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">\
@@ -23,13 +23,13 @@ $("#nav-placeholder").append('\
                         <a id="nav_howwework" href="http://andescreation.com/howwework" class="nav-link m-2 menu-item textmenu" style="display: table-cell;">Como Fazemos</a>\
                     </li>\
                     <li class="nav-item">\
-                        <a id="nav_contact" href="http://andescreation.com/contact" class="nav-link m-2 menu-item textmenu" style="display: table-cell;">Contato</a>\
-                    </li>\
-                    <li class="nav-item">\
                         <a id="nav_services" href="http://andescreation.com/services" class="nav-link m-2 menu-item textmenu" style="display: table-cell;">Serviços</a>\
                     </li>\
                     <li class="nav-item">\
                         <a id="nav_climber" href="http://andescreation.com/beclimber" class="nav-link m-2 menu-item textmenu" style="display: table-cell;">Seja um Climber</a>\
+                    </li>\
+                    <li class="nav-item">\
+                        <a id="nav_contact" href="http://andescreation.com/contact" class="nav-link m-2 menu-item textmenu" style="display: table-cell;">Contato</a>\
                     </li>\
                 </ul>\
             </div>\
@@ -40,10 +40,10 @@ $("#nav-placeholder").append('\
 var d = new Date();
 var n = d.getFullYear();
 $("#footer").append('\
-<div class="footer">\
-            <div class="col1_footer"\
+<div class="padding_std_2 footer">\
+            <div class="col1_footer">\
                 \
-                <p class="f1" style="color: white;"><span class="justmobile"><br></span><span style="padding-right:2vw"><img src="http://andescreation.com/images/logo_footer.png"></span><span class="justmobile"><br></span>All Right Reserved '+n.toString()+' - Andes Creation Capital</p>\
+                <p class="f1" style="color: white;"><span class="justmobile"><br></span><span style="padding-right:2vw"><img src="http://andescreation.com/images/logo_footer.png"></span><span class="justmobile"><br></span>All Right Reserved '+n.toString()+' <span class="justmobile" style="line-height:10px;"><br></span>- Andes Creation Capital</p>\
                 <p class="f1" style="color: #666666;"><br><br>Capital Criativo em performance.</p>\
                 <p class="f1" style="color: #666666;">contato@andescreation</p>\
                 <p class="f1" style="color: #666666;">+55 47 996 586023</p>\

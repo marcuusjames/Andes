@@ -1,0 +1,32 @@
+.montain{
+    padding-top: 10%;
+    padding-left: 10.79vw;
+    padding-right: 10.79vw;
+}
+
+.numbers_line{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+  }
+
+  .progress_backline{
+    position: relative;
+    height: 2px;
+    color: rgb(173, 173, 173);
+    width: 100%;
+    padding: 0.3px 0.3px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: #666;
+  }
+  .progress_line{
+    height: 2px;
+    color: white;
+    width: 100%;
+    padding: 0.3px 0.3px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: white;
+  }

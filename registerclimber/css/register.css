@@ -246,3 +246,49 @@ figure {
     display: none;position: fixed;top: 10vh;left:5vw;width: 90vw;
   }
 }
+
+.progress_backline{
+  position: relative;
+  height: 0.5px;
+  color: rgb(173, 173, 173);
+  width: 100%;
+  padding: 0.3px 0.3px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #C5C5C5;
+}
+.progress_line{
+  height: 0.5px;
+  color: #666;
+  width: 100%;
+  padding: 0.3px 0.3px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #666;
+}
+.number_line{
+  font-size: 18px;
+  font-family: 'Archivo';
+  font-weight: 600;
+  line-height: 27px;
+  text-align: center;
+  text-decoration:underline;
+  color:#C5C5C5
+}
+.select_line{
+  color: black
+}
+.numbers_line{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+}
+
+.invite{
+  border-color: #000;
+  box-shadow: 0px;
+  border-radius: 0px;
+  outline: 0 none;
+  border-width: 2px;
+}

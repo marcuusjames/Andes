@@ -297,7 +297,13 @@ figure {
   margin-bottom: 15px;
   color:black;
 }
+.way_contact{
+  display: block;
+}
 @media (max-width: 1000px) {
+  .way_contact{
+    display: inline-flex
+  }
   .text_contact{
     font-size: 16px;
     color: black;
@@ -318,6 +324,7 @@ figure {
     border-radius: 0px;
     outline: 0 none;
     border-width: 2px;
+    font-family: Archivo;
   }
 }
 

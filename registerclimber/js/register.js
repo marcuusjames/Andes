@@ -26,3 +26,8 @@ $(".button_finish").click(function(){
     $('.modalClimber').hide('slow')
 
 })
+
+$(".tagtext").click(function(){
+    console.log('teste')
+    $(this).toggleClass('tagclick')
+})

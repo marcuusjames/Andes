@@ -1,0 +1,24 @@
+.mon_linebreak{
+    width: 100%;
+    border: 0.1px solid white;
+    }
+    
+.mon_column1{
+    width: 15%;
+    float: left;
+    }
+
+.mon_column2{
+width: 81%;
+float: right;
+}
+
+.hp_column1{
+    width: 15%;
+    float: left;
+    }
+
+.hp_column2{
+width: 70%;
+float: right;
+}

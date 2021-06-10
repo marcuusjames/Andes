@@ -32,9 +32,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link href="../css/main.css" rel="stylesheet" />
     <link href="./css/register.css" rel="stylesheet" />
+    <link href="./css/dropzone.css" rel="stylesheet" />
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <meta charset="utf-8">
 </head>
 
@@ -56,23 +60,22 @@
                 <br><br><br></p>
                 <div>
                 <p class='h2'>Complete seu cadastro<br><br><br></p>
+                <p class='l2'> Seu nome<span style="color:#666">*</span></p>
+                <input class='invite' id='name' type="text" style="border-color: black; width: 100%; padding: 20px;" placeholder="O nome que vem no RG">
                 
-                <p class='l2'> Seu nome*</p>
-                <input class='invite' id='name' type="text" style="border-color: black; width: 100%; padding: 20px;">
+                <p class='l2' style="padding-top: 6vh;"> Nome Social<span style="color:#666">*</span></p>
+                <input class='invite' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;" placeholder="O nome do que vem do coração">
                 
-                <p class='l2' style="padding-top: 3vh;"> Nome Social*</p>
-                <input class='invite' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;">
-                
-                <p class='l2' style="padding-top: 3vh;"> Senha*</p>
+                <p class='l2' style="padding-top: 6vh;"> Senha<span style="color:#666">*</span></p>
                 <input class='invite' id='password' type="password" style="border-color: black; width: 100%; padding: 20px;">
                 
-                <p class='l2' style="padding-top: 3vh;"> Confirmar Senha*</p>
+                <p class='l2' style="padding-top: 6vh;"> Confirmar Senha<span style="color:#666">*</span></p>
                 <input class='invite' id='password_conf' type="password" style="border-color: black; width: 100%; padding: 20px;">
                 
-                <p class='l2' style="padding-top: 3vh;"> Telefone*</p>
+                <p class='l2' style="padding-top: 6vh;"> Telefone<span style="color:#666">*</span></p>
                 <input class='invite' id='telefone' type="text" style="border-color: black; width: 100%; padding: 20px;">
                 
-                <p class='l2' style="padding-top: 3vh;"> Aniversário*</p>
+                <p class='l2' style="padding-top: 6vh;"> Aniversário<span style="color:#666">*</span></p>
                 <input class='invite' id='birthday' type="date" style="border-color: black; width: 100%; padding: 20px;">
                 <div style="padding:10vh 0vh;">
                     <button class="button_orc button_av">Avançar</button>
@@ -88,49 +91,123 @@
             <p class='p3'>Agora só vamos dar à ela um pouquinho de alma. Para isso, comece nos contando um pouco sobre suas habilidades, os softwares com os quais você costuma executar seus projetos e com o que você gosta de trabalhar.
             <br><br><br></p>
             <div>            
-            <p class='l2'> Qual tipo de Climber você quer ser?*</p>
+            <p class='l2'> Qual tipo de Climber você quer ser?<span style="color:#666">*</span></p>
             <div style="    margin-right: 10px;">
-                <input  type="radio" name="gridRadios" id="gridRadios1" value="Ligação" checked>
+                <input  type="checkbox" name="gridRadios" id="gridRadios1" value="Ligação">
                 <label  for="gridRadios1">
                   Designer
                 </label>
               </div>
               <div>
-                <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
+                <input class="custom-control-input" type="checkbox" name="gridRadios" id="gridRadios2" value="WhatsApp">
                 <label  for="gridRadios2">
                   Ilustrador
                 </label>
               </div>
               <div>
-                <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
+                <input class="custom-control-input" type="checkbox" name="gridRadios" id="gridRadios2" value="WhatsApp">
                 <label  for="gridRadios2">
                   Fotógrafo
                 </label>
               </div>
             
-            <p class='l2' style="padding-top: 3vh;">Técnicas*</p>
-            <p class='p3' style="padding-bottom:5vh">Você pode escolher quantas opções quiser, mas pedimos para que só escolha os tipos de trabalho que compõe seu portfólio.</p>
-            <input class='invite' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;">
-            
-            <p class='l2' style="padding-top: 3vh;"> Etapas*</p>
-            <p class='p3' style="padding-bottom:5vh">Quais dessas etapas do processo você estaria disposta a executar pontualmente ou considera que tem mais domínio?</p>
-            <p class='h2'>DESIGN DE MARCA/IDENTIDADE VISUAL</p>
-            <p class='h2'>UX / UI</p>
+            <p class='l2' style="padding-top: 6vh;">Técnicas<span style="color:#666">*</span></p>
+            <p class='p3' style="padding-bottom:3vh">Você pode escolher quantas opções quiser, mas pedimos para que só escolha os tipos de trabalho que compõe seu portfólio.</p>
+            <div>
+                <p class="tagtext">Desing de Marca</p>
+                <p class="tagtext">Identidade Visual</p>
+                <p class="tagtext">UX/UI</p>
+                <p class="tagtext">Lettering</p>
+                <p class="tagtext">Tipografia</p>
+                <p class="tagtext">Diagramação</p>
+                <p class="tagtext">Ícones</p>
+                <p class="tagtext">Motion Design</p>
+                <p class="tagtext">Edição de Vídeo</p>
+                <p class="tagtext">Tratamento de Imagem</p>
+                <p class="tagtext">Colagem Digital</p>
+                <p class="tagtext">Produção de Conteúdo</p>
+                <p class="tagtext">Posts</p>
 
-            <p class='l2' style="padding-top: 3vh;"> Softwares*</p>
-            <p class='l2' style="padding-top: 3vh;">Estilo de Ilustração*</p>
-            <p class='p3' style="padding-bottom:5vh">Selecione abaixo os estilos de ilustração com os quais você esbanja talento.</p>
-            <p class='l2' style="padding-top: 3vh;"> Seu Portfólio*</p>
-                <input class='invite' id='portfolio' style="border-color: black; width: 100%; padding: 20px;">
+            </div>
+            <p class='l2' style="padding-top: 6vh;"> Etapas<span style="color:#666">*</span></p>
+            <p class='p3' style="padding-bottom:5vh">Quais dessas etapas do processo você estaria disposta a executar pontualmente ou considera que tem mais domínio?</p>
+            <p class='h2' style="padding-bottom:3vh">DESIGN DE MARCA/IDENTIDADE VISUAL</p>
+            <div id='idVisual_tags'>
+
+                <p class="tagtext">Criação de Id. Visual</p>
+                <p class="tagtext">Manual de Id. Visual</p>
+                <p class="tagtext">Mockup</p>
+                <p class="tagtext">Animação de Logotipo</p>
+                <p class="tagtext">Fechamento para Impressão</p>
+            </div>
+            <p class='h2' style="padding-bottom:3vh">UX / UI</p>
+            <div id='ux_tags'>
+
+                <p class="tagtext">Guia de Estilo</p>
+                <p class="tagtext">DesignSystem</p>
+                <p class="tagtext">Arquitetura de Informação</p>
+                <p class="tagtext">Wireframe</p>
+                <p class="tagtext">Prototipação</p>
+                <p class="tagtext">Ícones</p>
+                <p class="tagtext">Acessibilidade</p>
+                <p class="tagtext">Design de Interface</p>
+                <p class="tagtext">Teste de Usabilidade</p>
+            </div>
+            <p class='l2' style="padding-top: 6vh;">Estilo de Ilustração<span style="color:#666">*</span></p>
+            <p class='p3' style="padding-bottom:3vh">Selecione abaixo os estilos de ilustração com os quais você esbanja talento.</p>
             
-            <p class='l2' style="padding-top: 3vh;"> LinkedIn</p>
+            <div id='ux_tags'>
+
+                <p class="tagtext">3D</p>
+                <p class="tagtext">Abstrato</p>
+                <p class="tagtext">Aquarela</p>
+                <p class="tagtext">Cartoon</p>
+                <p class="tagtext">Doodle</p>
+                <p class="tagtext">Estampa</p>
+                <p class="tagtext">HQ</p>
+                <p class="tagtext">Papercut</p>
+                <p class="tagtext">Personagem</p>
+                <p class="tagtext">Pintura Digital</p>
+                <p class="tagtext">Pixel Art</p>
+                <p class="tagtext">Retrô</p>
+                <p class="tagtext">UX/UI</p>
+                <p class="tagtext">Outro</p>   
+            </div>
+
+            <p class='l2' style="padding-bottom:3vh;padding-top:6vh"> Softwares<span style="color:#666">*</span></p>
+            <div id='ux_tags'>
+
+                <p class="tagtext">Adobe Illustrator</p>
+                <p class="tagtext">CorelDraw</p>
+                <p class="tagtext">Adobe Photoshop</p>
+                <p class="tagtext">Adobe XD</p>
+                <p class="tagtext">Figma</p>
+                <p class="tagtext">Sketch</p>
+                <p class="tagtext">Lightroom</p>
+                <p class="tagtext">Adobe Premiere</p>
+                <p class="tagtext">Adobe AfterEffects</p>
+                <p class="tagtext">Adobe Dimension</p>
+                <p class="tagtext">Adobe InDesign</p>
+                <p class="tagtext">Adobe Animate</p>
+                <p class="tagtext">Adobe Fresco</p>
+                <p class="tagtext">Adobe Character Animator</p>   
+            </div>
+            
+            <p class='l2' style="padding-top: 6vh;"> Seu Portfólio<span style="color:#666">*</span></p>
                 <input class='invite' id='portfolio' style="border-color: black; width: 100%; padding: 20px;">
-            <p class='l2' style="padding-top: 3vh;"> Formação*</p>
+                <form action="/file-upload"
+                class="dropzone"
+                id="my-awesome-dropzone" style="margin-top:20px;min-height: 24px;
+                padding: 0px;"></form>
+            
+            <p class='l2' style="padding-top: 6vh;"> LinkedIn</p>
+                <input class='invite' id='portfolio' style="border-color: black; width: 100%; padding: 20px;">
+            <p class='l2' style="padding-top: 6vh;"> Formação<span style="color:#666">*</span></p>
             <p class='p3' style="padding-bottom:5vh">Formação, seja técnica ou acadêmica, não é um pré-requisito para a gente. Essa, como todas as perguntas a seguir, tem a simples função de entender melhor seu repertório.</p>
 
-                <p class='l2' style="padding-top: 3vh;"> Formação</p>
+                <p class='l2' style="padding-top: 6vh;"> Formação</p>
                 <input class='invite' id='curso' style="border-color: black; width: 100%; padding: 20px;">
-                <p class='l2' style="padding-top: 3vh;"> Nível</p>
+                <p class='l2' style="padding-top: 6vh;"> Nível</p>
                 <input class='invite' id='curso_nivel' style="border-color: black; width: 100%; padding: 20px;">
 
                 <div style="padding: 5vh 0;">
@@ -138,7 +215,7 @@
                     <label for="noformation"> Não tenho formação</label><br>
                 </div>
                     
-            <p class='l2' style="padding-top: 3vh;"> Qual é o seu Registro MEI?*</p>
+            <p class='l2' style="padding-top: 6vh;"> Qual é o seu Registro MEI?<span style="color:#666">*</span></p>
             <input class='invite' id='password_conf' type="password" style="border-color: black; width: 100%; padding: 20px;">
             <div style="padding: 5vh 0;">
                 <input type="checkbox" id="noformation" name="noformation" value="No_Formation">
@@ -164,26 +241,60 @@
             
         <br><br><br></p>
         <div>            
-        <p class='l2'> Onde você nasceu?*</p>
+        <p class='l2'> Onde você nasceu?<span style="color:#666">*</span></p>
         <input class='invite' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;">
         
-        <p class='l2' style="padding-top: 3vh;"> Onde você mora e/ou já morou?*</p>
-        <input class='invite' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;">
+        <p class='l2' style="padding-top: 6vh;"> Onde você mora e/ou já morou?<span style="color:#666">*</span></p>
+        <select multiple id="places_old" class="invite select2tags" style="width: 100%;" ph="Responsables"></select>
         
-        <p class='l2' style="padding-top: 3vh;"> Quem mora com você?*</p>
-        <p class='p2'>Tags</p>
+        <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Quem mora com você?<span style="color:#666">*</span></p>
+        <div id='ux_family'>
 
-        <p class='l2' style="padding-top: 3vh;"> Gênero*</p>
+            <p class="tagtext">Me, myself and I</p>
+            <p class="tagtext">Mãe</p>
+            <p class="tagtext">Pai</p>
+            <p class="tagtext">Irmã(o)</p>
+            <p class="tagtext">Marido</p>
+            <p class="tagtext">Mulher</p>
+            <p class="tagtext">Namorada</p>
+            <p class="tagtext">Namorado</p>
+            <p class="tagtext">Avós</p>
+            <p class="tagtext">Tios</p>
+            <p class="tagtext">Amigo(a)</p>
+            <p class="tagtext">Outro</p>  
+        </div>
+        <p class='l2' style="padding-top: 6vh;"> Gênero<span style="color:#666">*</span></p>
         <input class='invite' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;">
         
-        <p class='l2' style="padding-top: 3vh;"> Estado Civil*</p>
+        <p class='l2' style="padding-top: 6vh;"> Estado Civil<span style="color:#666">*</span></p>
         <input class='invite' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;">
         
-        <p class='l2' style="padding-top: 3vh;"> Você tem filhos? Se sim, qual a faixa etária?*</p>
-        <p class='p2'>Tags</p>
+        <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Você tem filhos? Se sim, qual a faixa etária?<span style="color:#666">*</span></p>
+        <div id='ux_family'>
 
-        <p class='l2' style="padding-top: 3vh;"> Ei, pet também é filho... Você tem? Se sim, qual?*</p>
-        <p class='p2'>Tags</p>
+            <p class="tagtext">Não tenho filhos</p>
+            <p class="tagtext">Recém-nascido</p>
+            <p class="tagtext">Bebê</p>
+            <p class="tagtext">Criança</p>
+            <p class="tagtext">Pré-adolescente</p>
+            <p class="tagtext">Adolescente</p>
+            <p class="tagtext">+18</p>  
+        </div>
+
+        <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Ei, pet também é filho... Você tem? Se sim, qual?<span style="color:#666">*</span></p>
+        <div id='ux_pet'>
+
+            <p class="tagtext">Não 😪</p>
+            <p class="tagtext">Cachorro 🐶</p>
+            <p class="tagtext">Gato 🐱</p>
+            <p class="tagtext">Peixe 🐟</p>
+            <p class="tagtext">Pássaro 🐥</p>
+            <p class="tagtext">Hamster 🐹</p>
+            <p class="tagtext">Coelho 🐇</p>
+            <p class="tagtext">Cavalo 🐴</p>
+            <p class="tagtext">Tartaruga 🐢</p>
+            <p class="tagtext">Outro 🦄</p>  
+        </div>
         <div style="padding:10vh 0vh;">
             <button class="button_orc button_av">Avançar</button>
         
@@ -200,22 +311,71 @@
 
     <br><br><br></p>
     <div>            
-    <p class='l2'> Para você, o que é sucesso?*</p>
+    <p class='l2'> Para você, o que é sucesso?<span style="color:#666">*</span></p>
     <textarea class="invite" id="formNeed" rows="10" style="border-color: black; width: 100%; padding: 20px;display: block;border-width: 2px;"></textarea>
     
-    <p class='l2' style="padding-top: 3vh;"> Escolha 2 dos temas que você mais gosta*</p>
-    <p class='p2'>Tags</p>
+    <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Escolha 2 dos temas que você mais gosta<span style="color:#666">*</span></p>
+    <div id='ux_likes'>
 
-    <p class='l2' style="padding-top: 3vh;"> Você não consome algum dos alimentos abaixo?*</p>
-    <p class='p2'>Tags</p>
+        <p class="tagtext">Arte 🖌</p>
+        <p class="tagtext">Ciência 🔬</p>
+        <p class="tagtext">Cinema</p>
+        <p class="tagtext">Culinária 🍴</p>
+        <p class="tagtext">Educação 📚</p>
+        <p class="tagtext">Espiritualidade 😌</p>
+        <p class="tagtext">Finanças 💸</p>
+        <p class="tagtext">Moda</p>
+        <p class="tagtext">Negócios 📋</p>
+        <p class="tagtext">Saúde ❤</p>
+        <p class="tagtext">Sociologia</p>
+        <p class="tagtext">Sustentabilidade 🌳</p>
+        <p class="tagtext">Tecnologia 💡</p>  
+    </div>
+
+    <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Você não consome algum dos alimentos abaixo?<span style="color:#666">*</span></p>
+    <div id='ux_foods'>
+
+        <p class="tagtext">Como TUDO!</p>
+        <p class="tagtext">Como, mas com moderação #fit</p>
+        <p class="tagtext">Lactose 🥛 </p>
+        <p class="tagtext">Glúten 🍞</p>
+        <p class="tagtext">Carne 🍗 </p>
+        <p class="tagtext">Origem Animal 🧀</p>
+        <p class="tagtext">Açúcar 🍭</p>
+        <p class="tagtext">Gordura 🍟</p>
+        <p class="tagtext">Frutos do Mar 🐙</p>
+        <p class="tagtext">Junk food 🌭</p>
+        <p class="tagtext">Sushi 🍣</p>
+        <p class="tagtext">Frutas 🍌</p>
+        <p class="tagtext">Salada 🥗</p> 
+        <p class="tagtext">Industrializados</p>
+        <p class="tagtext">Álcool 🍷</p> 
+    </div>
 
 
-    <p class='l2' style="padding-top: 3vh;"> Quais meios de locomoção você costuma usar?*</p>
-    <p class='p2'>Tags</p>
+    <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Quais meios de locomoção você costuma usar?<span style="color:#666">*</span></p>
+    <div id='ux_move'>
 
-    <p class='l2' style="padding-top: 3vh;"> Com que frequência você compra online?</p>
+        <p class="tagtext">Caminhada 👟</p>
+        <p class="tagtext">Cadeira de Rodas </p>
+        <p class="tagtext">Barco 🚤 </p>
+        <p class="tagtext">Bicicleta 🚲</p>
+        <p class="tagtext">Skate  </p>
+        <p class="tagtext">Patinete 🛴</p>
+        <p class="tagtext">Moto 🛵</p>
+        <p class="tagtext">Carro 🚗</p>
+        <p class="tagtext">Uber 🚘 </p>
+        <p class="tagtext">Táxi 🚖</p>
+        <p class="tagtext">Ônibus 🚌</p>
+        <p class="tagtext">Metrô 🚇</p>
+        <p class="tagtext">Avião ✈</p> 
+        <p class="tagtext">Cavalo 🐎</p>
+        <p class="tagtext">Outro 🚀</p> 
+    </div>
+
+    <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Com que frequência você compra online?</p>
     <div style="display: block;">
-    <div style="padding-bottom:2vh">
+    <div>
         <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
         <label  for="gridRadios2" style="padding-right: 30%;">
             Nunca
@@ -242,35 +402,35 @@
 
 
     
-    <p class='l2' style="padding-top: 3vh;"> Com que frequência você costuma comprar produtos artesanais?*</p>
+    <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Com que frequência você costuma comprar produtos artesanais?<span style="color:#666">*</span></p>
 
     <div style="display: block;">
-        <div style="padding-bottom:2vh">
+        <div>
             <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
-            <label  for="gridRadios2" style="padding-right: 30%;">
+            <label  class='p3' style='font-size:16px' for="gridRadios2" style="padding-right: 30%;">
                 Nunca
             </label>
     
             <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
-            <label  for="gridRadios2">
+            <label class='p3' style='font-size:16px' for="gridRadios2">
                 Raramente
             </label>
         </div>
         <div>
             <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
-            <label  for="gridRadios2" style="padding-right: 26.8%;">
+            <label class='p3' style='font-size:16px'  for="gridRadios2" style="padding-right: 26.8%;">
                 Às vezes
             </label>
     
             <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
-            <label  for="gridRadios2">
+            <label class='p3' style='font-size:16px'  for="gridRadios2">
                 Sempre
             </label>
         </div>
         </div>
 
 
-    <p class='l2' style="padding-top: 3vh;"> Com que frequência você faz as compras de mercado na sua casa?*</p>
+    <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Com que frequência você faz as compras de mercado na sua casa?<span style="color:#666">*</span></p>
 
     <div style="display: block;">
         <div style="padding-bottom:2vh">
@@ -298,28 +458,96 @@
         </div>
 
         
-    <p class='l2' style="padding-top: 3vh;"> Mais ou menos quantos dias por semana você pede delivery?*</p>
-    <p class='p2'>Linha</p>
+    <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Mais ou menos quantos dias por semana você pede delivery?<span style="color:#666">*</span></p>
+    <div class="numbers_line">
+        <p class='number_line select_line' style="padding-left: 0;">0</p>
+        <p class='number_line select_line'>1</p>
+        <p class='number_line'>2</p>
+        <p class='number_line'>3</p>
+        <p class='number_line'>4</p>
+        <p class='number_line'>5</p>
+        <p class='number_line'>6</p>
+        <p class='number_line' style="padding-right: 0;">7</p>
+    </div>
+    <div class="progress_backline">
+        <div class="progress_line" style="width:25%"></div>
+    </div>
 
-    <p class='l2' style="padding-top: 3vh;"> Mais ou menos quantos dias por semana você se exercita?*</p>
-    <p class='p2'>Linha</p>
+    <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Mais ou menos quantos dias por semana você se exercita?<span style="color:#666">*</span></p>
+    <div class="numbers_line">
+        <p class='number_line select_line' style="padding-left: 0;">0</p>
+        <p class='number_line select_line'>1</p>
+        <p class='number_line'>2</p>
+        <p class='number_line'>3</p>
+        <p class='number_line'>4</p>
+        <p class='number_line'>5</p>
+        <p class='number_line'>6</p>
+        <p class='number_line' style="padding-right: 0;">7</p>
+    </div>
+    <div class="progress_backline">
+        <div class="progress_line" style="width:25%"></div>
+    </div>
 
-    <p class='l2' style="padding-top: 3vh;"> E como você costuma mexer esse esqueleto?*</p>
-    <p class='p2'>Tags</p>
+    <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> E como você costuma mexer esse esqueleto?<span style="color:#666">*</span></p>
+    <div id='ux_move'>
 
-    <p class='l2' style="padding-top: 3vh;">Insira o @ de até três personalidades que mais te influenciam digitalmente:*</p>
+        <p class="tagtext">Nenhuma</p>
+        <p class="tagtext">Basquete 🏀</p>
+        <p class="tagtext">Capoeira</p>
+        <p class="tagtext">Ciclismo </p>
+        <p class="tagtext">Caminhada  </p>
+        <p class="tagtext">Corrida 👟</p>
+        <p class="tagtext">Crossfit   </p>
+        <p class="tagtext">Dança 💃</p>
+        <p class="tagtext">Escalada</p>
+        <p class="tagtext">Futebol ⚽</p>
+        <p class="tagtext">Ginástica</p>
+        <p class="tagtext">Handebol</p>
+        <p class="tagtext">Hipismo</p> 
+        <p class="tagtext">Levantamento de Copo 🍺</p>
+        <p class="tagtext">Lutas 🥋</p> 
+        <p class="tagtext">Musculação 💪</p> 
+        <p class="tagtext">Mergulho</p> 
+        <p class="tagtext">Natação</p> 
+        <p class="tagtext">Patinação</p> 
+        <p class="tagtext">Pilates</p>  
+        <p class="tagtext">Pole dance</p>  
+        <p class="tagtext">Pipa</p>  
+        <p class="tagtext">Remo</p>  
+        <p class="tagtext">Slackline</p>  
+        <p class="tagtext">Surf  </p>  
+        <p class="tagtext">Tenis 🎾</p> 
+        <p class="tagtext">Beach Tennis 🎾</p>  
+        <p class="tagtext">Volei 🏐  </p>  
+        <p class="tagtext">Yoga 👌</p> 
+    </div>
+
+    <p class='l2' style="padding-top: 6vh;">Insira o @ de até três personalidades que mais te influenciam digitalmente:<span style="color:#666">*</span></p>
     <input class='invite' id='password_conf' type="password" style="border-color: black; width: 100%; padding: 20px;">
             
-    <p class='l2' style="padding-top: 3vh;"> Quais são suas redes sociais preferidas?*</p>
-    <p class='p2'>Tags</p>
+    <p class='l2' style="padding-top: 6vh;;padding-bottom: 3vh;"> Quais são suas redes sociais preferidas?<span style="color:#666">*</span></p>
+    <div id='ux_social'>
 
-    <p class='l2' style="padding-top: 3vh;">Cite os perfis, canais ou sites aos quais você mais recorre para se informar sobre o mundo?* </p>
+        <p class="tagtext">Facebook</p>
+        <p class="tagtext">Instagram</p>
+        <p class="tagtext">LinkedIn</p>
+        <p class="tagtext">Medium</p>
+        <p class="tagtext">Soundcloud</p>
+        <p class="tagtext">TikTok</p>
+        <p class="tagtext">Twitter</p>
+        <p class="tagtext">Tinder</p>
+        <p class="tagtext">Clubhouse</p>
+        <p class="tagtext">Outra</p>
+    </div>
+
+    <p class='l2' style="padding-top: 6vh;">Cite os perfis, canais ou sites aos quais você mais recorre para se informar sobre o mundo?<span style="color:#666">*</span> </p>
     <input class='invite' id='password_conf' type="password" style="border-color: black; width: 100%; padding: 20px;">
      
 
 
     <div style="padding:10vh 0vh;">
-        <button class="button_orc button_finish">Concluir</button>
+        <button class="button_orc button_finish">Voltar</button>
+        <button style='float:right' class="button_orc button_finish">Concluir</button>
     
     </div>
     </div>
@@ -344,26 +572,14 @@
               <button type="button" class="close exit" data-dismiss="modal">&times;</button>
             </div>
             <div style="padding-left: 12%;padding-right: 12%;">
-                <p class="h1">It’s done, Climber!<br><br></p>
-                <p class="p3 firstSession">Você já faz parte da nossa comunidade. Agora temos um convite: como a Andes preza pela relação humana, gostaríamos de fazer um Call e bater um papo com você. O que acha? 
+                <p class="h1">Você é um Climber!<br><br></p>
+                <p class="p3 firstSession">Sua conta está criada e em breve entraremos em contato com você pelo Whatsapp para nos conhecermos um pouco melhor. Enquanto isso, conheça a nossa cordilheira! 
                   <br><br>
               </p>
-              <div style="padding-bottom:2vh">
-                <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
-                <label  for="gridRadios2" style="padding-right: 30%;">
-                    Legal, me chama no Whats e vamos combinar!
-                </label>
-            </div>
-            <div>
-                <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
-                <label  for="gridRadios2" style="padding-right: 26.8%;">
-                    Prefiro conversar só por texto!
-                </label>
-            </div>
             </div>
 
             <div class="firstSession" style="padding-left: 12%;padding-top: 10vh;">
-              <button id='ok_button' type="button" class="btn btn-dark button_orc okbut" data-dismiss="modal">ENVIAR</button>
+              <button id='ok_button' type="button" class="btn btn-dark button_orc okbut" data-dismiss="modal">ENTRAR</button>
             </div>
 
 
@@ -378,5 +594,10 @@
 <script src="..\js\tabs.js"></script>
 <script>
     $("#nav_about").addClass('actual')
+    $('.select2tags').select2({
+    placeholder: this.ph,
+    tags: true
+});
 </script>
 <script src="./js/register.js"></script> 
+<script src="./js/dropzone.js"></script> 

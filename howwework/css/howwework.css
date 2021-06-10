@@ -24,5 +24,18 @@
   background-size:     contain;                      /* <------ */
   background-repeat:   no-repeat;
   background-position: center center;              /* optional, center the image */
+  margin-top: 4vh;
+}
+
+@media (max-width: 1000px) {
+  .banner_main_howwework{
+    background-color: #000;
+    background-image: url("../images/banner_main.png");
+    height: 40vh;
+    background-size:     contain;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;              /* optional, center the image */
+    margin-top: 4vh;
+  }
 
 }

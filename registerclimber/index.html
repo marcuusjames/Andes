@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
@@ -60,23 +60,28 @@
                 <br><br><br></p>
                 <div>
                 <p class='h2'>Complete seu cadastro<br><br><br></p>
-                <p class='l2'> Seu nome<span style="color:#666">*</span></p>
-                <input class='invite' id='name' type="text" style="border-color: black; width: 100%; padding: 20px;" placeholder="O nome que vem no RG">
+
+                <p class='l2'> E-mail<span style="color:#666">*</span></p>
+                <input class='textfield invite requiredfield' id='email' type="email" style="border-color: black; width: 100%; padding: 20px;" placeholder="Seu e-mail para nos falarmos    ">
+                
+                
+                <p class='l2' style="padding-top: 6vh;"> Seu nome<span style="color:#666">*</span></p>
+                <input class='textfield invite requiredfield' id='name' type="text" style="border-color: black; width: 100%; padding: 20px;" placeholder="O nome que vem no RG">
                 
                 <p class='l2' style="padding-top: 6vh;"> Nome Social<span style="color:#666">*</span></p>
-                <input class='invite' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;" placeholder="O nome do que vem do coração">
+                <input class='textfield invite requiredfield' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;" placeholder="O nome do que vem do coração">
                 
                 <p class='l2' style="padding-top: 6vh;"> Senha<span style="color:#666">*</span></p>
-                <input class='invite' id='password' type="password" style="border-color: black; width: 100%; padding: 20px;">
+                <input class='textfield invite requiredfield' id='password' type="password" style="border-color: black; width: 100%; padding: 20px;">
                 
                 <p class='l2' style="padding-top: 6vh;"> Confirmar Senha<span style="color:#666">*</span></p>
-                <input class='invite' id='password_conf' type="password" style="border-color: black; width: 100%; padding: 20px;">
+                <input class='invite requiredfield' id='password_conf' type="password" style="border-color: black; width: 100%; padding: 20px;">
                 
                 <p class='l2' style="padding-top: 6vh;"> Telefone<span style="color:#666">*</span></p>
-                <input class='invite' id='telefone' type="text" style="border-color: black; width: 100%; padding: 20px;">
+                <input class='textfield invite requiredfield' id='telefone' type="text" style="border-color: black; width: 100%; padding: 20px;">
                 
                 <p class='l2' style="padding-top: 6vh;"> Aniversário<span style="color:#666">*</span></p>
-                <input class='invite' id='birthday' type="date" style="border-color: black; width: 100%; padding: 20px;">
+                <input class='datefield invite requiredfield' id='birthday' type="date" style="border-color: black; width: 100%; padding: 20px;">
                 <div style="padding:10vh 0vh;">
                     <button class="button_orc button_av">Avançar</button>
                 
@@ -90,30 +95,31 @@
             <br><br>
             <p class='p3'>Agora só vamos dar à ela um pouquinho de alma. Para isso, comece nos contando um pouco sobre suas habilidades, os softwares com os quais você costuma executar seus projetos e com o que você gosta de trabalhar.
             <br><br><br></p>
-            <div>            
-            <p class='l2'> Qual tipo de Climber você quer ser?<span style="color:#666">*</span></p>
-            <div style="    margin-right: 10px;">
-                <input  type="checkbox" name="gridRadios" id="gridRadios1" value="Ligação">
-                <label  for="gridRadios1">
-                  Designer
-                </label>
-              </div>
-              <div>
-                <input class="custom-control-input" type="checkbox" name="gridRadios" id="gridRadios2" value="WhatsApp">
-                <label  for="gridRadios2">
-                  Ilustrador
-                </label>
-              </div>
-              <div>
-                <input class="custom-control-input" type="checkbox" name="gridRadios" id="gridRadios2" value="WhatsApp">
-                <label  for="gridRadios2">
-                  Fotógrafo
-                </label>
-              </div>
-            
+            <div>
+            <div id="typeclimber">            
+                <p class='l2'> Qual tipo de Climber você quer ser?<span style="color:#666">*</span></p>
+                <div style="margin-right: 10px;">
+                    <input  type="checkbox" name="gridRadios" id="designer" value="Ligação">
+                    <label  for="designer">
+                    Designer
+                    </label>
+                </div>
+                <div>
+                    <input class="custom-control-input" type="checkbox" name="gridRadios" id="ilustrador" value="WhatsApp">
+                    <label  for="ilustrador">
+                    Ilustrador
+                    </label>
+                </div>
+                <div>
+                    <input class="custom-control-input" type="checkbox" name="gridRadios" id="fotografo" value="WhatsApp">
+                    <label  for="fotografo">
+                    Fotógrafo
+                    </label>
+                </div>
+            </div>
             <p class='l2' style="padding-top: 6vh;">Técnicas<span style="color:#666">*</span></p>
             <p class='p3' style="padding-bottom:3vh">Você pode escolher quantas opções quiser, mas pedimos para que só escolha os tipos de trabalho que compõe seu portfólio.</p>
-            <div>
+            <div id='tecnicas' class="tagsfield">
                 <p class="tagtext">Desing de Marca</p>
                 <p class="tagtext">Identidade Visual</p>
                 <p class="tagtext">UX/UI</p>
@@ -132,16 +138,16 @@
             <p class='l2' style="padding-top: 6vh;"> Etapas<span style="color:#666">*</span></p>
             <p class='p3' style="padding-bottom:5vh">Quais dessas etapas do processo você estaria disposta a executar pontualmente ou considera que tem mais domínio?</p>
             <p class='h2' style="padding-bottom:3vh">DESIGN DE MARCA/IDENTIDADE VISUAL</p>
-            <div id='idVisual_tags'>
+            <div id='IdvisTags' class="tagsfield">
 
-                <p class="tagtext">Criação de Id. Visual</p>
-                <p class="tagtext">Manual de Id. Visual</p>
+                <p class="tagtext">Criação de Id Visual</p>
+                <p class="tagtext">Manual de Id Visual</p>
                 <p class="tagtext">Mockup</p>
                 <p class="tagtext">Animação de Logotipo</p>
                 <p class="tagtext">Fechamento para Impressão</p>
             </div>
             <p class='h2' style="padding-bottom:3vh">UX / UI</p>
-            <div id='ux_tags'>
+            <div id='uxTags' class="tagsfield">
 
                 <p class="tagtext">Guia de Estilo</p>
                 <p class="tagtext">DesignSystem</p>
@@ -156,7 +162,7 @@
             <p class='l2' style="padding-top: 6vh;">Estilo de Ilustração<span style="color:#666">*</span></p>
             <p class='p3' style="padding-bottom:3vh">Selecione abaixo os estilos de ilustração com os quais você esbanja talento.</p>
             
-            <div id='ux_tags'>
+            <div id='ilustrationTags' class="tagsfield">
 
                 <p class="tagtext">3D</p>
                 <p class="tagtext">Abstrato</p>
@@ -175,7 +181,7 @@
             </div>
 
             <p class='l2' style="padding-bottom:3vh;padding-top:6vh"> Softwares<span style="color:#666">*</span></p>
-            <div id='ux_tags'>
+            <div id='softwaresTags' class="tagsfield">
 
                 <p class="tagtext">Adobe Illustrator</p>
                 <p class="tagtext">CorelDraw</p>
@@ -194,32 +200,32 @@
             </div>
             
             <p class='l2' style="padding-top: 6vh;"> Seu Portfólio<span style="color:#666">*</span></p>
-                <input class='invite' id='portfolio' style="border-color: black; width: 100%; padding: 20px;">
+                <input class='textfield invite' id='portfolio' style="border-color: black; width: 100%; padding: 20px;">
                 <form action="/file-upload"
                 class="dropzone"
                 id="my-awesome-dropzone" style="margin-top:20px;min-height: 24px;
                 padding: 0px;"></form>
             
             <p class='l2' style="padding-top: 6vh;"> LinkedIn</p>
-                <input class='invite' id='portfolio' style="border-color: black; width: 100%; padding: 20px;">
+                <input class='textfield invite' id='linkedin' style="border-color: black; width: 100%; padding: 20px;">
             <p class='l2' style="padding-top: 6vh;"> Formação<span style="color:#666">*</span></p>
             <p class='p3' style="padding-bottom:5vh">Formação, seja técnica ou acadêmica, não é um pré-requisito para a gente. Essa, como todas as perguntas a seguir, tem a simples função de entender melhor seu repertório.</p>
 
                 <p class='l2' style="padding-top: 6vh;"> Formação</p>
-                <input class='invite' id='curso' style="border-color: black; width: 100%; padding: 20px;">
+                <input class='textfield invite' id='curso' style="border-color: black; width: 100%; padding: 20px;">
                 <p class='l2' style="padding-top: 6vh;"> Nível</p>
-                <input class='invite' id='curso_nivel' style="border-color: black; width: 100%; padding: 20px;">
+                <input class='textfield invite' id='curso_nivel' style="border-color: black; width: 100%; padding: 20px;">
 
                 <div style="padding: 5vh 0;">
-                    <input type="checkbox" id="noformation" name="noformation" value="No_Formation">
+                    <input class="inputfield" type="checkbox" id="noformation" name="noformation" value="No_Formation">
                     <label for="noformation"> Não tenho formação</label><br>
                 </div>
                     
             <p class='l2' style="padding-top: 6vh;"> Qual é o seu Registro MEI?<span style="color:#666">*</span></p>
-            <input class='invite' id='password_conf' type="password" style="border-color: black; width: 100%; padding: 20px;">
+            <input class='textfield invite' id='mei' type="text" style="border-color: black; width: 100%; padding: 20px;">
             <div style="padding: 5vh 0;">
-                <input type="checkbox" id="noformation" name="noformation" value="No_Formation">
-                <label for="noformation"> Não tenho formação</label><br>
+                <input class="inputfield" type="checkbox" id="nomei" name="nomei" value="No_MEI">
+                <label for="nomei"> Não tenho MEI</label><br>
             </div>
 
 
@@ -242,13 +248,13 @@
         <br><br><br></p>
         <div>            
         <p class='l2'> Onde você nasceu?<span style="color:#666">*</span></p>
-        <input class='invite' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;">
+        <input class='textfield invite' id='birthtown' type="text" style="border-color: black; width: 100%; padding: 20px;">
         
         <p class='l2' style="padding-top: 6vh;"> Onde você mora e/ou já morou?<span style="color:#666">*</span></p>
-        <select multiple id="places_old" class="invite select2tags" style="width: 100%;" ph="Responsables"></select>
+        <select multiple id="places_old" class="invite select2tags" style="width: 100%;" ph=""></select>
         
         <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Quem mora com você?<span style="color:#666">*</span></p>
-        <div id='ux_family'>
+        <div id='familyTags' class="tagsfield">
 
             <p class="tagtext">Me, myself and I</p>
             <p class="tagtext">Mãe</p>
@@ -264,13 +270,13 @@
             <p class="tagtext">Outro</p>  
         </div>
         <p class='l2' style="padding-top: 6vh;"> Gênero<span style="color:#666">*</span></p>
-        <input class='invite' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;">
+        <input class='invite' id='gender' type="text" style="border-color: black; width: 100%; padding: 20px;">
         
         <p class='l2' style="padding-top: 6vh;"> Estado Civil<span style="color:#666">*</span></p>
-        <input class='invite' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;">
+        <input class='invite' id='marital_status' type="text" style="border-color: black; width: 100%; padding: 20px;">
         
         <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Você tem filhos? Se sim, qual a faixa etária?<span style="color:#666">*</span></p>
-        <div id='ux_family'>
+        <div id='filhosTags' class="tagsfield">
 
             <p class="tagtext">Não tenho filhos</p>
             <p class="tagtext">Recém-nascido</p>
@@ -282,7 +288,7 @@
         </div>
 
         <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Ei, pet também é filho... Você tem? Se sim, qual?<span style="color:#666">*</span></p>
-        <div id='ux_pet'>
+        <div id='petTags' class="tagsfield">
 
             <p class="tagtext">Não 😪</p>
             <p class="tagtext">Cachorro 🐶</p>
@@ -312,10 +318,10 @@
     <br><br><br></p>
     <div>            
     <p class='l2'> Para você, o que é sucesso?<span style="color:#666">*</span></p>
-    <textarea class="invite" id="formNeed" rows="10" style="border-color: black; width: 100%; padding: 20px;display: block;border-width: 2px;"></textarea>
+    <textarea class="textfield invite" id="formNeed" rows="10" style="border-color: black; width: 100%; padding: 20px;display: block;border-width: 2px;"></textarea>
     
     <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Escolha 2 dos temas que você mais gosta<span style="color:#666">*</span></p>
-    <div id='ux_likes'>
+    <div id='likesTags' class="tagsfield">
 
         <p class="tagtext">Arte 🖌</p>
         <p class="tagtext">Ciência 🔬</p>
@@ -333,7 +339,7 @@
     </div>
 
     <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Você não consome algum dos alimentos abaixo?<span style="color:#666">*</span></p>
-    <div id='ux_foods'>
+    <div id='foodsTags' class="tagsfield">
 
         <p class="tagtext">Como TUDO!</p>
         <p class="tagtext">Como, mas com moderação #fit</p>
@@ -354,7 +360,7 @@
 
 
     <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Quais meios de locomoção você costuma usar?<span style="color:#666">*</span></p>
-    <div id='ux_move'>
+    <div id='moveTags' class="tagsfield">
 
         <p class="tagtext">Caminhada 👟</p>
         <p class="tagtext">Cadeira de Rodas </p>
@@ -374,26 +380,26 @@
     </div>
 
     <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Com que frequência você compra online?</p>
-    <div style="display: block;">
+    <div style="display: block;" class="radiofield" id='shopRadios_'>
     <div>
-        <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
-        <label  for="gridRadios2" style="padding-right: 30%;">
+        <input class="custom-control-input" type="radio" name="shopRadios" id="shopRadios" value="nunca" >
+        <label  for="shopRadios" style="padding-right: 30%;">
             Nunca
         </label>
 
-        <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
-        <label  for="gridRadios2">
+        <input class="custom-control-input" type="radio" name="shopRadios" id="shopRadios" value="raramente">
+        <label  for="shopRadios">
             Raramente
         </label>
     </div>
     <div>
-        <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
-        <label  for="gridRadios2" style="padding-right: 26.8%;">
+        <input class="custom-control-input" type="radio" name="shopRadios" id="shopRadios" value="sometimes" >
+        <label  for="shopRadios" style="padding-right: 26.8%;">
             Às vezes
         </label>
 
-        <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
-        <label  for="gridRadios2">
+        <input class="custom-control-input" type="radio" name="shopRadios" id="shopRadios" value="sempre">
+        <label  for="shopRadios">
             Sempre
         </label>
     </div>
@@ -404,25 +410,25 @@
     
     <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Com que frequência você costuma comprar produtos artesanais?<span style="color:#666">*</span></p>
 
-    <div style="display: block;">
+    <div style="display: block;" class="radiofield" id='manualRadio_'>
         <div>
-            <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
+            <input class="custom-control-input" type="radio" name="manualRadio" id="gridRadios2" value="nunca" >
             <label  class='p3' style='font-size:16px' for="gridRadios2" style="padding-right: 30%;">
                 Nunca
             </label>
     
-            <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
+            <input class="custom-control-input" type="radio" name="manualRadio" id="gridRadios2" value="raramente">
             <label class='p3' style='font-size:16px' for="gridRadios2">
                 Raramente
             </label>
         </div>
         <div>
-            <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
+            <input class="custom-control-input" type="radio" name="manualRadio" id="gridRadios2" value="sometimes" >
             <label class='p3' style='font-size:16px'  for="gridRadios2" style="padding-right: 26.8%;">
                 Às vezes
             </label>
     
-            <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
+            <input class="custom-control-input" type="radio" name="manualRadio" id="gridRadios2" value="sempre">
             <label class='p3' style='font-size:16px'  for="gridRadios2">
                 Sempre
             </label>
@@ -432,25 +438,25 @@
 
     <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Com que frequência você faz as compras de mercado na sua casa?<span style="color:#666">*</span></p>
 
-    <div style="display: block;">
+    <div style="display: block;" class="radiofield" id="marketRadio_">
         <div style="padding-bottom:2vh">
-            <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
+            <input class="custom-control-input" type="radio" name="marketRadio" id="gridRadios2" value="nunca" >
             <label  for="gridRadios2" style="padding-right: 30%;">
                 Nunca
             </label>
     
-            <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
+            <input class="custom-control-input" type="radio" name="marketRadio" id="gridRadios2" value="raramente">
             <label  for="gridRadios2">
                 Raramente
             </label>
         </div>
         <div>
-            <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp" >
+            <input class="custom-control-input" type="radio" name="marketRadio" id="gridRadios2" value="sometimes" >
             <label  for="gridRadios2" style="padding-right: 26.8%;">
                 Às vezes
             </label>
     
-            <input class="custom-control-input" type="radio" name="gridRadios" id="gridRadios2" value="WhatsApp">
+            <input class="custom-control-input" type="radio" name="marketRadio" id="gridRadios2" value="sempre">
             <label  for="gridRadios2">
                 Sempre
             </label>
@@ -459,8 +465,8 @@
 
         
     <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Mais ou menos quantos dias por semana você pede delivery?<span style="color:#666">*</span></p>
-    <div class="numbers_line">
-        <p class='number_line select_line' style="padding-left: 0;">0</p>
+    <div class="numbers_line" id='deliveryNum'>
+        <p class='number_line select_line' id='testeline' style="padding-left: 0;">0</p>
         <p class='number_line select_line'>1</p>
         <p class='number_line'>2</p>
         <p class='number_line'>3</p>
@@ -489,7 +495,7 @@
     </div>
 
     <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> E como você costuma mexer esse esqueleto?<span style="color:#666">*</span></p>
-    <div id='ux_move'>
+    <div id='sportsTags' class="tagsfield">
 
         <p class="tagtext">Nenhuma</p>
         <p class="tagtext">Basquete 🏀</p>
@@ -523,10 +529,10 @@
     </div>
 
     <p class='l2' style="padding-top: 6vh;">Insira o @ de até três personalidades que mais te influenciam digitalmente:<span style="color:#666">*</span></p>
-    <input class='invite' id='password_conf' type="password" style="border-color: black; width: 100%; padding: 20px;">
-            
+    <select multiple id="personas" class="invite select2tags" style="width: 100%;" ph=""></select>
+               
     <p class='l2' style="padding-top: 6vh;;padding-bottom: 3vh;"> Quais são suas redes sociais preferidas?<span style="color:#666">*</span></p>
-    <div id='ux_social'>
+    <div id='socialmediasTags' class="tagsfield">
 
         <p class="tagtext">Facebook</p>
         <p class="tagtext">Instagram</p>
@@ -541,7 +547,7 @@
     </div>
 
     <p class='l2' style="padding-top: 6vh;">Cite os perfis, canais ou sites aos quais você mais recorre para se informar sobre o mundo?<span style="color:#666">*</span> </p>
-    <input class='invite' id='password_conf' type="password" style="border-color: black; width: 100%; padding: 20px;">
+    <select multiple id="perfis" class="invite select2tags" style="width: 100%;" ph=""></select>
      
 
 
@@ -579,7 +585,7 @@
             </div>
 
             <div class="firstSession" style="padding-left: 12%;padding-top: 10vh;">
-              <button id='ok_button' type="button" class="btn btn-dark button_orc okbut" data-dismiss="modal">ENTRAR</button>
+              <button id='ok_button' type="button" class="btn btn-dark button_orc homebut" data-dismiss="modal">VOLTAR PARA HOME</button>
             </div>
 
 

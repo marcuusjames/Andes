@@ -935,3 +935,21 @@ input {
   border: 1px solid transparent;
   border-radius: 0px;
 }
+
+input{
+  border-color: #000;
+  box-shadow: 0px;
+  border-radius: 0px;
+  outline: 0 none;
+  border-width: 2px;
+  padding: 20px;
+}
+
+.inputAndes{
+  border-color: #000;
+  box-shadow: 0px;
+  border-radius: 0px;
+  outline: 0 none;
+  border-width: 2px;
+  padding: 20px;
+}

@@ -273,7 +273,8 @@ figure {
   line-height: 27px;
   text-align: center;
   text-decoration:underline;
-  color:#C5C5C5
+  color:#C5C5C5;
+  cursor: pointer;
 }
 .select_line{
   color: black

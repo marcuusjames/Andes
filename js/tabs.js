@@ -11,7 +11,7 @@ $("#nav-placeholder").append('\
             <img src="http://andescreation.com/images/logo.png" class="d-inline-block align-top logoimage" alt="">\
         </a>\
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">\
-        <span class="icon-bar" style="color:#FFF;z-index=1000"><img src="http://andescreation.com/images/menu.png" height=30px></span>\
+        <span class="icon-bar" style="color:#FFF;z-index=4"><img src="http://andescreation.com/images/menu.png" height=30px></span>\
       </button>\
         <div class="nav_andes collapse navbar-collapse"  id="myNavbar">\
             <div>\
@@ -91,3 +91,18 @@ function getWithExpiry(key) {
 	}
 	return item.value
 }
+premodal=false
+function showmodal(modal){
+    if (premodal==false){
+    $('body').append('<div class="premodal" style="display: none;"></div>')
+    premodal=true
+    }
+    $("body").addClass("modal-open");
+    $('.premodal').show()
+    $('#'+modal).show()
+}
+$(".exit").click(function(){
+    $(this).parents('.modalAndes').hide()
+    $("body").removeClass("modal-open");
+    $('.premodal').hide()
+})

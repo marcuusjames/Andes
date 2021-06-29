@@ -1,27 +1,57 @@
 
 $( "#button_invite" ).click(function() {
-    if ($('.invite').val()=='TESTE'){
-      $('#modalFirst').show('slow')
-    } else {
-      alert ("Convite incorreto! Favor tentar novamente")
+  dict = {"inviteID":$("#inviteID").val()
+  }
+  filled = true
+  $.each( dict, function( key, value ) {
+    if (value==""){
+    alert("Preecha o número do convite!");
+    filled=false
+    return false;
+    };
+  });
+  if (filled){
+  $.ajax({
+    type: "GET",
+    url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/checkInvite",
+    data: dict,
+    dataType: "json",
+    success:function (data){
+      localStorage['email_to']=data['email']
+      window.location.href = "http://www.andescreation.com/registerclimber/#";
+      console.log(data)
+    },
+    error:function (xhr, textStatus, errorThrown){
+      console.log(xhr.status)
+      if (xhr.status==401){
+        alert('Convite não encontrado')
+      } else {
+        alert('Convite já usado!')
+      }
     }
+  });
+  
+  }
   });
 
   $(".exit").click(function(){
-      $('.modalAndes').hide('slow')
+    $('.premodal').hide()
+      $('.modalAndes').hide()
   })
 
   
   $(".okbut").click(function(){
-    $('.firstSession').hide('slow')
+    $('.firstSession').hide()
     
-    $('.secondSession').show('slow')
+    $('.secondSession').show()
 })
 
 $( "#loginref" ).click(function() {
-    $('#modalLogin').show('slow')
+  $('.premodal').show()
+    $('#modalLogin').show()
   }
 );
+
 
 $("#login_button").click(function(){
   dict = {"email":$("#email_login").val(),
@@ -43,7 +73,7 @@ $.ajax({
   dataType: "json",
   success:function (data){
     localStorage['user']=JSON.stringify(data)
-    window.location.href = "file:///C:/Andes/climber/index.html#";
+    window.location.href = "http://www.andescreation.com/climber/#";
 
   },
   fail:function (data){

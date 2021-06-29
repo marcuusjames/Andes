@@ -48,7 +48,7 @@ color: #F8F8F8;
 
 .banner_main{
   padding-top: 0;
-  background-size: 80%;
+  background-size: 88%;
   background-color: #000;
   background-image: url("../images/banner_main.png"); 
   height: 75vh;
@@ -548,7 +548,7 @@ a:hover {
 .navbar_fixed{
   position: fixed;
   width: 100%;
-  z-index: 10000000;
+  z-index: 4;
   top: 0;
 }
 
@@ -732,14 +732,14 @@ padding-top: 5%;
 
   .banner_main{
     padding-top: 0;
-    background-size: 126vh;
+    background-size: 186vh;
     background-color: (0,0,0,0.5);
     background-image: url("../images/banner_main.png"); 
     height: 75vh;
     width: 100vw;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: 95% 26%;
+    background-position: 61% 38%;
   }
 
   .opacity_back{
@@ -952,4 +952,29 @@ input{
   outline: 0 none;
   border-width: 2px;
   padding: 20px;
+}
+
+.premodal{
+  opacity: 90%;
+  top:0;
+  left: 0;
+  position: absolute;
+  z-index: 5;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+}
+.modalAndes{
+  display: none;position: fixed;top: 20vh;left:25vw;width: 50vw;
+  overflow-y: hidden;z-index: 6;
+}
+body.modal-open {
+  overflow: hidden;
+}
+@media (max-width: 1000px) {
+  .modalAndes{
+    display: none;position: fixed;top: 10vh;left:5vw;width: 90vw;
+    overflow-y: hidden;
+  }
 }

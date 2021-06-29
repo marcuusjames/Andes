@@ -240,6 +240,7 @@ figure {
 }
 .modalAndes{
   display: none;position: fixed;top: 20vh;left:25vw;width: 50vw;
+  overflow-y: hidden;
 }
 @media (max-width: 1000px) {
   .modalAndes{
@@ -292,4 +293,22 @@ figure {
   border-radius: 0px;
   outline: 0 none;
   border-width: 2px;
+}
+
+.vscomp-ele {
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.vscomp-toggle-button{
+  display: block;
+  position: relative;
+  align-items: center;
+  background-color: #fff;
+  cursor: pointer;
+  border-color: black;
+  border-width: 2px;
+  width: 100%;
+  padding: 20px;
 }

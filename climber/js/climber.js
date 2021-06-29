@@ -1,7 +1,7 @@
 try {
     user = JSON.parse(localStorage['user'])
 } catch (e){
-    window.location.replace("file:///C:/Andes/climber/index.html#");
+    window.location.replace("http://www.andescreation.com/climber/#");
 }
 
 $(".userVar").each(function() {

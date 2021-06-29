@@ -44,8 +44,8 @@
 .invite_but{
   background-color: #FFFFFF;
   width: 19vw;
-  padding: 20px 20px;
-  margin: 0px 0;
+  padding: 20px 31px;
+  margin: 0px 20px;
   display: inline-block;
   border: 0px;
   border-radius: 0px;
@@ -53,10 +53,12 @@
   color: #000;
   font-family: Archivo;
   font-size: 1.5rem;
+  width: 39%;
 }
 
 .modalAndes{
-  display: none;position: fixed;top: 20vh;left:25vw;width: 50vw;
+  display: none;position: fixed;top: 10vh;left:25vw;width: 50vw;    border: 0px solid rgba(0,0,0,.2);
+  border-radius: 0px;
 }
 
 

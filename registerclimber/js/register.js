@@ -5,9 +5,10 @@ $(document).ready(function(){
 idpage = 1
 console.log(idpage)
 $(".button_av").click(function(){
-    $("#page"+idpage).hide('slow');
+    $("#page"+idpage).hide();
     idpage+=1
-    $("#page"+idpage).show('slow')
+    $("#page"+idpage).show()
+    $(window).scrollTop($("#page"+idpage).offset().top);
 });
 
 
@@ -19,14 +20,11 @@ $(".button_finish").click(function(){
 
 
 
-  $(".exit").click(function(){
-      $('#modalClimber').hide('slow')
-  })
 
   
   $(".homebut").click(function(){
     
-    window.location.replace("file:///C:/Andes/climber/index.html#");
+    window.location.replace("http://www.andescreation.com/climber/#");
 
 })
 
@@ -84,7 +82,7 @@ function registerClimber(){
         data: data,
         dataType: "json",
         success:function (data){
-            $("#modalClimber").show('slow')
+            showmodal("modalClimber")
         },
         fail:function (data){
           alert('Erro!')
@@ -135,3 +133,50 @@ $('.number_line').click(function(){
     console.log(num)
     console.log('teste')
 })
+
+
+form_level = [
+    { label: 'Técnico', value: 'tecnico', alias: 'custom label for search' },
+    { label: 'Bacharel', value: 'bacharel', description: 'custom description for label'},
+    { label: 'Mestrado', value: 'mestrado' },
+    { label: 'Doutorado', value: 'doutorado' }
+  ]
+  
+    VirtualSelect.init({
+    ele: '#curso_nivel',
+    options: form_level,
+    multiple: false,
+    placeholder: 'Selecionar',
+    searchPlaceholderText:'Procurar...'
+  });
+
+  form_gender = [
+    { label: 'Homem', value: 'homem', alias: 'custom label for search' },
+    { label: 'Mulher', value: 'mulher', description: 'custom description for label'},
+    { label: 'Homem Transgênero', value: 'homemt' },
+    { label: 'Mulher Transgênero', value: 'mulhert' },
+    { label: 'Não binário', value: 'notbin' }
+  ]
+  
+    VirtualSelect.init({
+    ele: '#gender',
+    options: form_gender,
+    multiple: false,
+    placeholder: 'Selecionar',
+    searchPlaceholderText:'Procurar...'
+  });
+
+  form_marital = [
+    { label: 'Solteiro(a)', value: 'single', alias: 'custom label for search' },
+    { label: 'Casado(a)', value: 'married', description: 'custom description for label'},
+    { label: 'Divorciado(a)', value: 'divorcied' },
+    { label: 'Viúvo(a)', value: 'widower' }
+  ]
+  
+    VirtualSelect.init({
+    ele: '#marital_status',
+    options: form_marital,
+    multiple: false,
+    placeholder: 'Selecionar',
+    searchPlaceholderText:'Procurar...'
+  });

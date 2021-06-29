@@ -180,3 +180,27 @@ form_level = [
     placeholder: 'Selecionar',
     searchPlaceholderText:'Procurar...'
   });
+
+  $("#fotografo").change(function() {
+    if(this.checked) {
+        $("#fotografo_div").show()
+    } else {
+        $("#fotografo_div").hide()
+    }
+});
+
+$("#designer").change(function() {
+    if(this.checked) {
+        $("#designer_div").show()
+    } else {
+        $("#designer_div").hide()
+    }
+});
+
+$("#ilustrador").change(function() {
+    if(this.checked) {
+        $("#designer_div").show()
+    } else {
+        $("#designer_div").hide()
+    }
+});

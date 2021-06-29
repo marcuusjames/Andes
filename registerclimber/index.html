@@ -23,6 +23,7 @@
     <link href='https://fonts.googleapis.com/css?family=Archivo' rel='stylesheet'>
     <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+    
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
@@ -39,10 +40,11 @@
     <script src="../js/virtual-select-master/dist/virtual-select.min.js"></script>
     <link rel="stylesheet" href="../js/virtual-select-master/dist/virtual-select.min.css" />
 
-    <link href="./css/register.css" rel="stylesheet" />
     
     <link rel="stylesheet" href="./js/virtual-select-master/dist/virtual-select.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link href="./css/register.css" rel="stylesheet" />
+    
     <meta charset="utf-8">
 </head>
 
@@ -103,24 +105,23 @@
             <div id="typeclimber">            
                 <p class='l2'> Qual tipo de Climber você quer ser?<span style="color:#666">*</span></p>
                 <div style="margin-right: 10px;">
-                    <input  type="checkbox" name="gridRadios" id="designer" value="Ligação">
-                    <label  for="designer">
-                    Designer
-                    </label>
+                    <input type="checkbox" id="designer" class="regular-checkbox" />
+                    <label  for="designer">Designer</label>
                 </div>
                 <div>
-                    <input class="custom-control-input" type="checkbox" name="gridRadios" id="ilustrador" value="WhatsApp">
+                    <input class="regular-checkbox" type="checkbox" id="ilustrador" value="WhatsApp" >
                     <label  for="ilustrador">
                     Ilustrador
                     </label>
                 </div>
                 <div>
-                    <input class="custom-control-input" type="checkbox" name="gridRadios" id="fotografo" value="WhatsApp">
+                    <input class="regular-checkbox" type="checkbox" id="fotografo">
                     <label  for="fotografo">
                     Fotógrafo
                     </label>
                 </div>
             </div>
+            <div id='designer_div' style="display: none;">
             <p class='l2' style="padding-top: 6vh;">Técnicas<span style="color:#666">*</span></p>
             <p class='p3' style="padding-bottom:3vh">Você pode escolher quantas opções quiser, mas pedimos para que só escolha os tipos de trabalho que compõe seu portfólio.</p>
             <div id='tecnicas' class="tagsfield">
@@ -202,7 +203,23 @@
                 <p class="tagtext">Adobe Fresco</p>
                 <p class="tagtext">Adobe Character Animator</p>   
             </div>
+            </div>
+            <div id='fotografo_div' style="display: none;">
+                <p class='l2' style="padding-top: 6vh;">Áreas de atuação<span style="color:#666">*</span></p>
+                <p class='p3' style="padding-bottom:3vh">Nos conte um pouco sobre como você atua na fotografia.</p>
             
+                <div id='photoTags' class="tagsfield">
+
+                    <p class="tagtext">Artística</p>
+                    <p class="tagtext">Moda</p>
+                    <p class="tagtext">Gastronômica</p>
+                    <p class="tagtext">Publicitária</p>
+                    <p class="tagtext">Documental</p>
+                    <p class="tagtext">Social</p>
+                    <p class="tagtext">Infantil</p>
+                    <p class="tagtext">Outras</p>   
+                </div>
+            </div>
             <p class='l2' style="padding-top: 6vh;"> Seu Portfólio<span style="color:#666">*</span></p>
                 <input class='textfield invite' id='portfolio' style="border-color: black; width: 100%; padding: 20px;">
                 <!-- <form action="/file-upload"
@@ -221,14 +238,14 @@
                 <div class='textfield invite' id='curso_nivel'></div>
 
                 <div style="padding: 5vh 0;">
-                    <input class="inputfield" type="checkbox" id="noformation" name="noformation" value="No_Formation">
+                    <input class="regular-checkbox" type="checkbox" id="noformation" name="noformation" value="No_Formation">
                     <label for="noformation"> Não tenho formação</label><br>
                 </div>
                     
             <p class='l2' style="padding-top: 6vh;"> Qual é o seu Registro MEI?<span style="color:#666">*</span></p>
             <input class='textfield invite' id='mei' type="text" style="border-color: black; width: 100%; padding: 20px;">
             <div style="padding: 5vh 0;">
-                <input class="inputfield" type="checkbox" id="nomei" name="nomei" value="No_MEI">
+                <input class="regular-checkbox" type="checkbox" id="nomei" name="nomei" value="No_MEI">
                 <label for="nomei"> Não tenho MEI</label><br>
             </div>
 

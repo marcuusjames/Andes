@@ -50,11 +50,15 @@
 
 <body>
     <div class="background"></div>
-    <div style="padding-left: 10.79vw;padding-top: 10vh;">
-        <p><span><img src='./images/andesblack.png'></span></p>
-        
-        <p class="p5"><span style="text-decoration: underline;">
-        Seja um Climber  </span>   <span style="padding:0 0.5vw;">   >   </span> Cadastro</p>
+    <div class="column" style="padding-left: 10.79vw;padding-top: 10vh;">
+        <div style="float: left;">
+
+        <p class="p5"><span style="padding-right: 20px;"><img src='./images/andesblack.png'></span>
+            <span style="text-decoration: underline;">
+        Seja um Climber  </span>   <span style="padding:0 0.5vw;">   >   </span> Cadastro
+        </div>
+        <div style="float: right;display: inline-block;"><span class="menu_page menu_page_1 menu_page_active">[1]</span><span class="menu_page menu_page_2" >[2]</span><span class="menu_page menu_page_3">[3]</span><span class="menu_page menu_page_4">[4]</span></div>
+    </p>
     </div>
         <div class="rowcol" style="padding-top: 10vw;padding-left: 10.79vw;">
 
@@ -68,26 +72,27 @@
                 <p class='h2'>Complete seu cadastro<br><br><br></p>
 
                 <p class='l2'> E-mail<span style="color:#666">*</span></p>
-                <input class='textfield invite requiredfield' id='email' type="email" style="border-color: black; width: 100%; padding: 20px;" placeholder="Seu e-mail para nos falarmos    ">
+                <input class='textfield invite requiredfield' id='email' type="email"   placeholder="Seu e-mail para nos falarmos    ">
                 
                 
                 <p class='l2' style="padding-top: 6vh;"> Seu nome<span style="color:#666">*</span></p>
-                <input class='textfield invite requiredfield' id='name' type="text" style="border-color: black; width: 100%; padding: 20px;" placeholder="O nome que vem no RG">
+                <input class='textfield invite requiredfield' id='name' type="text"   placeholder="O nome que vem no RG">
                 
-                <p class='l2' style="padding-top: 6vh;"> Nome Social<span style="color:#666">*</span></p>
-                <input class='textfield invite requiredfield' id='socialname' type="text" style="border-color: black; width: 100%; padding: 20px;" placeholder="O nome do que vem do coração">
+                <p class='l2' style="padding-top: 6vh;"> Nome Social<span style="color:#666"></span></p>
+                <input class='textfield invite' id='socialname' type="text"   placeholder="O nome do que vem do coração">
                 
                 <p class='l2' style="padding-top: 6vh;"> Senha<span style="color:#666">*</span></p>
-                <input class='textfield invite requiredfield' id='password' type="password" style="border-color: black; width: 100%; padding: 20px;">
+                <input class='textfield invite requiredfield pass' id='password' type="password"  >
                 
                 <p class='l2' style="padding-top: 6vh;"> Confirmar Senha<span style="color:#666">*</span></p>
-                <input class='invite requiredfield' id='password_conf' type="password" style="border-color: black; width: 100%; padding: 20px;">
+                <input class='textfield invite requiredfield pass' id='password_conf' type="password">
+                <p class='l2' id="confpass" style="display:none;font-size:14px;padding-top: 1vh;color:red;"> Ops! Senhas não coincidem</span></p>
                 
                 <p class='l2' style="padding-top: 6vh;"> Telefone<span style="color:#666">*</span></p>
-                <input class='textfield invite requiredfield' id='telefone' type="text" style="border-color: black; width: 100%; padding: 20px;">
+                <input class='textfield invite requiredfield' id='telefone' type="text"  >
                 
                 <p class='l2' style="padding-top: 6vh;"> Aniversário<span style="color:#666">*</span></p>
-                <input class='datefield invite requiredfield' id='birthday' type="date" style="border-color: black; width: 100%; padding: 20px;">
+                <input class='datefield invite requiredfield' id='birthday' type="date"  >
                 <div style="padding:10vh 0vh;">
                     <button class="button_orc button_av">Avançar</button>
                 
@@ -221,19 +226,19 @@
                 </div>
             </div>
             <p class='l2' style="padding-top: 6vh;"> Seu Portfólio<span style="color:#666">*</span></p>
-                <input class='textfield invite' id='portfolio' style="border-color: black; width: 100%; padding: 20px;">
+                <input class='textfield invite' id='portfolio'  >
                 <!-- <form action="/file-upload"
                 class="dropzone"
                 id="my-awesome-dropzone" style="margin-top:20px;min-height: 24px;
                 padding: 0px;"></form> -->
             
             <p class='l2' style="padding-top: 6vh;"> LinkedIn</p>
-                <input class='textfield invite' id='linkedin' style="border-color: black; width: 100%; padding: 20px;">
+                <input class='textfield invite' id='linkedin'  >
             <p class='l2' style="padding-top: 6vh;"> Formação<span style="color:#666">*</span></p>
             <p class='p3' style="padding-bottom:5vh">Formação, seja técnica ou acadêmica, não é um pré-requisito para a gente. Essa, como todas as perguntas a seguir, tem a simples função de entender melhor seu repertório.</p>
 
-                <p class='l2' style="padding-top: 6vh;"> Formação</p>
-                <input class='textfield invite' id='curso' style="border-color: black; width: 100%; padding: 20px;">
+                <p class='l2' style="padding-top: 6vh;"> Curso</p>
+                <input class='textfield invite' id='curso'  >
                 <p class='l2' style="padding-top: 6vh;"> Nível</p>
                 <div class='textfield invite' id='curso_nivel'></div>
 
@@ -243,7 +248,7 @@
                 </div>
                     
             <p class='l2' style="padding-top: 6vh;"> Qual é o seu Registro MEI?<span style="color:#666">*</span></p>
-            <input class='textfield invite' id='mei' type="text" style="border-color: black; width: 100%; padding: 20px;">
+            <input class='textfield invite' id='mei' type="text"  >
             <div style="padding: 5vh 0;">
                 <input class="regular-checkbox" type="checkbox" id="nomei" name="nomei" value="No_MEI">
                 <label for="nomei"> Não tenho MEI</label><br>
@@ -269,7 +274,7 @@
         <br><br><br></p>
         <div>            
         <p class='l2'> Onde você nasceu?<span style="color:#666">*</span></p>
-        <input class='textfield invite' id='birthtown' type="text" style="border-color: black; width: 100%; padding: 20px;">
+        <input class='textfield invite' id='birthtown' type="text"  >
         
         <p class='l2' style="padding-top: 6vh;"> Onde você mora e/ou já morou?<span style="color:#666">*</span></p>
         <select multiple id="places_old" class="invite select2tags" style="width: 100%;" ph=""></select>
@@ -339,10 +344,10 @@
     <br><br><br></p>
     <div>            
     <p class='l2'> Para você, o que é sucesso?<span style="color:#666">*</span></p>
-    <textarea class="textfield invite" id="formNeed" rows="10" style="border-color: black; width: 100%; padding: 20px;display: block;border-width: 2px;"></textarea>
+    <textarea class="textfield invite" id="formNeed" rows="10" style="border-color: black; width: 100%; padding: 20px;display: block;border-width: 2px;height: 50px;"></textarea>
     
     <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Escolha 2 dos temas que você mais gosta<span style="color:#666">*</span></p>
-    <div id='likesTags' class="tagsfield">
+    <div id='likesTags' class="tagsfield rowc">
 
         <p class="tagtext">Arte 🖌</p>
         <p class="tagtext">Ciência 🔬</p>
@@ -401,26 +406,26 @@
     </div>
 
     <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Com que frequência você compra online?</p>
-    <div style="display: block;" class="radiofield" id='shopRadios_'>
+    <div style="display: block;font-weight: normal;" class="radiofield" id='shopRadios_' >
     <div>
-        <input class="custom-control-input" type="radio" name="shopRadios" id="shopRadios" value="nunca" >
-        <label  for="shopRadios" style="padding-right: 30%;">
+        <input class="regular-radio" type="radio" name="shopRadios" id="shopRadios" value="nunca" >
+        <label  class='p3' for="shopRadios" style="padding-right: 30%;">
             Nunca
         </label>
 
-        <input class="custom-control-input" type="radio" name="shopRadios" id="shopRadios" value="raramente">
-        <label  for="shopRadios">
+        <input class="regular-radio" type="radio" name="shopRadios" id="shopRadios" value="raramente">
+        <label  class='p3' for="shopRadios">
             Raramente
         </label>
     </div>
     <div>
-        <input class="custom-control-input" type="radio" name="shopRadios" id="shopRadios" value="sometimes" >
-        <label  for="shopRadios" style="padding-right: 26.8%;">
+        <input class="regular-radio" type="radio" name="shopRadios" id="shopRadios" value="sometimes" >
+        <label  class='p3' for="shopRadios" style="padding-right: 26.8%;">
             Às vezes
         </label>
 
-        <input class="custom-control-input" type="radio" name="shopRadios" id="shopRadios" value="sempre">
-        <label  for="shopRadios">
+        <input class="regular-radio" type="radio" name="shopRadios" id="shopRadios" value="sempre">
+        <label  class='p3' for="shopRadios">
             Sempre
         </label>
     </div>
@@ -433,24 +438,24 @@
 
     <div style="display: block;" class="radiofield" id='manualRadio_'>
         <div>
-            <input class="custom-control-input" type="radio" name="manualRadio" id="gridRadios2" value="nunca" >
-            <label  class='p3' style='font-size:16px' for="gridRadios2" style="padding-right: 30%;">
+            <input class="regular-radio" type="radio" name="manualRadio" id="gridRadios2" value="nunca" >
+            <label  class='p3' for="gridRadios2" style="padding-right: 30%;">
                 Nunca
             </label>
     
-            <input class="custom-control-input" type="radio" name="manualRadio" id="gridRadios2" value="raramente">
-            <label class='p3' style='font-size:16px' for="gridRadios2">
+            <input class="regular-radio" type="radio" name="manualRadio" id="gridRadios2" value="raramente">
+            <label class='p3' for="gridRadios2">
                 Raramente
             </label>
         </div>
         <div>
-            <input class="custom-control-input" type="radio" name="manualRadio" id="gridRadios2" value="sometimes" >
-            <label class='p3' style='font-size:16px'  for="gridRadios2" style="padding-right: 26.8%;">
+            <input class="regular-radio" type="radio" name="manualRadio" id="gridRadios2" value="sometimes" >
+            <label class='p3'  for="gridRadios2" style="padding-right: 26.8%;">
                 Às vezes
             </label>
     
-            <input class="custom-control-input" type="radio" name="manualRadio" id="gridRadios2" value="sempre">
-            <label class='p3' style='font-size:16px'  for="gridRadios2">
+            <input class="regular-radio" type="radio" name="manualRadio" id="gridRadios2" value="sempre">
+            <label class='p3'  for="gridRadios2">
                 Sempre
             </label>
         </div>
@@ -461,24 +466,24 @@
 
     <div style="display: block;" class="radiofield" id="marketRadio_">
         <div style="padding-bottom:2vh">
-            <input class="custom-control-input" type="radio" name="marketRadio" id="gridRadios2" value="nunca" >
-            <label  for="gridRadios2" style="padding-right: 30%;">
+            <input class="regular-radio" type="radio" name="marketRadio" id="gridRadios2" value="nunca" >
+            <label  class='p3' for="gridRadios2" style="padding-right: 30%;">
                 Nunca
             </label>
     
-            <input class="custom-control-input" type="radio" name="marketRadio" id="gridRadios2" value="raramente">
-            <label  for="gridRadios2">
+            <input class="regular-radio" type="radio" name="marketRadio" id="gridRadios2" value="raramente">
+            <label  class='p3' for="gridRadios2">
                 Raramente
             </label>
         </div>
         <div>
-            <input class="custom-control-input" type="radio" name="marketRadio" id="gridRadios2" value="sometimes" >
-            <label  for="gridRadios2" style="padding-right: 26.8%;">
+            <input class="regular-radio" type="radio" name="marketRadio" id="gridRadios2" value="sometimes" >
+            <label  class='p3' for="gridRadios2" style="padding-right: 26.8%;">
                 Às vezes
             </label>
     
-            <input class="custom-control-input" type="radio" name="marketRadio" id="gridRadios2" value="sempre">
-            <label  for="gridRadios2">
+            <input class="regular-radio" type="radio" name="marketRadio" id="gridRadios2" value="sempre">
+            <label  class='p3' for="gridRadios2">
                 Sempre
             </label>
         </div>
@@ -488,7 +493,7 @@
     <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Mais ou menos quantos dias por semana você pede delivery?<span style="color:#666">*</span></p>
     <div class="numbers_line" id='deliveryNum'>
         <p class='number_line select_line' id='testeline' style="padding-left: 0;">0</p>
-        <p class='number_line select_line'>1</p>
+        <p class='number_line'>1</p>
         <p class='number_line'>2</p>
         <p class='number_line'>3</p>
         <p class='number_line'>4</p>
@@ -497,13 +502,13 @@
         <p class='number_line' style="padding-right: 0;">7</p>
     </div>
     <div class="progress_backline">
-        <div class="progress_line" style="width:25%"></div>
+        <div class="progress_line" style="width:0%"></div>
     </div>
 
     <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Mais ou menos quantos dias por semana você se exercita?<span style="color:#666">*</span></p>
     <div class="numbers_line">
         <p class='number_line select_line' style="padding-left: 0;">0</p>
-        <p class='number_line select_line'>1</p>
+        <p class='number_line'>1</p>
         <p class='number_line'>2</p>
         <p class='number_line'>3</p>
         <p class='number_line'>4</p>
@@ -512,7 +517,7 @@
         <p class='number_line' style="padding-right: 0;">7</p>
     </div>
     <div class="progress_backline">
-        <div class="progress_line" style="width:25%"></div>
+        <div class="progress_line" style="width:0%"></div>
     </div>
 
     <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> E como você costuma mexer esse esqueleto?<span style="color:#666">*</span></p>

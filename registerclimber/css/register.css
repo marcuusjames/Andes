@@ -250,7 +250,7 @@ figure {
 
 .progress_backline{
   position: relative;
-  height: 0.5px;
+  height: 2px;
   color: rgb(173, 173, 173);
   width: 100%;
   padding: 0.3px 0.3px;
@@ -259,7 +259,7 @@ figure {
   background: #C5C5C5;
 }
 .progress_line{
-  height: 0.5px;
+  height: 2px;
   color: #666;
   width: 100%;
   padding: 0.3px 0.3px;
@@ -311,4 +311,74 @@ figure {
   border-width: 2px;
   width: 100%;
   padding: 20px;
+}
+
+
+.menu_page {
+  font-family: Archivo;
+  color:rgb(165, 164, 164);
+  padding-left: 3px;
+  cursor: pointer;
+}
+
+.menu_page_filled {
+  text-decoration: underline;
+  color: black;
+}
+
+.menu_page_active {
+  font-weight: bold;
+  color: black;
+}
+
+.textfield{
+  font-family: Archivo;
+  font-size: 24px;
+  color:black;
+  line-height: 36px;
+  border-color: black; 
+  width: 100%; 
+  height: 64px;
+}
+
+.datefield{
+  font-family: Archivo;
+  font-size: 24px;
+  color:black;
+  line-height: 36px;
+  border-color: black; 
+  width: 100%; 
+  padding: 10px;
+  padding-left: 15px;
+  height: 64px;
+}
+
+.typeclimber{
+  font-family: Archivo;
+  font-size: 24px;
+  color:black;
+  line-height: 36px;
+  border-color: black; 
+  width: 100%; 
+  height: 64px;
+}
+
+.tagsfield{
+  font-family: Archivo;
+  font-size: 24px;
+  color:black;
+  line-height: 36px;
+  border-color: black; 
+  width: 100%; 
+
+}
+
+.inputfield{
+  font-family: Archivo;
+  font-size: 24px;
+  color:black;
+  line-height: 36px;
+  border-color: black; 
+  width: 100%; 
+  height: 64px;
 }

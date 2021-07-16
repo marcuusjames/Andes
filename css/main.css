@@ -472,7 +472,7 @@ color: #000000;
   /* identical to box height, or 27px */
   letter-spacing: 0.01em;
 
-  color: #160F1F;
+  color: black;
 }
 .footer {
   background-color: black;
@@ -586,6 +586,7 @@ a:focus, a:hover {
   outline: none;
   transition: 0.4s;
   padding: 0vh 0;
+  cursor: pointer;
  }
 
 .ac_menu{
@@ -595,11 +596,13 @@ a:focus, a:hover {
  outline: none;
  transition: 0.4s;
  padding: 0vh 0;
+ cursor: pointer;
 }
 .ac_menu_div{
 display: none;
 padding-bottom: 10%;
 padding-top: 5%;
+cursor: pointer;
 }
 @media (max-width: 1000px) {
   .button_orc {
@@ -809,7 +812,7 @@ img {
 
 .tagtext{
   display: inline-block;
-  border: 1px;
+  border: 2px;
   border-style: solid;
   border-radius: 4px;
   text-align: center;
@@ -819,6 +822,9 @@ img {
   font-style: normal;
   height: 25px;
   padding: 1px 8px;
+  margin: 1px 2px;
+  cursor: pointer;
+  
 }
 .tagclick{
   color: white;
@@ -828,12 +834,11 @@ img {
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
     background-color: black;
     border: 0px solid #aaa;
-    border-radius: 0px;
+    border-radius: 4px;
     color: white;
     box-sizing: border-box;
     display: inline-block;
-    margin-left: 5px;
-    margin-top: 5px;
+    margin: 1px 2px;
     padding: 0;
     padding-left: 20px;
     position: relative;
@@ -844,11 +849,18 @@ img {
     white-space: nowrap;
 }
 
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: #C5C5C5;
+  color: white;
+}
+
 .select2-container--default .select2-selection--multiple .select2-selection__choice__display {
     cursor: default;
-    padding-left: 2px;
-    padding-right: 5px;
     color: white;
+    padding: 1px 8px;
+    font-family: Archivo;
+    font-size: 16px;
+
 }
 .select2-container--default .select2-selection--multiple {
   background-color: white;
@@ -858,10 +870,12 @@ img {
   padding-bottom: 5px;
   padding-right: 5px;
   position: relative;
+  font-family: Archivo;
 }
 .select2-container--default.select2-container--focus .select2-selection--multiple {
     border: solid black 0px;
     outline: 0;
+    font-family: Archivo;
 }
 
 .select2-container {
@@ -873,6 +887,7 @@ img {
   border-radius: 0px;
   cursor: text;
   position: relative;
+  font-family: Archivo;
 }
 
 .blackinput {
@@ -958,7 +973,7 @@ input{
   opacity: 90%;
   top:0;
   left: 0;
-  position: absolute;
+  position: fixed;
   z-index: 5;
   background-color: black;
   height: 100%;
@@ -989,9 +1004,11 @@ body.modal-open {
 	border-radius: 0px;
 	display: inline-block;
 	position: relative;
+  cursor: pointer;
 }
 .regular-checkbox:active, .regular-checkbox:checked:active {
-	box-shadow: 0
+	box-shadow: 0;
+  cursor: pointer;
 }
 
 .regular-checkbox:checked {
@@ -1000,6 +1017,7 @@ body.modal-open {
 	padding: 5px;
 	box-shadow: 0;
 	color: #666;
+  cursor: pointer;
 }
 
 .regular-checkbox:checked:after {
@@ -1009,6 +1027,7 @@ body.modal-open {
 	top: -2px;
 	left: 1px;
 	color: white;
+  cursor: pointer;
 }
 input[type=checkbox], input[type=radio] {
   -webkit-box-sizing: border-box;
@@ -1031,11 +1050,12 @@ input[type=file]:focus, input[type=checkbox]:focus, input[type=radio]:focus {
 	border-radius: 50px;
 	display: inline-block;
 	position: relative;
+  cursor: pointer;
 }
 
 .regular-radio:checked:after {
 	content: ' ';
-	width: 6px;
+	width: 7px;
 	height: 7px;
 	border-radius: 50px;
 	position: absolute;
@@ -1045,6 +1065,7 @@ input[type=file]:focus, input[type=checkbox]:focus, input[type=radio]:focus {
 	text-shadow: 0px;
 	left: 1.2px;
 	font-size: 32px;
+  cursor: pointer;
 }
 
 .regular-radio:checked {
@@ -1052,8 +1073,10 @@ input[type=file]:focus, input[type=checkbox]:focus, input[type=radio]:focus {
 	color: black;
 	border: 2px solid black;
 	box-shadow: 0;
+  cursor: pointer;
 }
 
 .regular-radio:active, .regular-radio:checked:active {
 	box-shadow: 0 ;
+  cursor: pointer;
 }

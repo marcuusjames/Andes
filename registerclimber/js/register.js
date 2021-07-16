@@ -5,16 +5,21 @@ $(document).ready(function(){
 idpage = 1
 console.log(idpage)
 $(".button_av").click(function(){
+    $(".menu_page_"+idpage).addClass('menu_page_filled')
     $("#page"+idpage).hide();
     idpage+=1
     $("#page"+idpage).show()
+    $(".menu_page_"+idpage).addClass('menu_page_active')
     $(window).scrollTop($("#page"+idpage).offset().top);
 });
 
 
 $(".button_finish").click(function(){
-    checkFields();
+    c = checkFields()
+    console.log(c)
+    if (c){
     registerClimber();
+    }
     
 });
 
@@ -24,7 +29,7 @@ $(".button_finish").click(function(){
   
   $(".homebut").click(function(){
     
-    window.location.replace("http://www.andescreation.com/climber/#");
+    window.location.replace("http://andescreation.com/climber/#");
 
 })
 
@@ -34,11 +39,20 @@ $(".tagtext").click(function(){
 })
 
 function checkFields(){
+    x = true
     if (($('#password').val()==$("#password_conf").val())&($('#password').val()!="")){
         console.log('ok')
     } else {
         alert('Senhas não são iguais ou senha está nula!')
+        return false
     }
+    $('.requiredfield').each(function(){
+        if (($(this).val()=='')&(x)){
+            alert('Há campos não preenchidos!')
+            x= false
+        }
+    })
+    return x
 }
 
 function registerClimber(){
@@ -79,7 +93,7 @@ function registerClimber(){
     $.ajax({
         type: "GET",
         url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/insertUser",
-        data: data,
+        data: {data:JSON.stringify(data)},
         dataType: "json",
         success:function (data){
             showmodal("modalClimber")
@@ -139,7 +153,8 @@ form_level = [
     { label: 'Técnico', value: 'tecnico', alias: 'custom label for search' },
     { label: 'Bacharel', value: 'bacharel', description: 'custom description for label'},
     { label: 'Mestrado', value: 'mestrado' },
-    { label: 'Doutorado', value: 'doutorado' }
+    { label: 'Doutorado', value: 'doutorado' },
+    { label: 'Outro', value: 'other' }
   ]
   
     VirtualSelect.init({
@@ -151,11 +166,15 @@ form_level = [
   });
 
   form_gender = [
-    { label: 'Homem', value: 'homem', alias: 'custom label for search' },
-    { label: 'Mulher', value: 'mulher', description: 'custom description for label'},
+    
+    { label: 'Homem cisgênero', value: 'homem', alias: 'custom label for search' },
+    { label: 'Mulher cisgênero', value: 'mulher', description: 'custom description for label'},
     { label: 'Homem Transgênero', value: 'homemt' },
     { label: 'Mulher Transgênero', value: 'mulhert' },
-    { label: 'Não binário', value: 'notbin' }
+    { label: 'Homem Transexual', value: 'homemts' },
+    { label: 'Mulher Transexual', value: 'mulherts' },
+    { label: 'Prefiro não responder', value: 'noanswer' },
+    { label: 'Outro', value: 'other' }
   ]
   
     VirtualSelect.init({
@@ -204,3 +223,47 @@ $("#ilustrador").change(function() {
         $("#designer_div").hide()
     }
 });
+
+$(".menu_page_1").click(function(){
+    
+    $(".menu_page_"+idpage).addClass('menu_page_filled')
+    $("#page"+idpage).hide();
+    idpage=1
+    $("#page"+idpage).show()
+    $(".menu_page_"+idpage).addClass('menu_page_active')
+    $(window).scrollTop($("#page"+idpage).offset().top);
+})
+$(".menu_page_2").click(function(){
+    $(".menu_page_"+idpage).addClass('menu_page_filled')
+    $("#page"+idpage).hide();
+    idpage=2
+    $("#page"+idpage).show()
+    $(".menu_page_"+idpage).addClass('menu_page_active')
+    $(window).scrollTop($("#page"+idpage).offset().top);
+})
+$(".menu_page_3").click(function(){
+    $(".menu_page_"+idpage).addClass('menu_page_filled')
+    $("#page"+idpage).hide();
+    idpage=3
+    $("#page"+idpage).show()
+    $(".menu_page_"+idpage).addClass('menu_page_active')
+    $(window).scrollTop($("#page"+idpage).offset().top);
+})
+$(".menu_page_4").click(function(){
+    $(".menu_page_"+idpage).addClass('menu_page_filled')
+    $("#page"+idpage).hide();
+    idpage=4
+    $("#page"+idpage).show()
+    $(".menu_page_"+idpage).addClass('menu_page_active')
+    $(window).scrollTop($("#page"+idpage).offset().top);
+})
+
+$(".pass").change(function(){
+    if (($('#password_conf').val()!="")&($('#password').val()!="")){
+    if (($('#password').val()==$("#password_conf").val())&($('#password').val()!="")&($('#password').val()!="")){
+        $("#confpass").hide()
+    } else {
+        $("#confpass").show()
+    }
+}
+})

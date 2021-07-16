@@ -18,7 +18,7 @@ $( "#button_invite" ).click(function() {
     dataType: "json",
     success:function (data){
       localStorage['email_to']=data['email']
-      window.location.href = "http://www.andescreation.com/registerclimber/#";
+      window.location.href = "http://andescreation.com/registerclimber/#";
       console.log(data)
     },
     error:function (xhr, textStatus, errorThrown){
@@ -47,8 +47,8 @@ $( "#button_invite" ).click(function() {
 })
 
 $( "#loginref" ).click(function() {
-  $('.premodal').show()
-    $('#modalLogin').show()
+  
+  showmodal("modalLogin")
   }
 );
 
@@ -72,8 +72,9 @@ $.ajax({
   data: dict,
   dataType: "json",
   success:function (data){
-    localStorage['user']=JSON.stringify(data)
-    window.location.href = "http://www.andescreation.com/climber/#";
+    console.log(data)
+    sessionStorage['user']=JSON.stringify(data)
+    window.location.href = "http://andescreation.com/climber/";
 
   },
   fail:function (data){

@@ -949,6 +949,7 @@ input {
   background-image: none;
   border: 1px solid transparent;
   border-radius: 0px;
+  height: 30px;
 }
 
 input{

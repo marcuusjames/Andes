@@ -58,7 +58,7 @@ function fillParameters(){
     })
     console.log(invites_used)
     console.log(invites_available)
-    if (invites_used>0){
+    if (invites_used==0){
         $("#invite_0").show()
     } else {
         $("#invite_1").show()

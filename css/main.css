@@ -931,7 +931,7 @@ input {
 
 .navbar-brand {
   float: left;
-  height: 50px;
+  height: 100%;
   padding: 15px 0px;
   font-size: 18px;
   line-height: 20px;

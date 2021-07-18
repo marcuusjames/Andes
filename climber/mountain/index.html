@@ -55,9 +55,13 @@
             <div class="mon_column1 rowcol">
                <div style="min-height: 30vh;">
                   <p class='h2' style="color:white">QUERO CRIAR</p>
-                  <p><span class='flag_off'><img src='./climber/mountain/images/flag_off.png'></span>
+                  <div class="tooltip_flag">
+                     <span class='flag_off'>
+                           <img  src='./climber/mountain/images/flag_off.png'>
+                           <span class="tooltiptext">Com sede de criação? Acene a bandeira para a gente identificar sua predispoção para algum projeto.</span>
+                     </span>
                      <span class='flag_on' style="display: none;"><img src='./climber/mountain/images/flag_on.png'></span>
-                  </p>
+                  </div>
                </div>
                <div style="min-height: 30vh;">
                   <p class='h2' style="color:white">TÉCNICAS</p>
@@ -85,18 +89,6 @@
                            <p id="invite_0" class="p2 noinvite" style="color:white;width: 95%;display: none;">Você sabia que nossa comunidade cresce a partir de cada Climber? Isso quer dizer que é você quem escolhe quem trabalha com a gente. Convide um amigo e deixe seu legado.</p>
                            <p id="invite_1" class="p2 noinvite" style="color:white;width: 95%;display: none;">Você já transformou <span id='num_climbers' style="color: #666;text-decoration: underline;">3</span> pessoas em Climbers, uau! Segundo nossos cálculos, ainda restam <span id='num_invites' style="color: #666;text-decoration: underline;">2</span> convites!</p>
                            <p id='inviteClimber' style="color: #666;text-decoration: underline;"><span style="padding-right: 10px;"><img src='./climber/mountain/images/send.png'></span>Convidar um amigo</p>
-                        </div>
-                     </div>
-                     <div class="ac_menu">
-                        <p class="h2 open_menu" style="color:white">PROJETOS ASSOCIADOS<span style="float:right">+</span></p>
-                        <div class="ac_menu_div">
-                           <p class="p2 noinvite" style="color:white;width: 95%;display: none;">Quando você indica um cliente e a gente fecha o negócio, você passa a ser um sócio de projeto. Ou seja, divide o lucro com a gente. Quer ser nosso sócio de projeto? Indique um cliente na sessão abaixo!</p>
-                           <p class="p2 invite" style="color:white;width: 95%;display: none;">We are partner in business!</p>
-                           <div class="numbers_line invite" style="padding-top: 5vh;width: 90%;display: none;">
-                              <p class='number_line' style="padding-left: 0;">Construtora Richter</p>
-                              <p class='number_line' style="color: #007552;">Negócio Fechado!</p>
-                              <p class='number_line'><a style="color: #666;text-decoration: underline;">Informações</a></p>
-                           </div>
                         </div>
                      </div>
                      <div class="ac_menu" style="margin-bottom: 10vh;">
@@ -134,34 +126,11 @@
                                  <button class="button_orc button_finish" style="color: black;background-color:white;">ADICIONAR INDICAÇÃO</button>
                               </div>
                            </form>
-                           <div class="indicacao invite" style="display: none;">
+
+
+                           <div id='indprojects_1' style="display: none;">
                               <p class="h2" style="color:white">ACOMPANHE SUAS INDICAÇÕES</p>
-                              <p class="p2" style="color: white;padding-top: 5vh;">Lunix Tecnologia</p>
-                              <div class="numbers_line" style="padding-top: 5vh;width: 100%;">
-                                 <p class='number_line p3' style="color:white;padding-left: 0;">Indicação Recebida</p>
-                                 <p class='number_line p3' style="color: #666;">Em negociação</p>
-                                 <p class='number_line p3' style="color: #666;">Status Final</p>
-                              </div>
-                              <div class="progress_backline">
-                                 <div class="progress_line" style="width:33%"></div>
-                              </div>
-                              <p class="p2" style="color: white;padding-top: 5vh;">Macaw Business</p>
-                              <div class="numbers_line" style="padding-top: 5vh;width: 100%;">
-                                 <p class='number_line p3' style="color:white;padding-left: 0;">Indicação Recebida</p>
-                                 <p class='number_line p3' style="color:white;">Em negociação</p>
-                                 <p class='number_line p3' style="color: #666;">Status Final</p>
-                              </div>
-                              <div class="progress_backline">
-                                 <div class="progress_line" style="width:66%"></div>
-                              </div>
-                              <p class="p2" style="color: white;padding-top: 5vh;">DudaKalef</p>
-                              <div class="numbers_line" style="padding-top: 5vh;width: 100%;">
-                                 <p class='number_line p3' style="color:white;padding-left: 0;">Indicação Recebida</p>
-                                 <p class='number_line p3' style="color:white;">Em negociação</p>
-                                 <p class='number_line p3' style="color: #ED0047;">Proposta Recusada!</p>
-                              </div>
-                              <div class="progress_backline">
-                                 <div class="progress_line" style="width:100%"></div>
+                              <div id="indprojects_table">  
                               </div>
                            </div>
                         </div>
@@ -170,51 +139,37 @@
                   <div class="ac_menu_first">
                      <p class="h2 open_menu" style="color:white">O QUE ESTOU CRIANDO<span style="float:right">+</span></p>
                      <div class="ac_menu_div">
-                        <p class="h2 invite" style="color:white;display: none;">No momento, você não está criando nada com a gente.
-                           <span class='flag_off' style="float:right"><img src='./climber/mountain/images/flag_off.png'></span>
-                           <span class='flag_on' style="float:right;display: none;"><img src='./climber/mountain/images/flag_on.png'></span>
-                        </p>
-                        <div class="noinvite" style='display: none;'>
-                           <div class="numbers_line" style="padding-top: 5vh;width: 90%">
-                              <p class='number_line p3' style="color:white;padding-left: 0;">Identidade Visual</p>
-                              <p class='number_line p3' style="color:white;">Lunix Tecnologia</p>
-                              <p class='number_line p3' style="color:white;"><a style="color: #666;text-decoration: underline;">Bloqueio Criativo</a></p>
-                           </div>
-                           <div class="numbers_line" style="padding-top: 5vh;width: 90%">
-                              <p class='number_line p3' style="color:white;padding-left: 0;">Mockup</p>
-                              <p class='number_line p3' style="color:white;">Macaw Business</p>
-                              <p class='number_line p3' style="color:white;"><a style="color: #666;text-decoration: underline;">Bloqueio Criativo</a></p>
+                        <div id="ownprojects_0" style="display: none;">
+                           <p class="h2 invite" style="color:white;">No momento, você não está criando nada com a gente.
+                              <span class='flag_off' style="float:right"><img src='./climber/mountain/images/flag_off.png'></span>
+                              <span class='flag_on' style="float:right;display: none;"><img src='./climber/mountain/images/flag_on.png'></span>
+                           </p>
+                        </div>
+
+                        <div id='ownprojects_1' style="display: none;">
+                           <div id="ownprojects_table">  
                            </div>
                         </div>
+                  
                      </div>
                   </div>
-                  <div class="ac_menu">
-                     <p class="h2 open_menu" style="color:white">CONVITES PARA PROJETO<span style="float:right">+</span></p>
-                     <div class="ac_menu_div">
-                        <p class="p2" style="color:white;display: none;">Nenhum convite ainda.
-                           <span class='flag_off' style="float:right"><img src='./climber/mountain/images/flag_off.png'></span>
-                           <span class='flag_on' style="float:right;display: none;"><img src='./climber/mountain/images/flag_on.png'></span>
-                        </p>
-                     </div>
-                  </div>
+
+
                   <div class="ac_menu">
                      <p class="h2 open_menu" style="color:white;">MEU HISTÓRICO DE CRIAÇÕES<span style="float:right">+</span></p>
                      <div class="ac_menu_div">
-                        <p class="p2 invite" style="color:white;display: none;">Parece que ainda não criamos nada juntos, mas estamos ansiosos para conhecer você e seu potencial criativo. Por isso, nossa equipe está trabalhando para te encaixar em algum projeto o quanto antes. 
-                        </p>
-                        <div class="noinvite" style='display: none;'>
-                           <div class="numbers_line" style="padding-top: 5vh;width: 90%">
-                              <p class='number_line p3' style="color:white;padding-left: 0;">Identidade Visual</p>
-                              <p class='number_line p3' style="color:white;">Lunix Tecnologia</p>
-                              <p class='number_line p3' style="color:white;"><a style="color: #666;text-decoration: underline;">Feedbacks</a></p>
-                           </div>
-                           <div class="numbers_line" style="padding-top: 5vh;width: 90%">
-                              <p class='number_line p3' style="color:white;padding-left: 0;">Mockup</p>
-                              <p class='number_line p3' style="color:white;">Macaw Business</p>
-                              <p class='number_line p3' style="color:white;"><a style="color: #666;text-decoration: underline;">Feedbacks</a></p>
+                        <div id="histprojects_0" style="display: none;">
+                           <p class="p3 invite" style="color:white;">Parece que ainda não criamos nada juntos, mas estamos ansiosos para conhecer você e seu potencial criativo. Por isso, nossa equipe está trabalhando para te encaixar em algum projeto o quanto antes. 
+                           </p>
+                        </div>
+
+                        <div id='histprojects_1' style="display: none;">
+                           <div id="histprojects_table">  
                            </div>
                         </div>
+                  
                      </div>
+
                   </div>
                </div>
             </div>

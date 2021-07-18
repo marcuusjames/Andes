@@ -14,8 +14,33 @@ $('.flag_on').click(function(){
     $('.flag_on').toggle()
 })
 $(document).ready(function(){
-    fillParameters()
-      
+    data = fillParameters()
+    invites_used = 0
+    invites_available = 0
+    indprojects = 0
+    $.each(data['invites'],function(i,j){
+        if(i['to']==null){
+            invites_available+=1
+        } else {
+            invites_used+=1
+        }
+    })
+    console.log(invites_used)
+    console.log(invites_available)
+    if (invites_used==0){
+        $("#invite_0").show()
+    } else {
+        $("#invite_1").show()
+        $("#num_climbers").text(invites_used.toString())
+        $("#num_invites").text(invites_available.toString())
+        $("#invite_1").show()
+    }
+
+
+                                 
+    indProjects(data)            
+    ownProjects(data)
+    histProjects(data)
 }
 )
 
@@ -26,4 +51,119 @@ $("#inviteClimber").click(function(){
 
 function inviteClimber(){
     showmodal('modalInvite')
+    $("#invite_number").text((invites_used+1).toString())
+    $("#num_invites_invite").text(invites_available.toString())
+}
+
+function indProjects(data){
+    $.each(data['indProjects'],function(j,i){
+        console.log(i)
+        project = i['company']
+        status = i['status']
+        t = '<p class="l1" style="color: white;">'+project+'</p>'
+        t += '<table class="table_projects invite" style="padding-top: 15vh;width: 100%;"><tr>'
+        if (status=='indicated'){
+           t+='<td class="p3" style="color:#FFF">Indicação Recebida</td>' 
+           t+='<td class="p3" style="color:#666666">Em Negociação</td>' 
+           t+='<td class="p3" style="color:#666666">Status Final</td>' 
+           t+='</table>'
+           t+='<div class="progress_backline"><div class="progress_line" style="width:33%"></div></div>'
+        } else if (status=='negociation') {
+            t+='<td class="p3" style="color:#666666">Indicação Recebida</td>' 
+            t+='<td class="p3" style="color:#FFF">Em Negociação</td>' 
+            t+='<td class="p3" style="color:#666666">Status Final</td>'
+            t+='</table>'
+            t+='<div class="progress_backline"><div class="progress_line" style="width:66%"></div></div>'
+        } else if (status=='doing'|status=='finished'|status=='payment') {
+            t+='<td class="p3" style="color:#666666">Indicação Recebida</td>' 
+            t+='<td class="p3" style="color:#666666">Em Negociação</td>' 
+            t+='<td class="p3" style="color:#B585B4">Negócio Fechado!</td>'
+            t+='</table>'
+            t+='<div class="progress_backline"><div class="progress_line" style="width:100%"></div></div>'
+        } else if (status=='rejected') {
+            t+='<td class="p3" style="color:#666666">Indicação Recebida</td>' 
+            t+='<td class="p3" style="color:#666666">Em Negociação</td>' 
+            t+='<td class="p3"style="color:#CF684D">Proposta recusada</td>'
+            t+='</table>'
+            t+='<div class="progress_backline"><div class="progress_line" style="width:100%"></div></div>'
+        }
+        t+
+        // <td class='number_line' style="padding-left: 0;">Construtora Richter</td>
+        $("#indprojects_table").append(t)
+        indprojects+=1
+
+    })
+    console.log(indprojects)
+    if (indprojects==0){
+        $("#indprojects_0").show()
+    } else {
+        $("#indprojects_1").show()
+    }
+}
+
+
+
+function ownProjects(data){
+    ownprojects=0
+    $.each(data['ownProjects'],function(j,i){
+        console.log(i)
+        company = i['company']
+        status = i['status']
+        services = i['services'].join()
+        if (status!='finished'){
+
+        }
+        t=''
+        t += '<table class="table_projects invite" style="padding-top: 15vh;width: 100%;"><tr>'
+        t+='<td class="p3" style="color:#FFF;font-weight: bold;">Projeto</td>' 
+        t+='<td class="p3" style="color:#FFF;font-weight: bold;">Cliente</td>' 
+        t+='<td class="p3" style="text-align:center;color:#FFF;font-weight: bold;">Bloqueio Criativo</td></tr>'
+
+           t+='<td class="p3" style="color:#FFF">'+services+'</td>' 
+           t+='<td class="p3" style="color:#FFF">'+company+'</td>' 
+           t+='<td class="p3" style="text-align:center;color:#FFF"><span>B</span></td>' 
+           t+='</tr></table>'
+        
+        // <td class='number_line' style="padding-left: 0;">Construtora Richter</td>
+        $("#ownprojects_table").append(t)
+        ownprojects+=1
+
+    })
+    if (ownprojects==0){
+        $("#ownprojects_0").show()
+    } else {
+        $("#ownprojects_1").show()
+    }
+}
+
+
+
+function histProjects(data){
+    histprojects=0
+    $.each(data['ownProjects'],function(j,i){
+        console.log(i)
+        company = i['company']
+        status = i['status']
+        services = i['services'].join()
+        if (status=='finished'){
+
+        
+        t=''
+        t += '<table class="table_projects invite" style="padding-top: 15vh;width: 100%;"><tr>'
+           t+='<td class="p3" style="color:#FFF">'+services+'</td>' 
+           t+='<td class="p3" style="color:#FFF">'+company+'</td>' 
+           t+='<td class="p3" style="text-align:center;color:#FFF"><span class="link">Feedbacks</span></td>' 
+           t+='</tr></table>'
+        
+        // <td class='number_line' style="padding-left: 0;">Construtora Richter</td>
+        $("#histprojects_table").append(t)
+        histprojects+=1
+        }
+
+    })
+    if (histprojects==0){
+        $("#histprojects_0").show()
+    } else {
+        $("#histprojects_1").show()
+    }
 }

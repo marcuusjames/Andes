@@ -47,23 +47,5 @@ function getParameters(user){
 
 function fillParameters(){
     data = JSON.parse(sessionStorage['userParameters'])
-    invites_used = 0
-    invites_available = 0
-    $.each(data['invites'],function(i,j){
-        if(i['to']==null){
-            invites_available+=1
-        } else {
-            invites_used+=1
-        }
-    })
-    console.log(invites_used)
-    console.log(invites_available)
-    if (invites_used==0){
-        $("#invite_0").show()
-    } else {
-        $("#invite_1").show()
-        $("#num_climbers").text(invites_used.toString())
-        $("#num_invites").text(invites_available.toString())
-        $("#invite_1").show()
-    }
+    return data
 }

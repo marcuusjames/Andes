@@ -472,7 +472,20 @@ color: #000000;
   /* identical to box height, or 27px */
   letter-spacing: 0.01em;
 
+ 
   color: black;
+}
+
+.l2w{ 
+  font-family: Archivo;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  /* identical to box height, or 27px */
+  letter-spacing: 0.01em;
+
+  color: white;
 }
 .footer {
   background-color: black;

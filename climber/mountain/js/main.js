@@ -231,6 +231,7 @@ function clickfunctions(){
     })
 
     $('.lamp_on').click(function(){
+        idP = $(this).attr('idproject')
         $.each(data["ownProjects"],function(i,j){
             if (j['id']=idP){
                 projectBloq=j

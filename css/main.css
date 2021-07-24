@@ -1117,4 +1117,5 @@ textarea {
   -moz-box-sizing: border-box;
        box-sizing: border-box;
   padding: 10px;
+  color: #000;
 }

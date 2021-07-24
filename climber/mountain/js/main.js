@@ -258,6 +258,7 @@ function clickfunctions(){
             success:function (data){
                 alert("Bloqueio Enviado! Entraremos em contato logo!")
                 closemodal('modalBloq')
+                $("[idproject="+projectBloq['id']+"]").toggle()
             },
             fail:function (data){
               alert("error on sending message! Check with administrator")
@@ -283,6 +284,7 @@ function clickfunctions(){
             success:function (data){
                 alert("Bloqueio Removido!")
                 closemodal('modalBloqRem')
+                $("[idproject="+projectBloq['id']+"]").toggle()
             },
             fail:function (data){
               alert("error on sending message! Check with administrator")

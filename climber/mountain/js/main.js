@@ -223,6 +223,7 @@ function invitesClimbers(data){
 
 function clickfunctions(){
     $('.lamp_off').click(function(){
+        idP = $(this).attr('idproject')
         $.each(data["ownProjects"],function(i,j){
             if (j['id']=idP){
                 projectBloq=j

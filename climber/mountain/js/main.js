@@ -294,4 +294,31 @@ function clickfunctions(){
           });
     })
 
+    $('#indCustomer').click(function(){
+        data = {
+            "climber":user['name'],
+            "email_climber":user['email'],
+            "company":$("#indCompany").val(),
+            "tel":$("#indTel").val(),
+            "responsable":$("#indResp").val(),
+            "email":$("#indEmail").val(),
+            "bonus":$('#indBonus:checked').val()
+        }
+        $.ajax({
+            type: "GET",
+            url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/newIndication",
+            data: {'data':JSON.stringify(data)},
+            dataType: "json",
+            success:function (data){
+                alert("Bloqueio Removido!")
+                closemodal('modalBloqRem')
+                $("[idproject="+projectBloq['id']+"]").toggle()
+            },
+            fail:function (data){
+              alert("error on sending message! Check with administrator")
+            }
+          });
+
+    })
+
 }

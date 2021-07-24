@@ -223,15 +223,69 @@ function invitesClimbers(data){
 
 function clickfunctions(){
     $('.lamp_off').click(function(){
-        project
+        $.each(data["ownProjects"],function(i,j){
+            if (j['id']=idP){
+                projectBloq=j
+            }})
         showmodal("modalBloq")
     })
 
     $('.lamp_on').click(function(){
-        modalRemoveBloq(this)
+        $.each(data["ownProjects"],function(i,j){
+            if (j['id']=idP){
+                projectBloq=j
+            }})
+            showmodal("modalBloqRem")
     })
 
     $("#sendBloq").click(function(){
-
+        data = {
+            'climber':user['name'],
+            'email':user['email'],
+            'bloq':$("#bloq_creat").val(),
+            'project':projectBloq['id'],
+            'projectName':projectBloq['services'].join(),
+            'projectComp':projectBloq['company'],
+            'set':true
+        }
+        $.ajax({
+            type: "GET",
+            url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/blockCreat",
+            data: data,
+            dataType: "json",
+            success:function (data){
+                alert("Bloqueio Enviado! Entraremos em contato logo!")
+                closemodal('modalBloq')
+            },
+            fail:function (data){
+              alert("error on sending message! Check with administrator")
+            }
+          });
     })
+
+    $("#removeBloq").click(function(){
+        data = {
+            'climber':user['name'],
+            'email':user['email'],
+            'bloq':$("#bloq_creat").val(),
+            'project':projectBloq['id'],
+            'projectName':projectBloq['services'].join(),
+            'projectComp':projectBloq['company'],
+            'set':false
+        }
+        $.ajax({
+            type: "GET",
+            url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/blockCreat",
+            data: data,
+            dataType: "json",
+            success:function (data){
+                alert("Bloqueio Removido!")
+                closemodal('modalBloqRem')
+            },
+            fail:function (data){
+              alert("error on sending message! Check with administrator")
+            }
+          });
+    })
+
 }

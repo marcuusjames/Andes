@@ -101,6 +101,14 @@ function showmodal(modal){
     $('.premodal').show()
     $('#'+modal).show()
 }
+
+
+function closemodal(modal){
+    $("body").removeClass("modal-open");
+    $('.premodal').hide()
+    $('#'+modal).hide()
+}
+
 $(".exit").click(function(){
     console.log("exit")
     $(this).parents('.modalAndes').hide()

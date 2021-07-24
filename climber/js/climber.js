@@ -49,3 +49,18 @@ function fillParameters(){
     data = JSON.parse(sessionStorage['userParameters'])
     return data
 }
+
+function updateUser(updates){
+    $.ajax({
+        type: "GET",
+        url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/updateUser",
+        data: {'email':user['email'],'updates':updates},
+        dataType: "json",
+        success:function (data){
+            console.log("Updated!")
+        },
+        fail:function (data){
+          alert("error updating data!")
+        }
+      });
+}

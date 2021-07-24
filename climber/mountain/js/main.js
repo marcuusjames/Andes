@@ -4,14 +4,15 @@ $('.login').click(function(){
 })
 
 $('.flag_off').click(function(){
-    console.log('teste')
     $('.flag_off').toggle()
     $('.flag_on').toggle()
+    updateUser({'create':true})
 })
 
 $('.flag_on').click(function(){
     $('.flag_off').toggle()
     $('.flag_on').toggle()
+    updateUser({'create':false})
 })
 $(document).ready(function(){
     data = fillParameters()
@@ -19,6 +20,13 @@ $(document).ready(function(){
     indProjects(data)            
     ownProjects(data)
     histProjects(data)
+    if (user){
+        $('.flag_off').hide()
+        $('.flag_on').show()
+    } else {
+    $('.flag_off').show()
+        $('.flag_on').hide()
+    }
 }
 )
 
@@ -187,6 +195,7 @@ function invitesClimbers(data){
                     },
                 dataType: "json",
                 success:function (data){
+                    setTimeout(() => { console.log("Enviando..."); }, 2000);
                     alert("Convite Enviado!")
                     location.reload();              
                 },

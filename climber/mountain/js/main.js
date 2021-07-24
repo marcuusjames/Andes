@@ -95,10 +95,26 @@ function ownProjects(data){
         console.log(i)
         company = i['company']
         status = i['status']
+        bloq_creat = i['bloq_creat']
         services = i['services'].join()
-        if (status!='finished'){
-
+        if (bloq_creat){
+            b = "   <span class='flag_off' style='display: none;'>\
+            <img  src='./climber/mountain/images/lamp_off.png'>\
+            <span class='tooltiptext'>Não consegue progredir na criação? <br>\
+            Avisa que a gente dá uma mão. </span>\
+      </span>\
+      <span class='flag_on'><img src='./climber/mountain/images/lamp_on.png'></span>\
+   "
+        } else {
+            b = "   <span class='flag_off'>\
+            <img  src='./climber/mountain/images/lamp_off.png'>\
+            <span class='tooltiptext'>Não consegue progredir na criação? <br>\
+            Avisa que a gente dá uma mão. </span>\
+      </span>\
+      <span class='flag_on' style='display: none;'><img src='./climber/mountain/images/lamp_on.png'></span>\
+   "
         }
+        if (status!='finished'){        
         t=''
         t += '<table class="table_projects invite" style="padding-top: 15vh;width: 100%;"><tr>'
         t+='<td class="p3" style="color:#FFF;font-weight: bold;">Projeto</td>' 
@@ -113,6 +129,7 @@ function ownProjects(data){
         // <td class='number_line' style="padding-left: 0;">Construtora Richter</td>
         $("#ownprojects_table").append(t)
         ownprojects+=1
+        }
 
     })
     if (ownprojects==0){

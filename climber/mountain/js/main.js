@@ -49,7 +49,7 @@ function indProjects(data){
     $.each(data['indProjects'],function(j,i){
         project = i['company']
         status = i['status']
-        t = '<p class="l1" style="color: white;">'+project+'</p>'
+        t = '<p class="l1" style="color: white;padding-top:30px">'+project+'</p>'
         t += '<table class="table_projects invite" style="padding-top: 15vh;width: 100%;"><tr>'
         if (status=='indicated'){
            t+='<td class="p3" style="color:#FFF">Indicação Recebida</td>' 
@@ -311,7 +311,9 @@ function clickfunctions(){
             data: {'data':JSON.stringify(data)},
             dataType: "json",
             success:function (data){
+                setTimeout(() => { console.log("Enviando..."); }, 2000);
                 alert("Indicação Enviada!")
+                location.reload(); 
             },
             fail:function (data){
               alert("error on sending message! Check with administrator")

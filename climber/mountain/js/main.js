@@ -253,7 +253,7 @@ function clickfunctions(){
         $.ajax({
             type: "GET",
             url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/blockCreat",
-            data: data,
+            data: {'data':JSON.stringify(data)},
             dataType: "json",
             success:function (data){
                 alert("Bloqueio Enviado! Entraremos em contato logo!")
@@ -281,7 +281,7 @@ function clickfunctions(){
         $.ajax({
             type: "GET",
             url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/blockCreat",
-            data: data,
+            data: {'data':JSON.stringify(data)},
             dataType: "json",
             success:function (data){
                 alert("Bloqueio Removido!")

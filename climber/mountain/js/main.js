@@ -31,6 +31,7 @@ $(document).ready(function(){
         $('.flag_on').hide()
     }
     clickfunctions()
+    $('#indTel').mask('(00)000000000');
 }
 )
 
@@ -310,9 +311,7 @@ function clickfunctions(){
             data: {'data':JSON.stringify(data)},
             dataType: "json",
             success:function (data){
-                alert("Bloqueio Removido!")
-                closemodal('modalBloqRem')
-                $("[idproject="+projectBloq['id']+"]").toggle()
+                alert("Indicação Enviada!")
             },
             fail:function (data){
               alert("error on sending message! Check with administrator")

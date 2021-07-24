@@ -265,7 +265,9 @@ function clickfunctions(){
             }
           });
     })
-
+    $("exitBloq").click(function(){
+        closemodal('modalBloqRem')
+    })
     $("#removeBloq").click(function(){
         data = {
             'climber':user['name'],

@@ -94,19 +94,19 @@ function ownProjects(data){
         bloq_creat = i['bloq_creat']
         services = i['services'].join()
         if (bloq_creat){
-            b = "   <span class='lamp_off' style='display: none;'>\
+            b = "   <div class='tooltip_flag'><span class='lamp_off' style='display: none;'>\
             <img  src='./climber/mountain/images/lamp_off.png'>\
             <span class='tooltiptext'>Não consegue progredir na criação? <br>\
             Avisa que a gente dá uma mão. </span>\
-      </span>\
+      </span></div>\
       <span class='lamp_on'><img src='./climber/mountain/images/lamp_on.png'></span>\
    "
         } else {
-            b = "   <span class='lamp_off'>\
+            b = "   <div class='tooltip_flag'><span class='lamp_off'>\
             <img  src='./climber/mountain/images/lamp_off.png'>\
             <span class='tooltiptext'>Não consegue progredir na criação? <br>\
             Avisa que a gente dá uma mão. </span>\
-      </span>\
+      </span></div>\
       <span class='lamp_on' style='display: none;'><img src='./climber/mountain/images/lamp_on.png'></span>\
    "
         }

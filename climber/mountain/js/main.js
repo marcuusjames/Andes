@@ -123,7 +123,7 @@ function ownProjects(data){
 
            t+='<td class="p3" style="color:#FFF">'+services+'</td>' 
            t+='<td class="p3" style="color:#FFF">'+company+'</td>' 
-           t+='<td class="p3" style="text-align:center;color:#FFF"><span>B</span></td>' 
+           t+='<td class="p3" style="text-align:center;color:#FFF">'+b+'</td>' 
            t+='</tr></table>'
         
         // <td class='number_line' style="padding-left: 0;">Construtora Richter</td>

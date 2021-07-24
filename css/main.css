@@ -428,7 +428,18 @@ color: #000000;
   
   color: #000000;
 }
-
+.p3w{
+  font-family: Archivo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px !important;
+  line-height: 22.5px;
+  /* or 36px */
+  
+  letter-spacing: 0.06em;
+  
+  color: #FFF;
+}
 .p4{
   font-family: Archivo;
   font-style: normal;

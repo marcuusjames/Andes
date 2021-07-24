@@ -15,29 +15,7 @@ $('.flag_on').click(function(){
 })
 $(document).ready(function(){
     data = fillParameters()
-    invites_used = 0
-    invites_available = 0
-    indprojects = 0
-    $.each(data['invites'],function(i,j){
-        if(j['to']==null){
-            invites_available+=1
-        } else {
-            invites_used+=1
-        }
-    })
-    console.log(invites_used)
-    console.log(invites_available)
-    if (invites_used==0){
-        $("#invite_0").show()
-    } else {
-        $("#invite_1").show()
-        $("#num_climbers").text(invites_used.toString())
-        $("#num_invites").text(invites_available.toString())
-        $("#invite_1").show()
-    }
-
-
-                                 
+    invitesClimbers(data)                    
     indProjects(data)            
     ownProjects(data)
     histProjects(data)
@@ -166,4 +144,55 @@ function histProjects(data){
     } else {
         $("#histprojects_1").show()
     }
+}
+
+function invitesClimbers(data){
+    invites_used = 0
+    invites_available = 0
+    indprojects = 0
+    next_invite=null
+    $.each(data['invites'],function(i,j){
+        if(j['to']==null){
+            if (next_invite==null){
+                next_invite=j['inviteID']
+            }
+            invites_available+=1
+        } else {
+            invites_used+=1
+        }
+    })
+
+    console.log(invites_used)
+    console.log(invites_available)
+    if (invites_used==0){
+        $("#invite_0").show()
+    } else {
+        $("#invite_1").show()
+        $("#num_climbers").text(invites_used.toString())
+        $("#num_invites").text(invites_available.toString())
+        $("#invite_1").show()
+    }
+
+    $("#sendInvite").click(function(){
+            $.ajax({
+                type: "GET",
+                url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/inviteUser",
+                data: {
+                    "ID":next_invite,
+                    "user_to":$("#invite_name").val(),
+                    "user_email_to":$("#invite_email").val(),
+                    "user_from":user['name'].split(" ")[0],
+                    "message":$("#invite_message").val()
+                        
+                    },
+                dataType: "json",
+                success:function (data){
+                    alert("Convite Enviado!")
+                    location.reload();              
+                },
+                fail:function (data){
+                  alert("error on sending invite! Check with administrator")
+                }
+              });
+    })
 }

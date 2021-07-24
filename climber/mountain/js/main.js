@@ -31,7 +31,6 @@ $(document).ready(function(){
 )
 
 $("#inviteClimber").click(function(){
-    console.log('teste')
     inviteClimber()
 })
 
@@ -43,7 +42,6 @@ function inviteClimber(){
 
 function indProjects(data){
     $.each(data['indProjects'],function(j,i){
-        console.log(i)
         project = i['company']
         status = i['status']
         t = '<p class="l1" style="color: white;">'+project+'</p>'
@@ -79,7 +77,6 @@ function indProjects(data){
         indprojects+=1
 
     })
-    console.log(indprojects)
     if (indprojects==0){
         $("#indprojects_0").show()
     } else {
@@ -92,7 +89,6 @@ function indProjects(data){
 function ownProjects(data){
     ownprojects=0
     $.each(data['ownProjects'],function(j,i){
-        console.log(i)
         company = i['company']
         status = i['status']
         bloq_creat = i['bloq_creat']
@@ -144,7 +140,6 @@ function ownProjects(data){
 function histProjects(data){
     histprojects=0
     $.each(data['ownProjects'],function(j,i){
-        console.log(i)
         company = i['company']
         status = i['status']
         services = i['services'].join()
@@ -187,8 +182,6 @@ function invitesClimbers(data){
         }
     })
 
-    console.log(invites_used)
-    console.log(invites_available)
     if (invites_used==0){
         $("#invite_0").show()
     } else {

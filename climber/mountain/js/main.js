@@ -182,7 +182,7 @@ function invitesClimbers(data){
                     "user_to":$("#invite_name").val(),
                     "user_email_to":$("#invite_email").val(),
                     "user_from":user['name'].split(" ")[0],
-                    "message":$("#invite_message").val()
+                    "message":$("#invite_msg").val()
                         
                     },
                 dataType: "json",

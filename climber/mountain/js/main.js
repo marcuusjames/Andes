@@ -99,20 +99,20 @@ function ownProjects(data){
         bloq_creat = i['bloq_creat']
         services = i['services'].join()
         if (bloq_creat){
-            b = "   <div class='tooltip_flag'><span idproject=idProject class='lamp_off' style='display: none;'>\
+            b = "   <div class='tooltip_flag'><span idproject="+idProject+" class='lamp_off' style='display: none;'>\
             <img  src='./climber/mountain/images/lamp_off.png'>\
             <span class='tooltiptext'>Não consegue progredir na criação? <br>\
             Avisa que a gente dá uma mão. </span>\
       </span></div>\
-      <span idproject=idProject class='lamp_on'><img src='./climber/mountain/images/lamp_on.png'></span>\
+      <span idproject="+idProject+" class='lamp_on'><img src='./climber/mountain/images/lamp_on.png'></span>\
    "
         } else {
-            b = "   <div class='tooltip_flag'><span idproject=idProject class='lamp_off'>\
+            b = "   <div class='tooltip_flag'><span idproject="+idProject+" class='lamp_off'>\
             <img  src='./climber/mountain/images/lamp_off.png'>\
             <span class='tooltiptext'>Não consegue progredir na criação? <br>\
             Avisa que a gente dá uma mão. </span>\
       </span></div>\
-      <span idproject=idProject class='lamp_on' style='display: none;'><img src='./climber/mountain/images/lamp_on.png'></span>\
+      <span idproject="+idProject+" class='lamp_on' style='display: none;'><img src='./climber/mountain/images/lamp_on.png'></span>\
    "
         }
         if (status!='finished'){        

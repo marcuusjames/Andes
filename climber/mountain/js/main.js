@@ -265,7 +265,7 @@ function clickfunctions(){
             }
           });
     })
-    $("exitBloq").click(function(){
+    $("#exitBloq").click(function(){
         closemodal('modalBloqRem')
     })
     $("#removeBloq").click(function(){

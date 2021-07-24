@@ -19,7 +19,7 @@ $(document).ready(function(){
     invites_available = 0
     indprojects = 0
     $.each(data['invites'],function(i,j){
-        if(i['to']==null){
+        if(j['to']==null){
             invites_available+=1
         } else {
             invites_used+=1

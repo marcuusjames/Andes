@@ -37,6 +37,28 @@ $("#nav-placeholder").append('\
     </nav>');
 
 
+
+$("#navClimber-placeholder").addClass('navbar_fixed')
+
+$("#navClimber-placeholder").append('\
+    <nav class="padding_std_2 vis_desktop navbar fixed-top navbar-expand-lg py-md-3" style="border-radius: 0;justify-content: space-between;background-color: #000000;font-size:1.125rem;height:12vh;    margin-bottom: -20px;">\
+        <a class="navbar-brand" href="http://andescreation.com/" >\
+            <img src="http://andescreation.com/images/logo.png" class="d-inline-block align-top logoimage" alt="">\
+        </a>\
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">\
+        <span class="icon-bar" style="color:#FFF;z-index=4"><img src="http://andescreation.com/images/menu.png" height=30px></span>\
+        </button>\
+        <div class="nav_andes collapse navbar-collapse"  id="myNavbar">\
+            <div>\
+                <ul class="nav_andesul nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap">\
+                    <li class="nav-item">\
+                        <a id="nav_contact" href="climber/account" class="nav-link m-2 menu-item textmenu" style="display: table-cell;">Sua Conta</a>\
+                    </li>\
+                </ul>\
+            </div>\
+        </div>\
+    </nav>');
+    
 var d = new Date();
 var n = d.getFullYear();
 $("#footer").append('\

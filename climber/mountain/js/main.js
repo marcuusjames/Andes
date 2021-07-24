@@ -14,6 +14,9 @@ $('.flag_on').click(function(){
     $('.flag_on').toggle()
     updateUser({'create':false})
 })
+
+
+
 $(document).ready(function(){
     data = fillParameters()
     invitesClimbers(data)                    
@@ -27,6 +30,7 @@ $(document).ready(function(){
     $('.flag_off').show()
         $('.flag_on').hide()
     }
+    clickfunctions()
 }
 )
 
@@ -213,5 +217,15 @@ function invitesClimbers(data){
                   alert("error on sending invite! Check with administrator")
                 }
               });
+    })
+}
+
+function clickfunctions(){
+    $('.lamp_off').click(function(){
+        showmodal("modalBloq")
+    })
+
+    $('.lamp_on').click(function(){
+        modalRemoveBloq(this)
     })
 }

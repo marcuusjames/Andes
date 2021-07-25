@@ -210,7 +210,7 @@ $(document).ready(function(){
 $(".numbers_line").each(function(){
     f = $(this).attr('id')
     $.each($(this).find(".number_line"),function(){
-        if ($(this).text==user[f]){
+        if ($(this).text()==user[f]){
             num = $(this).text()
             if (num=='0'){
                 perc = '0%'

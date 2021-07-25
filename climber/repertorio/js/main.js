@@ -211,7 +211,38 @@ $(".numbers_line").each(function(){
     f = $(this).attr('id')
     $.each($(this).find(".number_line"),function(){
         if ($(this).text==user[f]){
-            $(this).click()
+            num = $(this).text()
+            if (num=='0'){
+                perc = '0%'
+            } else if (num=='1'){
+                perc = '20%'
+            }  else if (num=='2'){
+                perc = '32%'
+            }  else if (num=='3'){
+                perc = '44%'
+            }  else if (num=='4'){
+                perc = '57%'
+            }  else if (num=='5'){
+                perc = '69%'
+            }  else if (num=='6'){
+                perc = '82%'
+            }  else if (num=='7'){
+                perc = '100%'
+            } 
+            $(this).parent().next('.progress_backline').children('.progress_line').each(function(){
+                    $(this).css({'width':perc})
+                })
+
+                $(this).parent().children('.number_line').each(function(){
+                    if (parseInt($(this).text())<=parseInt(num)){
+                        $(this).css({'color':'white'})
+                        $(this).addClass('select_line')
+                    } else {
+                        $(this).css({'color':'#666'})
+                        $(this).removeClass('select_line')
+                    }
+                    
+                })
         }
     })
     

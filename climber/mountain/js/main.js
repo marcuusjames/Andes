@@ -203,6 +203,23 @@ function invitesClimbers(data){
     }
 
     $("#sendInvite").click(function(){
+        filled = true
+            dict = {
+                "ID":next_invite,
+                "user_to":$("#invite_name").val(),
+                "user_email_to":$("#invite_email").val(),
+                "user_from":user['name'].split(" ")[0],
+                "message":$("#invite_msg").val()
+                    
+                },
+            $.each( dict, function( key, value ) {
+            if (value==""){
+            alert("Preecha todos os campos!");
+            filled=false
+            return false;
+            };
+            });
+            if (filled){
             $.ajax({
                 type: "GET",
                 url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/inviteUser",
@@ -224,6 +241,7 @@ function invitesClimbers(data){
                   alert("error on sending invite! Check with administrator")
                 }
               });
+            }
     })
 }
 

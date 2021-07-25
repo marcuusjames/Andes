@@ -135,6 +135,10 @@ $(document).ready(function(){
             }
         });
 
+    $("#saveRep").click(function(){
+        updateClimber()
+    })
+
     })
 
 

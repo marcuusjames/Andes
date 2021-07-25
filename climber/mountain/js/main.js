@@ -7,6 +7,10 @@ $('.flag_off').click(function(){
     $('.flag_off').toggle()
     $('.flag_on').toggle()
     updateUser({'create':true})
+    $("#tooltip_on").show()
+    setTimeout(() => { console.log("Enviando..."); }, 3000);
+    $("#tooltip_on").fadeOut()
+
 })
 
 $('.flag_on').click(function(){

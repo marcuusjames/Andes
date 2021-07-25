@@ -1065,6 +1065,43 @@ body.modal-open {
 	color: white;
   cursor: pointer;
 }
+
+.black-checkbox {
+	-webkit-appearance: none;
+	background-color: black;
+	border: 2px solid white;
+	box-shadow: 0;
+	padding: 5px;
+	border-radius: 0px;
+	display: inline-block;
+	position: relative;
+  cursor: pointer;
+}
+.black-checkbox:active, .black-checkbox:checked:active {
+	box-shadow: 0;
+  cursor: pointer;
+}
+
+.black-checkbox:checked {
+	background-color: black;
+	border: -1px solid #666;
+	padding: 5px;
+	box-shadow: 0;
+	color: #666;
+  cursor: pointer;
+}
+
+.black-checkbox:checked:after {
+	content: '\2714';
+	font-size: 10px;
+	position: absolute;
+	top: -2px;
+	left: 1px;
+	color: white;
+  cursor: pointer;
+}
+
+
 input[type=checkbox], input[type=radio] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

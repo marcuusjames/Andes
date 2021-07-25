@@ -7,3 +7,25 @@
   color: white;
   background-color: #000;
 }
+
+.tagtext{
+  display: inline-block;
+  border: 2px;
+  border-style: solid;
+  border-radius: 4px;
+  text-align: center;
+  font-family: 'Archivo';
+  font-size: 16px;
+  line-height: 20px;
+  font-style: normal;
+  height: 25px;
+  padding: 1px 8px;
+  margin: 1px 2px;
+  cursor: pointer;
+  color: white;
+  
+}
+.tagclick{
+  color: black;
+  background-color: white;
+}

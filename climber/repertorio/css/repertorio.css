@@ -111,7 +111,7 @@ font-family: Archivo;
 
 .select2-container {
 border-color: black;
-width: 37.64vw;
+width: 54vw;
 padding: 20px;
 background-color: black;
 border: 2px solid;
@@ -119,4 +119,14 @@ border-radius: 0px;
 cursor: text;
 position: relative;
 font-family: Archivo;
+}
+
+.select2-container--default .select2-selection--multiple {
+  background-color: black;
+  border: 0px solid #aaa;
+  border-radius: 4px;
+  cursor: text;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  position: relative;
 }

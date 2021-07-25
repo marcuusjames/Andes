@@ -1018,7 +1018,7 @@ input{
 }
 .modalAndes{
   display: none;position: fixed;top: 20vh;left:25vw;width: 50vw;
-  overflow-y: hidden;z-index: 6;
+  overflow-y: hidden;z-index: 6;border-radius: 0;
 }
 body.modal-open {
   overflow: hidden;

@@ -131,3 +131,23 @@ font-family: Archivo;
   position: relative;
 }
 
+
+
+.vscomp-ele {
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.vscomp-toggle-button{
+  display: block;
+  position: relative;
+  align-items: center;
+  background-color: #000;
+  cursor: pointer;
+  border-color: #fff;
+  border-width: 2px;
+  width: 100%;
+  padding: 20px;
+  color: white;
+}

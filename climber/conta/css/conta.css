@@ -1,0 +1,13 @@
+td:nth-child(1) {
+    width: 20%;
+}
+
+/* the second */
+td:nth-child(2) {
+width: 70%;
+}
+
+/* the third */
+td:nth-child(3) {
+width: 10%;
+}

@@ -1,7 +1,16 @@
 user = JSON.parse(sessionStorage['user'])
 $(".tagtext").click(function(){
-    console.log('teste')
-    $(this).toggleClass('tagclick')
+    that=this
+    if ($(this).hasClass('tagexclusive')){
+        $.each($(this).parent().find('.tagtext'),function(){
+            $(this).removeClass('tagclick')
+        })
+    } else {
+        $.each($(this).parent().find('.tagexclusive'),function(){
+            $(this).removeClass('tagclick')
+        })
+    }
+    $(that).toggleClass('tagclick')
 })
 
 $('.number_line').click(function(){

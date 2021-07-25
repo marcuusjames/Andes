@@ -15,6 +15,16 @@ $(document).ready(function(){
     $.each($('.datefield'),function(){
         $(this).html(dataAtualFormatada(user[$(this).attr('id')]))
     })
+
+    $(".edittextfield").click(function(){
+        n = $(this).attr("id").slice(0,-4)
+        $("#"+n).hide()
+        $("#i_"+n).show()
+
+        $("#"+n+"Edit").hide()
+        $("#"+n+"Save").show()
+    })
+
     $("#saveRep").click(function(){
         updateClimber()
         alert("Informações Atualizadas!")

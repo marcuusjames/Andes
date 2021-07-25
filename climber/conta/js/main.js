@@ -16,6 +16,13 @@ $(document).ready(function(){
         $(this).html(dataAtualFormatada(user[$(this).attr('id')]))
     })
 
+    $.each($('.i_textfield'),function(){
+        $(this).val(user[$(this).attr('id')])
+    })
+    $.each($('.i_datefield'),function(){
+        $(this).val(dataAtualFormatada(user[$(this).attr('id')]))
+    })
+
     
 
     $("#saveRep").click(function(){

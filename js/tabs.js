@@ -52,7 +52,7 @@ $("#navClimber-placeholder").append('\
             <div>\
                 <ul class="nav_andesul nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap">\
                     <li class="nav-item">\
-                        <a id="nav_contact" href="climber/account" class="nav-link m-2 menu-item textmenu" style="display: table-cell;">Sua Conta</a>\
+                        <a id="nav_contact" href="climber/conta" class="nav-link m-2 menu-item textmenu" style="display: table-cell;">Sua Conta</a>\
                     </li>\
                 </ul>\
             </div>\

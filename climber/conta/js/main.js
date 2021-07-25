@@ -42,6 +42,19 @@ $(document).ready(function(){
         $("#"+n+"Save").show()
     })
 
+    $(".saveEdit").click(function(){
+        n = $(this).attr("id").slice(0,-4)
+        updates = {
+            n:$("#input_"+n).val()
+        }
+        updateUser(updates)
+        $("#"+n).show()
+        $("#i_"+n).hide()
+
+        $("#"+n+"Edit").show()
+        $("#"+n+"Save").hide()
+    })
+
 
     function updateClimber(){
         data = {}

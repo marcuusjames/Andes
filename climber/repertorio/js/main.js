@@ -53,7 +53,8 @@ form_level = [
     options: form_level,
     multiple: false,
     placeholder: 'Selecionar',
-    searchPlaceholderText:'Procurar...'
+    searchPlaceholderText:'Procurar...',
+    selectedValue:user['curso_nivel']
   });
 
   form_gender = [
@@ -73,7 +74,8 @@ form_level = [
     options: form_gender,
     multiple: false,
     placeholder: 'Selecionar',
-    searchPlaceholderText:'Procurar...'
+    searchPlaceholderText:'Procurar...',
+    selectedValue:user['gender']
   });
 
   form_marital = [
@@ -88,10 +90,27 @@ form_level = [
     options: form_marital,
     multiple: false,
     placeholder: 'Selecionar',
-    searchPlaceholderText:'Procurar...'
+    searchPlaceholderText:'Procurar...',
+    selectedValue:user['marital_status']
   });
 
     $('.select2tags').select2({
     placeholder: this.ph,
     tags: true
+    })
+
+
+$(document).ready(function(){
+    $.each($('.select2tags'),function(){
+        that=this
+        $.each(user[$(that).attr('id')],function(){
+                var newOption = new Option(this, this, false, false);
+                $(that).append(newOption).trigger('change');
+            })
+            $(that).val(user[$(that).attr('id')]).change()
+        })
+
+    $.each($('.textfield'),function(){
+        $(this).val(user[$(this).attr('id')])
+    })
     })

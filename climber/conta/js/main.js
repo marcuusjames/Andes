@@ -5,7 +5,16 @@ $(document).ready(function(){
     $.each($('.textfield'),function(){
         $(this).html(user[$(this).attr('id')])
     })
-
+    function dataAtualFormatada(d){
+        var data = new Date(d),
+            dia  = data.getUTCDate().toString().padStart(2, '0'),
+            mes  = (data.getUTCMonth()+1).toString().padStart(2, '0'), //+1 pois no getMonth Janeiro começa com zero.
+            ano  = data.getUTCFullYear();
+        return dia+"/"+mes+"/"+ano;
+    }
+    $.each($('.datefield'),function(){
+        $(this).html(dataAtualFormatada(user[$(this).attr('id')]))
+    })
     $("#saveRep").click(function(){
         updateClimber()
         alert("Informações Atualizadas!")

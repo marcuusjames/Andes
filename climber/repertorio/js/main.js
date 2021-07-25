@@ -39,8 +39,10 @@ $('.number_line').click(function(){
         $(this).parent().children('.number_line').each(function(){
             if (parseInt($(this).text())<=parseInt(num)){
                 $(this).css({'color':'white'})
+                $(this).addClass('select_line')
             } else {
                 $(this).css({'color':'#666'})
+                $(this).removeClass('select_line')
             }
             
         })

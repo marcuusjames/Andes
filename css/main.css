@@ -588,9 +588,14 @@ a:hover {
   text-align:left
 }
 
+
+a {
+  color: #666666;
+  text-decoration: none;
+}
+
 a:focus, a:hover {
   color: #666666;
-  text-decoration: underline;
 }
 
 .vscomp-wrapper.multiple .vscomp-option.selected .checkbox-icon::after {

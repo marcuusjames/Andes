@@ -115,4 +115,24 @@ $(document).ready(function(){
     $.each($('.textfield'),function(){
         $(this).val(user[$(this).attr('id')])
     })
+
+    $(".tagsfield").each(function(){
+        f = $(this).attr('id')
+        $(this).children('.tagtext').each(function(){
+              g=this
+             if(user[f][$(this).text()]){   
+                $(this).toggleClass('tagclick')
+            }
+        })
+    })
+
+    $(".radiofield").each(function(){
+    
+            var $radios = $('input[name='+$(this).attr('id').slice(0, -1)+']');
+            console.log($radios)
+            if($radios.is(':checked') === false) {
+                $radios.filter('[value="'+user[$(this).attr('id')]+'"]').prop('checked', true);
+            }
+        });
+
     })

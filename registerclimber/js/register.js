@@ -81,6 +81,11 @@ function registerClimber(){
         })
     })
 
+    $(".select2tags").each(function(){
+        data[$(this).attr('id')]=$(this).val()
+    })
+
+
     $('.inputfield').each(function(){
         data[$(this).attr('id')]=$(this).prop('checked')
     })

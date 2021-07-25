@@ -137,7 +137,7 @@ td:nth-child(3) {
 }
 
 .tooltip_flag .tooltiptext_on {
-  visibility: hidden;
+  display: none;
   width: 274px;
   background-color: white;
   color: #000;

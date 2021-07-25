@@ -509,9 +509,6 @@ color: #000000;
   
 }
 
-a:hover {
-  color: #ccc !important;
-}
 
 .actual{
   text-decoration: underline;

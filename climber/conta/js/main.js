@@ -44,16 +44,13 @@ $(document).ready(function(){
 
     $(".saveEdit").click(function(){
         n = $(this).attr("id").slice(0,-4)
+        updates = {}
         if ($("#input_"+n).hasClass('datefield')){
             var pattern = /(\d{2})\/(\d{2})\/(\d{4})/;
             var dt = new Date($("#input_"+n).val().replace(pattern,'$3-$2-$1'));
-            updates = {
-                n:dt
-            }
+            updates[n] = dt
         } else {
-            updates = {
-                n:$("#input_"+n).val()
-            }
+            updates[n] = $("#input_"+n).val()
         }
         console.log(updates)
         updateUser(updates)

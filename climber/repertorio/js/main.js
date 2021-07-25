@@ -183,5 +183,4 @@ $(document).ready(function(){
         })
         updateUser(data)
     
-        console.log(data)
     }

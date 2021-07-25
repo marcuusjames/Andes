@@ -48,7 +48,15 @@ $('.number_line').click(function(){
         })
     
 })
-
+$(".numbers_line").each(function(){
+    f = $(this).attr('id')
+    $.each($(this).find(".number_line"),function(){
+        if ($(this).text==user[f]){
+            $(this).click()
+        }
+    })
+    
+});
 
 form_level = [
     { label: 'Técnico', value: 'tecnico', alias: 'custom label for search' },
@@ -143,15 +151,7 @@ $(document).ready(function(){
             }
         });
 
-    $(".numbers_line").each(function(){
-        f = $(this).attr('id')
-        $.each($(this).find(".number_line"),function(){
-            if ($(this).text==user[f]){
-                $(this).click()
-            }
-        })
-        
-    });
+    
 
     
 

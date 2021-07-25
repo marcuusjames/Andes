@@ -47,8 +47,6 @@ $('.number_line').click(function(){
             
         })
     
-    console.log(num)
-    console.log('teste')
 })
 
 
@@ -140,11 +138,20 @@ $(document).ready(function(){
     $(".radiofield").each(function(){
     
             var $radios = $('input[name='+$(this).attr('id').slice(0, -1)+']');
-            console.log($radios)
             if($radios.is(':checked') === false) {
                 $radios.filter('[value="'+user[$(this).attr('id')]+'"]').prop('checked', true);
             }
         });
+
+    $(".numbers_line").each(function(){
+        f = $(this).attr('id')
+        $.each($(this).find(".number_line"),function(){
+            if ($(this).text==user[f]){
+                $(this).click()
+            }
+        })
+        
+    });
 
     
 
@@ -194,7 +201,7 @@ $(document).ready(function(){
         $('.radiofield').each(function(){
             data[$(this).attr('id')]=$('input[name='+$(this).attr('id').slice(0, -1)+']:checked').val();
         })
-        
+
         $.each($(".numbers_line"),function(){
             f = $(this).attr('id')
             $.each($(this).find(".number_line"),function(){

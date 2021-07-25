@@ -22,7 +22,7 @@ $('.flag_on').click(function(){
 
 $(document).ready(function(){
     data = fillParameters()
-    $('#indTel').mask('(00)000000000');
+    
     invitesClimbers(data)                    
     indProjects(data)            
     ownProjects(data)

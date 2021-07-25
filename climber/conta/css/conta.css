@@ -16,3 +16,13 @@ width: 10%;
 border-bottom: 1px solid #666666;
 height: 100px;
 }
+
+.invite_rep{
+    border-color: white;
+    box-shadow: 0px;
+    border-radius: 0px;
+    outline: 0 none;
+    border-width: 2px;
+    color: white;
+    background-color: #000;
+  }

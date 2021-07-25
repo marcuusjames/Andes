@@ -93,6 +93,17 @@ function registerClimber(){
     $('.radiofield').each(function(){
         data[$(this).attr('id')]=$('input[name='+$(this).attr('id').slice(0, -1)+']:checked').val();
     })
+
+    $.each($(".numbers_line"),function(){
+        f = $(this).attr('id')
+        $.each($(this).find(".number_line"),function(){
+            if ($(this).hasClass('select_line')){
+                n = $(this).text()
+            }
+        })
+        data[f]=n
+    })
+
     data['status']='active'
     data['create']=true
     $.ajax({

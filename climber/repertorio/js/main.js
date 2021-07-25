@@ -90,3 +90,8 @@ form_level = [
     placeholder: 'Selecionar',
     searchPlaceholderText:'Procurar...'
   });
+
+    $('.select2tags').select2({
+    placeholder: this.ph,
+    tags: true
+    })

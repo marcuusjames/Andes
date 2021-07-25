@@ -8,8 +8,7 @@ $('.flag_off').click(function(){
     $('.flag_on').toggle()
     updateUser({'create':true})
     $("#tooltip_on").show()
-    setTimeout(() => { console.log("Enviando..."); }, 3000);
-    $("#tooltip_on").fadeOut()
+    $("#tooltip_on").fadeOut(5000)
 
 })
 

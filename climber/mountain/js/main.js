@@ -41,6 +41,7 @@ $("#inviteClimber").click(function(){
 
 function inviteClimber(){
     showmodal('modalInvite')
+    $("body").removeClass("modal-open");
     $("#invite_number").text((invites_used+1).toString())
     $("#num_invites_invite").text(invites_available.toString())
 }

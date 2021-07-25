@@ -57,15 +57,13 @@ td:nth-child(3) {
   
 
   .modalInvite{
-    position: fixed;
+    position: absolute;
     width: 40%;
     left: 30%;
     top: 10%;
 
     background: #BECDFF;
     border-radius: 20px;
-    max-height: calc(100vh - 20%);
-    overflow-y: auto;
   }
   .invite_input{
     border: 0px;

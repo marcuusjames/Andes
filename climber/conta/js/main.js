@@ -36,7 +36,7 @@ $(document).ready(function(){
         n = $(this).attr("id").slice(0,-4)
         $("#"+n).hide()
         $("#i_"+n).show()
-        $("#i_"+n).focus()
+        $("#input_"+n).focus()
 
         $("#"+n+"Edit").hide()
         $("#"+n+"Save").show()

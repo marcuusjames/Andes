@@ -137,6 +137,7 @@ $(document).ready(function(){
 
     $("#saveRep").click(function(){
         updateClimber()
+        alert("Informações Atualizadas!")
     })
 
     })

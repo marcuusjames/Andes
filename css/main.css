@@ -596,6 +596,7 @@ a {
 
 a:focus, a:hover {
   color: #666666;
+  text-decoration: none;
 }
 
 .vscomp-wrapper.multiple .vscomp-option.selected .checkbox-icon::after {

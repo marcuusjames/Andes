@@ -93,7 +93,7 @@ function registerClimber(){
     $('.radiofield').each(function(){
         data[$(this).attr('id')]=$('input[name='+$(this).attr('id').slice(0, -1)+']:checked').val();
     })
-    data['status']='register'
+    data['status']='active'
     data['create']=true
     $.ajax({
         type: "GET",

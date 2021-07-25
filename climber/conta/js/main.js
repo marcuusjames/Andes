@@ -17,10 +17,10 @@ $(document).ready(function(){
     })
 
     $.each($('.i_textfield'),function(){
-        $(this).val(user[$(this).attr('id')])
+        $(this).val(user[$(this).attr('id').slice(6,50)])
     })
     $.each($('.i_datefield'),function(){
-        $(this).val(dataAtualFormatada(user[$(this).attr('id')]))
+        $(this).val(dataAtualFormatada(user[$(this).attr('id').slice(6,50)]))
     })
 
     

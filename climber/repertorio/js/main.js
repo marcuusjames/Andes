@@ -28,9 +28,9 @@ $('.number_line').click(function(){
 
         $(this).parent().children('.number_line').each(function(){
             if (parseInt($(this).text())<=parseInt(num)){
-                $(this).css({'color':'black'})
+                $(this).css({'color':'white'})
             } else {
-                $(this).css({'color':'#C5C5C5'})
+                $(this).css({'color':'#666'})
             }
             
         })

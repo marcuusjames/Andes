@@ -1,3 +1,4 @@
+user = JSON.parse(sessionStorage['user'])
 $(".tagtext").click(function(){
     console.log('teste')
     $(this).toggleClass('tagclick')
@@ -101,6 +102,7 @@ form_level = [
 
 
 $(document).ready(function(){
+    
     $.each($('.select2tags'),function(){
         that=this
         $.each(user[$(that).attr('id')],function(){

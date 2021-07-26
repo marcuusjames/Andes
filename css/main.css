@@ -1026,7 +1026,7 @@ body.modal-open {
 @media (max-width: 1000px) {
   .modalAndes{
     display: none;position: fixed;top: 10vh;left:5vw;width: 90vw;
-    overflow-y: hidden;
+    overflow-y: hidden
   }
 }
 

@@ -21,8 +21,8 @@
   height: 25px;
   padding: 1px 8px;
   margin: 4px 4px;
-  cursor: pointer;
-  color: white;
+  cursor: auto;
+  color: rgb(65, 64, 64);
   
 }
 .t {

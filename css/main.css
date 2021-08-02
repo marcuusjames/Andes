@@ -957,6 +957,7 @@ input {
   border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
   border-image: initial;
   border-radius: 0px;
+  font-family: Archivo;
 }
 
 .navbar-brand {
@@ -1023,6 +1024,7 @@ input{
 body.modal-open {
   overflow: hidden;
 }
+
 @media (max-width: 1000px) {
   .modalAndes{
     display: none;position: fixed;top: 10vh;left:5vw;width: 90vw;

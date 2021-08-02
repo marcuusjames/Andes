@@ -91,8 +91,8 @@
                         <p class="h2 open_menu" style="color:white">MEU LEGADO<span class="minus_menu" style="float:right;display: none;">-</span><span class="plus_menu" style="float:right">+</span></p>
                         <div class="ac_menu_div">
                            <p id="invite_0" class="p2 noinvite" style="color:white;width: 95%;display: none;">Você sabia que nossa comunidade cresce a partir de cada Climber? Isso quer dizer que é você quem escolhe quem trabalha com a gente. Convide um amigo e deixe seu legado.</p>
-                           <p id="invite_1" class="p2 noinvite" style="color:white;width: 95%;display: none;">Você já transformou <span id='num_climbers' style="color: #BECDFF">3</span> pessoas em Climbers, uau! Segundo nossos cálculos, ainda restam <span id='num_invites' style="color: #BECDFF">2</span> convites!</p>
-                           <p id='inviteClimber' style="color: #666;text-decoration: underline;"><span style="padding-right: 10px;"><img src='./climber/mountain/images/send.png'></span>Convidar um amigo</p>
+                           <p id="invite_1" class="p2 noinvite" style="color:white;width: 95%;display: none;">Você já transformou <span id='num_climbers' style="color: #BECDFF">3</span> pessoas em Climbers, uau! Segundo nossos cálculos, ainda restam <span id='num_invites' style="color: #BECDFF">2</span> convites!<br><br></p>
+                           <p id='inviteClimber' class="p2" style="color: #666;text-decoration: underline;"><span style="padding-right: 10px;"><img src='./climber/mountain/images/send.png'></span>Convidar um amigo</p>
                         </div>
                      </div>
                      <div class="ac_menu" style="margin-bottom: 10vh;">
@@ -128,7 +128,7 @@
                               </div>
                            
                               <div style="padding-top:5vh;">
-                                 <button id='indCustomer' class="button_orc" style="color: black;background-color:white;">ADICIONAR INDICAÇÃO</button>
+                                 <button id='indCustomer' class="button_orc" style="color: black;background-color:white;border:0">ADICIONAR INDICAÇÃO</button>
                               </div>
 
 
@@ -145,8 +145,20 @@
                      <div class="ac_menu_div">
                         <div id="ownprojects_0" style="display: none;">
                            <p class="p3 invite" style="color:white;">No momento, você não está criando nada com a gente.
-                              <span class='flag_off' style="float:right"><img src='./climber/mountain/images/flag_off.png'></span>
-                              <span class='flag_on' style="float:right;display: none;"><img src='./climber/mountain/images/flag_on.png'></span>
+                              
+                              <div class="tooltip_flag">
+                                 <span class='flag_off'>
+                                       <img  src='./climber/mountain/images/flag_off.png'>
+                                       <span class="tooltiptext">Com sede de criação? Acene a bandeira para a gente identificar sua predispoção para algum projeto.</span>
+                                       
+                                 </span>
+                                 <span class='flag_on' style="display: none;"><img src='./climber/mountain/images/flag_on.png'>
+                                    <span id="tooltip_on" class="tooltiptext_on" style="background-color:#B585B4">
+                                       Em 30 dias sua bandeira será guardada e você poderá acenar novamente caso queira.
+                                    </span>
+                                 </span>
+                              </div>
+
                            </p>
                         </div>
 

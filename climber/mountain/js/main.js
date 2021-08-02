@@ -7,8 +7,9 @@ $('.flag_off').click(function(){
     $('.flag_off').toggle()
     $('.flag_on').toggle()
     updateUser({'create':true})
-    $("#tooltip_on").show()
-    $("#tooltip_on").fadeOut( 10000)
+    that = $(this).parent().children('.flag_on').children('.tooltiptext_on')
+    that.show()
+    that.fadeOut( 10000)
 
 })
 

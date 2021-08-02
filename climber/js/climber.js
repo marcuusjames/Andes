@@ -18,7 +18,7 @@ $(".userVar").each(function() {
         $.each(tags,function(i,j){
             if (j==true){
                 $(that).append(
-                    '<p class="tagtext">'+i+'</p>'
+                    '<p class="tagtext" style="cursor:auto">'+i+'</p>'
                 )
             }
         })

@@ -1157,6 +1157,46 @@ input[type=file]:focus, input[type=checkbox]:focus, input[type=radio]:focus {
 }
 
 
+.black-radio {
+	-webkit-appearance: none;
+	background-color: black;
+	border: 2px solid white;
+	box-shadow: 0;
+	padding: 9px;
+	border-radius: 50px;
+	display: inline-block;
+	position: relative;
+  cursor: pointer;
+}
+
+.black-radio:checked:after {
+	content: ' ';
+	width: 7px;
+	height: 7px;
+	border-radius: 50px;
+	position: absolute;
+	top:1.5px;
+	background: white;
+	box-shadow: 0;
+	text-shadow: 0px;
+	left: 1.2px;
+	font-size: 32px;
+  cursor: pointer;
+}
+
+.black-radio:checked {
+	background-color: black;
+	color: white;
+	border: 2px solid white;
+	box-shadow: 0;
+  cursor: pointer;
+}
+
+.black-radio:active, .regular-radio:checked:active {
+	box-shadow: 0 ;
+  cursor: pointer;
+}
+
 textarea {
   -webkit-writing-mode: horizontal-tb !important;
   text-rendering: auto;

@@ -23,7 +23,7 @@ height: 25vh;
     outline: 0 none;
     border-width: 2px;
     color: white;
-    background-color: #000;
+    background-color: rgba(102, 102, 102,0.3);
     border-color: #666666;
     border-top: 0;
     border-right: 0;

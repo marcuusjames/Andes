@@ -52,6 +52,7 @@ $(document).ready(function(){
         } else {
             updates[n] = $("#input_"+n).val()
         }
+        $("#"+n).text($("#input_"+n).val())
         console.log(updates)
         updateUser(updates)
         $("#"+n).show()

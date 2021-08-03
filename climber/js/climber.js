@@ -1,5 +1,10 @@
 try {
     user = JSON.parse(sessionStorage['user'])
+    if (user['socialname']==""){
+        user['callname']=user['name'].split(' ')[0]
+    } else {
+        user['callname']=user['socialname'].split(' ')[0]
+    }
 
 getParameters(user)
 

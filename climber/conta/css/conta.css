@@ -6,14 +6,14 @@ td:nth-child(1) {
 /* the second */
 td:nth-child(2) {
 width: 69%;
-border-bottom: 1px solid #666666;
+border-bottom: 0.5px solid #666666;
 height: 25vh;
 }
 
 /* the third */
 td:nth-child(3) {
 width: 10%;
-border-bottom: 1px solid #666666;
+border-bottom: 0.5px solid #666666;
 height: 25vh;
 }
 

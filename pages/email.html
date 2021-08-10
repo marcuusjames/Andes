@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+   <base href="http://andescreation.com">
+   <!-- <base href="C:/Andes/index.html"> -->
+   <meta charset="utf-8" />
+   <meta name="HandheldFriendly" content="true" />
+   <meta name="MobileOptimized" content="320" />
+   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
+   <!-- smart phone css  -->
+   
+   <head>
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Epilogue&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Syne&display=swap" rel="stylesheet" />
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <script
+         src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+      <!-- <link href="css/main.css" rel="stylesheet" />
+      <link href="climber/css/main.css" rel="stylesheet" />
+      <link href="climber/mountain/css/montain.css" rel="stylesheet" />
+      <link href="css\fonts.css" rel="stylesheet" /> -->
+      <style>
+         body {
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333;
+            background-color: #fff;
+         }
+         body {
+            margin: 0;
+         }
+         .modalInvite {
+            background: #BECDFF;
+            border-radius: 20px;
+         }
+   
+         .modalAndes {
+            display: none;
+            margin-top: 10vh;
+            top: 20vh;
+            left: 5vw;
+            width: 90vw;
+            z-index: 6;
+         }
+         .p3 {
+            font-family: Archivo;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px !important;
+            line-height: 22.5px;
+            letter-spacing: 0.06em;
+            color: #000000;
+         }
+         .p2 {
+            font-family: Archivo;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 150%;
+            letter-spacing: 0.06em;
+            color: #000000;
+         }
+         .h1 {
+            font-family: Archivo;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 40px;
+            line-height: 44px;
+            letter-spacing: 0.06em;
+            color: #000000;
+         }
+         .h2 {
+            font-family: Archivo;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-feature-settings: 'liga' off;
+            color: #000000;
+            margin-top: 20px;
+            margin-bottom: 20px;
+         }
+         .l2 {
+    font-family: Archivo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: black;
+}
+         html, body {
+            -webkit-text-size-adjust: none;
+         }
+         body {
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333;
+            background-color: #fff;
+         }
+         .h1, .h2, .h3, h1, h2, h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+         }
+         p {
+            margin: 0 0 10px;
+         }
+         .rowcol:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+         * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+         @media (min-width: 768px){
+            .modal-content {
+               -webkit-box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+               box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+            }
+         }
+      </style>
+      <meta charset="utf-8">
+   </head>
+   
+   
+   <body style="background-color: black;color:white">
+    <div class="modal-content modalInvite modalAndes" id='modalInvite' style="display:block;top:5%">
+    <div class="modal-header" style="border-bottom:1px solid #73798E;padding-left: 8%;">
+        <p class="p3 modal-title" style="float:right">AAAAAA</p>
+       <p class="p3 modal-title">Você recebeu um convite</p>
+    </div>
+    <div style="padding-left: 8%;padding-right: 8%;padding-bottom: 3%;
+       background-image: linear-gradient(to right, #73798E 50%, #BECDFF 0%);
+       background-position: bottom;
+       background-size: 8% 1px;
+       background-repeat: repeat-x;">
+       <div class="rowcol">
+          <p class="h1" style="width: 30%;float: left;">Creative Climbing</p>
+          <p class="h1" style="float: right;"><img src="./climber/mountain/images/black_seta.png"></p>
+       </div>
+       <div>
+          <div style="padding-top: 30px; width: 60%;">
+             <p class="p2">Cartão-convite para novos Climbers.
+          </div>
+       </div>
+    </div>
+    <div style="padding-left: 8%;padding-right: 8%;padding-bottom: 3%;">
+       <div class="rowcol" style="padding-top: 6%;">
+          <div style="float: left;">
+             <p class="h2" style="margin-bottom: 0px;">REQUISITOS</p>
+             <p class="l2" style="width: 30%;">Criatividade</p>
+          </div>
+          <div style="float: right;">
+             <p class="h2" style="margin-bottom: 0px;">CUSTO</p>
+             <p class="l2">$ 0</p>
+          </div>
+       </div>
+       <div style="padding-top: 2%;">
+          <p class="h2" style="margin-bottom: 0px;">Convidado</p>
+          <p id='invite_name' class="l2" style="width: 30%;">Marcus James</p>
+          <p class="h2" style="margin-bottom: 0px;">Destino</p>
+          <p id='invite_name' class="l2" style="width: 100%;">Uma nova dimensão de trabalho criativo.</p>
+          <p class="h2" style="margin-bottom: 0px; padding-top: 2%;">MENSAGEM DO ANFITRIÃO</p>
+          <p id='invite_name' class="l2" style="width: 100%;">Você é dedicado, criativo e atento aos detalhes. Admiro seu trabalho!<span class='h2'> - BRUNNA</span></p>
+       </div>
+       <div class="rowcol" style="padding-top: 6%;">
+          <div style="float: left;">
+             <p class="h2" style="margin-bottom: 0px;">CÓDIGO DE ACESSO</p>
+             <p class="l2" style="width: 30%;">AAAAAA</p>
+          </div>
+          <div style="float: right;">
+             <p class="h2" style="margin-bottom: 0px;">VALIDADE</p>
+             <p class="l2">20/07/2021</p>
+          </div>
+       </div>
+    </div>
+ </div>
+ <div>
+    <p class="p3" style="padding: 10vw;color: white;">
+      Somos uma empresa officeless de design. Desenvolvemos estratégias, marcas e produtos digitais, mas nosso trabalho preferido mesmo é criar uma ampla comunidade de profissionas da economia criativa.
+<br><br>
+      Queremos, com isso, aumentar a eficiência criativa, facilitar a vida dos freelas e ajudar a colocar dinheiro no bolso de criativos. Quer entender melhor? Clica aqui.
+      <br><br>
+      A boa notícia é que você foi convidado para participar dessa comunidade para performar seu talento e criatividade junto com a gente.
+      <br><br>
+      Para embarcar, é só copiar o código abaixo e clicar no botão para confirmar o seu e-mail e criar sua conta!
+    </p>
+    <center>
+    <div style="border: white solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0
+    ; width: 30vw;">
+    <p id='inviteCode' style="font-family:'Archivo';width: 100%;text-align: center;font-size: 46px;">
+      AAAAAA
+    </p>
+   </div>
+   <button style="text-align:center;width:30vw;padding: 22px 32px;margin-top: 5vh;color: black;font-family: 'Archivo';font-size: 24px;">
+      ACEITAR CONVITE
+   </button>
+</center>
+ </div>
+</body>
+</html>
+
+<script>
+   function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("inviteCode");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+</script>

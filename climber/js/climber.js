@@ -27,6 +27,9 @@ $(".userVar").each(function() {
                 )
             }
         })
+        $(that).append(
+            '<p class="tagtext"><span><img src="climber/mountain/images/editpng.png"></span></p>'
+        )
     }
 })
 

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+   <base href="http://andescreation.com">
+   <!-- <base href="C:/Andes/index.html"> -->
+   <meta charset="utf-8" />
+   <meta name="HandheldFriendly" content="true" />
+   <meta name="MobileOptimized" content="320" />
+   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
+   <!-- smart phone css  -->
+   
+   <head>
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <style type="text/css">
+         @import url('https://fonts.googleapis.com/css2?family= Helvetica:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+       </style>
+       <link href="https://fonts.googleapis.com/css2?family= Helvetica:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <script
+         src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+      <!-- <link href="css/main.css" rel="stylesheet" />
+      <link href="climber/css/main.css" rel="stylesheet" />
+      <link href="climber/mountain/css/montain.css" rel="stylesheet" />
+      <link href="css\fonts.css" rel="stylesheet" /> -->
+      <style>
+         /* body {
+            font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333;
+            background-color: #fff;
+            margin: 0;
+            -webkit-text-size-adjust: none;
+         } */
+         /* .modalInvite {
+            background: #BECDFF;
+            border-radius: 20px;
+         } */
+   
+         /* .modalAndes {
+            display: none;
+            margin-top: 10vh;
+            top: 20vh;
+            left: 5%;
+            width: 95%;
+            z-index: 6;
+         } */
+         /* .p3 {
+            font-family:  Helvetica;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px !important;
+            line-height: 22.5px;
+            letter-spacing: 0.06em;
+            color: #000000;
+         } */
+         /* .p2 {
+            font-family:  Helvetica;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 150%;
+            letter-spacing: 0.06em;
+            color: #000000;
+         } */
+         /* .h1 {
+            font-family:  Helvetica;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 40px;
+            line-height: 44px;
+            letter-spacing: 0.06em;
+            color: #000000;
+         } */
+         /* .h2 {
+            font-family:  Helvetica;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-feature-settings: 'liga' off;
+            color: #000000;
+            margin-top: 20px;
+            margin-bottom: 20px;
+         } */
+         /* .l2 {
+    font-family:  Helvetica;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: black;
+} */
+         /* html, body {
+            -webkit-text-size-adjust: none;
+         } */
+         /* .h1, .h2, .h3, h1, h2, h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+         } */
+         /* p {
+            margin: 0 0 10px;
+         } */
+         .rowcol:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+         * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+         @media (min-width: 768px){
+            .modal-content {
+               -webkit-box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+               box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+            }
+         }
+         /* .tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+} */
+/* .footer {
+    background-color: black;
+    color: white;
+    padding-top: 4%;
+    overflow: hidden;
+    padding-bottom: 4%;
+}
+.padding_std_2 {
+    padding-left: 10.79%;
+    padding-right: 10.79%;
+}
+.col1_footer {
+    float: left;
+    text-align: left;
+}
+.col2_footer {
+    float: right;
+    text-align: left;
+    display: inline-block;
+    text-align: left;
+} */
+/* .f1 {
+    font-family:  Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.1em;
+    font-feature-settings: 'liga' off;
+    color: white;
+} */
+/* .modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+} */
+      </style>
+      <meta charset="utf-8">
+   </head>
+   
+   
+   <body style="background-color: black;color:white;padding:20px;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+   font-size: 14px;
+   line-height: 1.42857143;
+   color: #333;
+   background-color: #000;
+   margin: 0;
+   -webkit-text-size-adjust: none;">
+      <div id=nav-placeholder>
+         <nav class="padding_std_2 vis_desktop navbar fixed-top navbar-expand-lg py-md-3" style="    padding-left: 10.79%;
+         padding-right: 10.79%;border-radius: 0;justify-content: space-between;background-color: #000000;font-size:1.125rem;height:12vh;    margin-bottom: -20px;"> 
+            <a class="navbar-brand" href="http://andescreation.com/" > 
+                <img src="http://andescreation.com/images/logo.png" class="d-inline-block align-top logoimage" alt=""> 
+            </a> 
+            <p class="p2" style="float: right;color: white;padding: 3vh;font-family:  Helvetica;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 150%;
+            letter-spacing: 0.06em;
+            margin: 0 0 10px;">
+               Oi, """+usr_to+"""!
+            </p>
+        </nav>
+      </div>
+    <div class="modal-content modalInvite modalAndes" id='modalInvite' style="display:block;top:0%;background: #BECDFF;border-radius: 20px;    margin-top: 10vh;        left: 5%;    width: 95%;    z-index: 6;">    <div class="modal-header" style="    padding: 15px;
+      border-bottom: 1px solid #e5e5e5;border-bottom:1px solid #73798E;padding-left: 8%;">
+        <p class="p3 modal-title" style="float:right;font-family:  Helvetica;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px !important;
+        line-height: 22.5px;
+        letter-spacing: 0.06em;
+        color: #000000;
+        margin: 0 0 10px;
+        padding: 20px;">"""+inviteId+"""</p>
+       <p class="p3 modal-title" style="font-family:  'Helvetica';
+       font-style: normal;
+       font-weight: normal;
+       font-size: 15px !important;
+       line-height: 22.5px;
+       letter-spacing: 0.06em;
+       color: #000000;
+       margin: 0 0 10px;
+        padding: 20px">Você recebeu um convite</p>
+    </div>
+    <div style="padding-left: 8%;padding-right: 8%;padding-bottom: 3%;
+       background-image: linear-gradient(to right, #73798E 50%, #BECDFF 0%);
+       background-position: bottom;
+       background-size: 8% 1px;
+       background-repeat: repeat-x;">
+       <div style="padding-top: 6%;display: inline-block;width: 100%;">
+          <p class="h1" style="margin: 0 0 10px;width: 30%;float: left;font-family:  Helvetica;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 40px;
+          line-height: 44px;
+          letter-spacing: 0.06em;
+          color: #000000;margin-top: 20px;
+            margin-bottom: 10px;">Creative Climbing</p>
+          <p class="h1" style="float: right;font-family:  Helvetica;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 40px;
+          line-height: 44px;
+          letter-spacing: 0.06em;
+          color: #000000;margin-top: 20px;
+            margin-bottom: 10px;"><img src="./climber/mountain/images/black_seta.png"></p>
+       </div>
+       <div>
+          <div style="padding-top: 30px; width: 60%;">
+             <p class="p2" style="font-family:  Helvetica;
+             font-style: normal;
+             font-weight: normal;
+             font-size: 24px;
+             line-height: 150%;
+             letter-spacing: 0.06em;
+             color: #000000;">Cartão-convite para novos Climbers.
+          </div>
+       </div>
+    </div>
+    <div style="padding-left: 8%;padding-right: 8%;padding-bottom: 3%;">
+       <div style="padding-top: 6%;display: inline-block;width: 100%;">
+          <div style="float: left;">
+             <p class="h2" style="margin-bottom: 0px;font-family:  Helvetica;
+             font-style: normal;
+             font-weight: normal;
+             font-size: 16px;
+             line-height: 20px;
+             letter-spacing: 0.1em;
+             text-transform: uppercase;
+             font-feature-settings: 'liga' off;
+             color: #000000;
+             margin-top: 20px;
+             margin-bottom: 20px;">REQUISITOS</p>
+             <p class="l2" style="    font-family:  Helvetica;
+             font-style: normal;
+             font-weight: 600;
+             font-size: 18px;
+             line-height: 150%;
+             letter-spacing: 0.01em;
+             color: black;">Criatividade</p>
+          </div>
+          <div style="float: right;">
+             <p class="h2" style="margin-bottom: 0px;font-family:  Helvetica;
+             font-style: normal;
+             font-weight: normal;
+             font-size: 16px;
+             line-height: 20px;
+             letter-spacing: 0.1em;
+             text-transform: uppercase;
+             font-feature-settings: 'liga' off;
+             color: #000000;
+             margin-top: 20px;
+             margin-bottom: 20px;">CUSTO</p>
+             <p class="l2" style="    font-family:  Helvetica;
+             font-style: normal;
+             font-weight: 600;
+             font-size: 18px;
+             line-height: 150%;
+             letter-spacing: 0.01em;
+             color: black;">$ 0</p>
+          </div>
+       </div>
+       <div style="padding-top: 2%;">
+          <p class="h2" style="margin-bottom: 0px;font-family:  Helvetica;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 20px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          font-feature-settings: 'liga' off;
+          color: #000000;
+          margin-top: 20px;
+          margin-bottom: 20px;">Convidado</p>
+          <p id='invite_name' class="l2" style="    font-family:  Helvetica;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 150%;
+          letter-spacing: 0.01em;
+          color: black;">"""+usr_to+"""</p>
+          <p class="h2" style="margin-bottom: 0px;font-family:  Helvetica;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 20px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          font-feature-settings: 'liga' off;
+          color: #000000;
+          margin-top: 20px;
+          margin-bottom: 20px;">Destino</p>
+          <p id='invite_name' class="l2" style="width: 100%;    font-family:  Helvetica;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 150%;
+          letter-spacing: 0.01em;
+          color: black;">Uma nova dimensão de trabalho criativo.</p>
+          <p class="h2" style="margin-bottom: 0px; padding-top: 2%;font-family:  Helvetica;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 20px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          font-feature-settings: 'liga' off;
+          color: #000000;
+          margin-top: 20px;
+          margin-bottom: 20px;">MENSAGEM DO ANFITRIÃO</p>
+          <p id='invite_name' class="l2" style="width: 100%;    font-family:  Helvetica;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 150%;
+          letter-spacing: 0.01em;
+          color: black;">"""+msg+"""<span class='h2' style="font-family:  Helvetica;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-feature-settings: 'liga' off;
+            color: #000000;
+            margin-top: 20px;
+            margin-bottom: 20px;"> - """+usr_from+"""</span></p>
+       </div>
+       <div style="padding-top: 6%;display: inline-block;width: 100%;">
+          <div style="float: left;">
+             <p class="h2" style="margin-bottom: 0px;font-family:  Helvetica;
+             font-style: normal;
+             font-weight: normal;
+             font-size: 16px;
+             line-height: 20px;
+             letter-spacing: 0.1em;
+             text-transform: uppercase;
+             font-feature-settings: 'liga' off;
+             color: #000000;
+             margin-top: 20px;
+             margin-bottom: 20px;">CÓDIGO DE ACESSO</p>
+             <p class="l2" style="    font-family:  Helvetica;
+             font-style: normal;
+             font-weight: 600;
+             font-size: 18px;
+             line-height: 150%;
+             letter-spacing: 0.01em;
+             color: black;">"""+inviteId+"""</p>
+          </div>
+          <div style="float: right;">
+             <p class="h2" style="margin-bottom: 0px;font-family:  Helvetica;
+             font-style: normal;
+             font-weight: normal;
+             font-size: 16px;
+             line-height: 20px;
+             letter-spacing: 0.1em;
+             text-transform: uppercase;
+             font-feature-settings: 'liga' off;
+             color: #000000;
+             margin-top: 20px;
+             margin-bottom: 20px;">VALIDADE</p>
+             <p class="l2" style="    font-family:  Helvetica;
+             font-style: normal;
+             font-weight: 600;
+             font-size: 18px;
+             line-height: 150%;
+             letter-spacing: 0.01em;
+             color: black;">20/07/2021</p>
+          </div>
+       </div>
+    </div>
+ </div>
+ <div style="padding-bottom:80px">
+    <p class="p3" style="padding: 10%;color: white;font-family:  Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px !important;
+    line-height: 22.5px;
+    letter-spacing: 0.06em;">
+      Somos uma empresa officeless de design. Desenvolvemos estratégias, marcas e produtos digitais, mas nosso trabalho preferido mesmo é criar uma ampla comunidade de profissionas da economia criativa.
+<br><br>
+      Queremos, com isso, aumentar a eficiência criativa, facilitar a vida dos freelas e ajudar a colocar dinheiro no bolso de criativos. Quer entender melhor? Clica aqui.
+      <br><br>
+      A boa notícia é que você foi convidado para participar dessa comunidade para performar seu talento e criatividade junto com a gente.
+      <br><br>
+      Para embarcar, é só copiar o código abaixo e clicar no botão para confirmar o seu e-mail e criar sua conta!
+    </p>
+    <center>
+    <div style="border: white solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0
+    ; width: 40%;">
+    <p id='inviteCode' style="font-family:  Helvetica;;width: 100%;text-align: center;font-size: 46px;color: white;">
+      """+inviteId+"""
+      
+    </p>
+    
+   </div>
+   <div style="background-color:white;text-align:center;width:40%;padding: 22px 32px;margin-top: 20px;color: black;font-family:  Helvetica;;font-size: 24px;">
+      <a href="http://andescreation.com/beclimber/" style="color: black;text-decoration:none">
+         ACEITAR CONVITE
+      </a>
+   </div>
+</center>
+ </div>
+
+ <div class="padding_std_2 footer" style="    padding-left: 10.79%;
+ padding-right: 10.79%;display:block;background-color: black;
+ color: white;
+ padding-top: 4%;
+ overflow: hidden;
+ padding-bottom: 4%;">
+   <div class="col1_footer" style="    float: left;
+   text-align: left;">
+       
+       <p class="f1" style="color: white;    font-family:  Helvetica;
+       font-style: normal;
+       font-weight: normal;
+       font-size: 16px;
+       line-height: 100%;
+       letter-spacing: 0.1em;
+       font-feature-settings: 'liga' off;
+       color: white;">
+       <span style="padding-right:2vw"><img src="http://andescreation.com/images/logo_footer.png"></span>
+       </p>
+       <p class="f1" style="color: #666666;    font-family:  Helvetica;
+       font-style: normal;
+       font-weight: normal;
+       font-size: 16px;
+       line-height: 100%;
+       letter-spacing: 0.1em;
+       font-feature-settings: 'liga' off;"><br><br>Capital Criativo em performance.</p>
+       <p class="f1" style="color: #666666;    font-family:  Helvetica;
+       font-style: normal;
+       font-weight: normal;
+       font-size: 16px;
+       line-height: 100%;
+       letter-spacing: 0.1em;
+       font-feature-settings: 'liga' off;">contato@andescreation</p>
+       <p class="f1" style="color: #666666;    font-family:  Helvetica;
+       font-style: normal;
+       font-weight: normal;
+       font-size: 16px;
+       line-height: 100%;
+       letter-spacing: 0.1em;
+       font-feature-settings: 'liga' off;">+55 47 996 586023</p>
+   </div>
+   <div class="col2_footer" style="    float: right;
+   text-align: left;
+   display: inline-block;
+   text-align: left;">
+       <p class="f1" style="color: white;    font-family:  Helvetica;
+       font-style: normal;
+       font-weight: normal;
+       font-size: 16px;
+       line-height: 100%;
+       letter-spacing: 0.1em;
+       font-feature-settings: 'liga' off;
+       color: white;">
+       <span style="padding-right:1vw">Siga a gente</span></a>
+       <a href="https://www.facebook.com/andescreation/"><span><img src="http://andescreation.com/images/facebook.png"></span></a>
+       <a href="https://www.instagram.com/andescreation/"><span><img src="http://andescreation.com/images/instagram.png"></span></a>
+       <a href="https://www.linkedin.com/company/andesdesign/"><span><img src="http://andescreation.com/images/LinkedIn.png"></span></a></p>
+       <p class="f1" style="color: #666666;    font-family:  Helvetica;
+       font-style: normal;
+       font-weight: normal;
+       font-size: 16px;
+       line-height: 100%;
+       letter-spacing: 0.1em;
+       font-feature-settings: 'liga' off;"><br><br>Santa Catarina, Brasil</p>
+       <p class="f1" style="color: #666666;    font-family:  Helvetica;
+       font-style: normal;
+       font-weight: normal;
+       font-size: 16px;
+       line-height: 100%;
+       letter-spacing: 0.1em;
+       font-feature-settings: 'liga' off;">São Paulo, Brasil</p>
+       <p class="f1" style="color: #666666;    font-family:  Helvetica;
+       font-style: normal;
+       font-weight: normal;
+       font-size: 16px;
+       line-height: 100%;
+       letter-spacing: 0.1em;
+       font-feature-settings: 'liga' off;">Anywhere</p>
+   </div>
+</div>
+
+
+</body>
+</html>
+
+<script>
+function copyElementText(id) {
+   console.log(id.innerText)
+    var text = id.innerText;
+    var elem = document.createElement("textarea");
+    document.body.appendChild(elem);
+    elem.value = text;
+    elem.select();
+    document.execCommand("copy");
+    document.body.removeChild(elem);
+}
+</script>

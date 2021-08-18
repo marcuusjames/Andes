@@ -1,5 +1,15 @@
 $(document).ready(function(){
     $('#telefone').mask('(00)000000000');
+    try {
+        inviteID = localStorage['inviteID']
+        email_to = localStorage['email_to']
+        if (typeof localStorage['inviteID'] === 'undefined'){
+            window.location.replace("http://andescreation.com/");
+        }
+        $("#email").val(email_to)
+    } catch (e){
+        window.location.replace("http://andescreation.com/");
+    }
   });
 
 idpage = 1
@@ -106,6 +116,7 @@ function registerClimber(){
 
     data['status']='active'
     data['create']=true
+    data['inviteID']=localStorage['inviteID']
     $.ajax({
         type: "GET",
         url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/insertUser",
@@ -114,8 +125,13 @@ function registerClimber(){
         success:function (data){
             showmodal("modalClimber")
         },
-        fail:function (data){
-          alert('Erro!')
+        error:function (data){
+            if (data['responseJSON']['status']=='Email'){
+                alert('E-mail já cadastrado!')
+            } else {
+                alert("Erro!")
+            }
+          
         }
       });
 

@@ -18,6 +18,7 @@ $( "#button_invite" ).click(function() {
     dataType: "json",
     success:function (data){
       localStorage['email_to']=data['email']
+      localStorage['inviteID']=$("#inviteID").val()
       window.location.href = "http://andescreation.com/registerclimber/#";
       console.log(data)
     },

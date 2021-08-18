@@ -1,0 +1,223 @@
+<html>
+   <base href="http://andescreation.com">
+   <!-- <base href="C:/Andes/index.html"> -->
+   <meta charset="utf-8" />
+   <meta name="HandheldFriendly" content="true" />
+   <meta name="MobileOptimized" content="320" />
+   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
+   <!-- smart phone css  -->
+   <head>
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Epilogue&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Syne&display=swap" rel="stylesheet" />
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <script
+         src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+      <link href="css/main.css" rel="stylesheet" />
+      <link href="climber/css/main.css" rel="stylesheet" />
+      <link href="climber/mountain/css/montain.css" rel="stylesheet" />
+      <script src="js/virtual-select-master/dist/virtual-select.min.js"></script>
+      <link rel="stylesheet" href="js/virtual-select-master/dist/virtual-select.min.css" />
+      <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+      <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+      <link href="climber/tecnicas/css/repertorio.css" rel="stylesheet" />
+      <link href="css\fonts.css" rel="stylesheet" />
+
+      <meta charset="utf-8">
+   </head>
+   <body style="background-color: black;color:white">
+      <div id='navClimber-placeholder'></div>
+      <div class='montain rowcol' style="padding-bottom: 20vh;">
+         <div>
+            <p class="p3" style="color: white;"><a href="/climber" style="color: white;text-decoration: underline;">Home</a> > <a href="/climber/mountain/" style="color: white;text-decoration: underline;">Sua montanha</a> > Editar minhas habilidades</p>
+         </div>
+         <div>
+            <div class="mon_linebreak" style="width: 100%"></div>
+         </div>
+         <div class="rowcol">
+            <div class="mon_column1 rowcol" style="padding-top: 5vh;">
+               <div style="height: 30vh;">
+                  <p class='h2w' id="" style="color:white">MINHAS HABILIDADES</p>
+               </div>
+            </div>
+            
+            <div class="mon_column2 rowcol" style="padding-top: 5vh;">
+               <div>
+                  <p class='h1' style="color:white">Por onde você já passou? O que você já viveu? Do que você gosta? Seu repertório vale muito!</p>
+                  <p class="p3" style="color:white">Edite essas informações caso você tenha preenchido algo por engano ou tenha enriquecido seu repertório.</p>
+               </div>
+            </div>
+
+         </div>
+            <div class="mon_column2 rowcol" style="padding-top: 80px;">
+               <div>
+                  <div id="typeclimber">            
+                      <p class='l2w'> Qual tipo de Climber você quer ser?<span style="color:#666">*</span></p>
+                      <div style="margin-right: 10px;">
+                          <input type="checkbox" id="designer" class="regular-checkbox" />
+                          <label  for="designer">Designer</label>
+                      </div>
+                      <div>
+                          <input class="regular-checkbox" type="checkbox" id="ilustrador" value="WhatsApp" >
+                          <label  for="ilustrador">
+                          Ilustrador
+                          </label>
+                      </div>
+                      <div>
+                          <input class="regular-checkbox" type="checkbox" id="fotografo">
+                          <label  for="fotografo">
+                          Fotógrafo
+                          </label>
+                      </div>
+                  </div>
+                  <div id='designer_div' style="display: none;">
+                  <p class='l2w' style="padding-top: 6vh;">Técnicas<span style="color:#666">*</span></p>
+                  <div id='tecnicas' class="tagsfield">
+                      <p class="tagtext">Desing de Marca</p>
+                      <p class="tagtext">Identidade Visual</p>
+                      <p class="tagtext">UX/UI</p>
+                      <p class="tagtext">Lettering</p>
+                      <p class="tagtext">Tipografia</p>
+                      <p class="tagtext">Diagramação</p>
+                      <p class="tagtext">Ícones</p>
+                      <p class="tagtext">Motion Design</p>
+                      <p class="tagtext">Edição de Vídeo</p>
+                      <p class="tagtext">Tratamento de Imagem</p>
+                      <p class="tagtext">Colagem Digital</p>
+                      <p class="tagtext">Produção de Conteúdo</p>
+                      <p class="tagtext">Posts</p>
+      
+                  </div>
+                  <p class='l2w' style="padding-top: 6vh;"> Etapas<span style="color:#666">*</span></p>
+                  <p class='h2w' style="padding-bottom:3vh">DESIGN DE MARCA/IDENTIDADE VISUAL</p>
+                  <div id='IdvisTags' class="tagsfield">
+      
+                      <p class="tagtext">Criação de Id Visual</p>
+                      <p class="tagtext">Manual de Id Visual</p>
+                      <p class="tagtext">Mockup</p>
+                      <p class="tagtext">Animação de Logotipo</p>
+                      <p class="tagtext">Fechamento para Impressão</p>
+                  </div>
+                  <p class='h2w' style="padding-bottom:3vh">UX / UI</p>
+                  <div id='uxTags' class="tagsfield">
+      
+                      <p class="tagtext">Guia de Estilo</p>
+                      <p class="tagtext">DesignSystem</p>
+                      <p class="tagtext">Arquitetura de Informação</p>
+                      <p class="tagtext">Wireframe</p>
+                      <p class="tagtext">Prototipação</p>
+                      <p class="tagtext">Ícones</p>
+                      <p class="tagtext">Acessibilidade</p>
+                      <p class="tagtext">Design de Interface</p>
+                      <p class="tagtext">Teste de Usabilidade</p>
+                  </div>
+                  <p class='l2w' style="padding-top: 6vh;">Estilo de Ilustração<span style="color:#666">*</span></p>
+                  
+                  <div id='ilustrationTags' class="tagsfield">
+      
+                      <p class="tagtext">3D</p>
+                      <p class="tagtext">Abstrato</p>
+                      <p class="tagtext">Aquarela</p>
+                      <p class="tagtext">Cartoon</p>
+                      <p class="tagtext">Doodle</p>
+                      <p class="tagtext">Estampa</p>
+                      <p class="tagtext">HQ</p>
+                      <p class="tagtext">Papercut</p>
+                      <p class="tagtext">Personagem</p>
+                      <p class="tagtext">Pintura Digital</p>
+                      <p class="tagtext">Pixel Art</p>
+                      <p class="tagtext">Retrô</p>
+                      <p class="tagtext">UX/UI</p>
+                      <p class="tagtext">Outro</p>   
+                  </div>
+      
+                  <p class='l2w' style="padding-bottom:3vh;padding-top:6vh"> Softwares<span style="color:#666">*</span></p>
+                  <div id='softwaresTags' class="tagsfield">
+      
+                      <p class="tagtext">Adobe Illustrator</p>
+                      <p class="tagtext">CorelDraw</p>
+                      <p class="tagtext">Adobe Photoshop</p>
+                      <p class="tagtext">Adobe XD</p>
+                      <p class="tagtext">Figma</p>
+                      <p class="tagtext">Sketch</p>
+                      <p class="tagtext">Lightroom</p>
+                      <p class="tagtext">Adobe Premiere</p>
+                      <p class="tagtext">Adobe AfterEffects</p>
+                      <p class="tagtext">Adobe Dimension</p>
+                      <p class="tagtext">Adobe InDesign</p>
+                      <p class="tagtext">Adobe Animate</p>
+                      <p class="tagtext">Adobe Fresco</p>
+                      <p class="tagtext">Adobe Character Animator</p>   
+                  </div>
+                  </div>
+                  <div id='fotografo_div' style="display: none;">
+                      <p class='l2w' style="padding-top: 6vh;">Áreas de atuação<span style="color:#666">*</span></p>
+                      
+                      <div id='photoTags' class="tagsfield">
+      
+                          <p class="tagtext">Artística</p>
+                          <p class="tagtext">Moda</p>
+                          <p class="tagtext">Gastronômica</p>
+                          <p class="tagtext">Publicitária</p>
+                          <p class="tagtext">Documental</p>
+                          <p class="tagtext">Social</p>
+                          <p class="tagtext">Infantil</p>
+                          <p class="tagtext">Outras</p>   
+                      </div>
+                  </div>
+                  <p class='l2w' style="padding-top: 6vh;"> Seu Portfólio<span style="color:#666">*</span></p>
+                      <input class='textfield invite_rep' id='portfolio'  >
+                      <!-- <form action="/file-upload"
+                      class="dropzone"
+                      id="my-awesome-dropzone" style="margin-top:20px;min-height: 24px;
+                      padding: 0px;"></form> -->
+                  
+                  <p class='l2w' style="padding-top: 6vh;"> LinkedIn</p>
+                      <input class='textfield invite_rep' id='linkedin'  >
+                  <p class='l2w' style="padding-top: 6vh;"> Formação<span style="color:#666">*</span></p>
+                      <p class='l2w' style="padding-top: 6vh;"> Curso</p>
+                      <input class='textfield invite_rep' id='curso'  >
+                      <p class='l2w' style="padding-top: 6vh;"> Nível</p>
+                      <div class='textfield invite_rep' id='curso_nivel'></div>
+      
+                      <div style="padding: 5vh 0;">
+                          <input class="regular-checkbox" type="checkbox" id="noformation" name="noformation" value="No_Formation">
+                          <label for="noformation"> Não tenho formação</label><br>
+                      </div>
+                          
+                  <p class='l2w' style="padding-top: 6vh;"> Qual é o seu Registro MEI?<span style="color:#666">*</span></p>
+                  <input class='textfield invite_rep' id='mei' type="text"  >
+                  <div style="padding: 5vh 0;">
+                      <input class="regular-checkbox" type="checkbox" id="nomei" name="nomei" value="No_MEI">
+                      <label for="nomei"> Não tenho MEI</label><br>
+                  </div>
+      
+      
+                  <div style="padding:10vh 0vh;">
+                     <button id="saveRep" class="button_orc" style="background-color: white;color: #000;">Salvar</button>
+                  
+                  </div>
+                  </div>
+      </div>
+   </div>
+      <!-- Footer -->
+      
+      <div id="footer"></div>
+   </body>
+</html>
+<script src="js/tabs.js"></script>
+<script src="js/main.js"></script>
+<script src=".\climber\js\climber.js"></script>
+<script src="climber/tecnicas/js/main.js"></script>
+<script>
+   $("#nav_climber").addClass('actual')
+</script>

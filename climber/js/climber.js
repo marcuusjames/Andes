@@ -28,9 +28,12 @@ $(".userVar").each(function() {
             }
         })
         $(that).append(
-            '<p class="tagtext"><span><img src="climber/mountain/images/editpng.png"></span></p>'
+            '<p class="tagtext"><span class="editTag"><img src="climber/mountain/images/editpng.png"></span></p>'
         )
     }
+    $('.editTag').click(function(){
+        window.location.replace("http://andescreation.com/climber/tecnicas");
+    })
 })
 
 function getParameters(user){

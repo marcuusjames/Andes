@@ -31,7 +31,7 @@
   font-family: Archivo;
   font-size: 14px;
   background-color: #000;
-  width: 29vw;
+  width: 52%;
   padding: 5% 5% ;
   display: inline-block;
   border: 1px solid #FFFFFF;
@@ -71,7 +71,7 @@
     font-family: Archivo;
     font-size: 15px;
     background-color: #000;
-    width: 75%;
+    width: 100%;
     padding: 20px 20px ;
     display: inline-block;
     border: 1px solid #FFFFFF;
@@ -83,7 +83,7 @@
   
   .invite_but{
     background-color: #FFFFFF;
-    width: 25%;
+    width: 100%;
     padding: 21.5px 21.5px;
     margin: 0px 0;
     display: inline-block;
@@ -93,6 +93,7 @@
     color: #000;
     font-family: Archivo;
     font-size: 1.5rem;
+    margin-top: 10px
   }
 
 }  

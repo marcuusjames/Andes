@@ -47,7 +47,7 @@ $( "#button_invite" ).click(function() {
     $('.secondSession').show()
 })
 
-$( "#loginref" ).click(function() {
+$( ".loginref" ).click(function() {
   
   showmodal("modalLogin")
   }

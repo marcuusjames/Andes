@@ -67,6 +67,7 @@ $.each( dict, function( key, value ) {
   };
 });
 if (filled){
+  showloader()
 $.ajax({
   type: "GET",
   url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/login",
@@ -79,6 +80,7 @@ $.ajax({
 
   },
   fail:function (data){
+    closeloader()
     if (data['error']=='email'){
       alert('E-mail não encontrado')
     } else {

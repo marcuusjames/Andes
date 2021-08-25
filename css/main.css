@@ -1034,6 +1034,19 @@ input{
   width: 100%;
   overflow-y: hidden;
 }
+.preloader {
+  opacity: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 6;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  background: url(../images/loading.gif) 50% 50% no-repeat rgb(177,177,177);
+  background-size: 10%;
+}
 .modalAndes{
   display: none;position: fixed;top: 20vh;left:25vw;width: 50vw;
   overflow-y: hidden;z-index: 6;border-radius: 0;

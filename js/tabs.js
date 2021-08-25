@@ -124,11 +124,19 @@ function showmodal(modal){
     $('#'+modal).show()
 }
 
+loader=false
+function showloader(){
+    if (loader==false){
+    $('body').append('<div class="preloader" style="display: none;"></div>')
+    loader=true
+    }
+    $("body").addClass("modal-open");
+    $('.preloader').show()
+}
 
-function closemodal(modal){
+function closeloader(modal){
     $("body").removeClass("modal-open");
-    $('.premodal').hide()
-    $('#'+modal).hide()
+    $('.preloader').hide()
 }
 
 $(".exit").click(function(){

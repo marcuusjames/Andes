@@ -38,7 +38,7 @@ $(".button_finish").click(function(){
 
   
   $(".homebut").click(function(){
-    
+    sessionStorage['user']=JSON.stringify(data)
     window.location.replace("http://andescreation.com/climber/#");
 
 })
@@ -117,15 +117,18 @@ function registerClimber(){
     data['status']='active'
     data['create']=true
     data['inviteID']=localStorage['inviteID']
+    showloader()
     $.ajax({
         type: "GET",
         url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/insertUser",
         data: {data:JSON.stringify(data)},
         dataType: "json",
         success:function (data){
+            hideloader()
             showmodal("modalClimber")
         },
         error:function (data){
+            hideloader()
             if (data['responseJSON']['status']=='Email'){
                 alert('E-mail já cadastrado!')
             } else {

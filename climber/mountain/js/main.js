@@ -329,6 +329,14 @@ function clickfunctions(){
             "email":$("#indEmail").val(),
             "bonus":$('#indBonus:checked').val()
         }
+        $.each( dict, function( key, value ) {
+            if (value==""){
+            alert("Preecha todos os campos!");
+            filled=false
+            return false;
+            };
+            });
+            if (filled){
         $.ajax({
             type: "GET",
             url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/newIndication",
@@ -343,6 +351,7 @@ function clickfunctions(){
               alert("error on sending message! Check with administrator")
             }
           });
+        }
 
     })
 

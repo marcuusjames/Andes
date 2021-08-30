@@ -79,9 +79,9 @@ $.ajax({
     window.location.href = "http://andescreation.com/climber/";
 
   },
-  fail:function (data){
+  error:function (data){
     closeloader()
-    if (data['error']=='email'){
+    if (data['responseJSON']['error']=='email'){
       alert('E-mail não encontrado')
     } else {
       alert('Senha incorreta')

@@ -1039,12 +1039,12 @@ input{
   top: 0;
   left: 0;
   position: fixed;
-  z-index: 6;
+  z-index: 2147483648;
   background-color: black;
   height: 100%;
   width: 100%;
   overflow-y: hidden;
-  background: url(../images/loading.gif) 50% 50% no-repeat rgb(177,177,177);
+  background: url(../images/loading.gif) 50% 50% no-repeat white;
   background-size: 10%;
 }
 .modalAndes{

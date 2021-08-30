@@ -164,3 +164,11 @@ height: 25vh;
   top: 40px;
   left: 0px;
 }
+
+.edittextfield{
+  cursor: pointer;
+}
+
+.saveEdit{
+  cursor: pointer;
+}

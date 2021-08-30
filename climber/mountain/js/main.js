@@ -329,7 +329,7 @@ function clickfunctions(){
             "email":$("#indEmail").val(),
             "bonus":$('#indBonus:checked').val()
         }
-        $.each( dict, function( key, value ) {
+        $.each( data, function( key, value ) {
             if (value==""){
             alert("Preecha todos os campos!");
             filled=false
@@ -347,7 +347,7 @@ function clickfunctions(){
                 alert("Indicação Enviada!")
                 location.reload(); 
             },
-            fail:function (data){
+            error:function (data){
               alert("error on sending message! Check with administrator")
             }
           });

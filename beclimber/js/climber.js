@@ -50,6 +50,17 @@ $( "#button_invite" ).click(function() {
 $( ".loginref" ).click(function() {
   
   showmodal("modalLogin")
+  $("#email_login").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#login_button").click();
+    }
+});
+$("#pass_login").keyup(function(event) {
+  if (event.keyCode === 13) {
+      $("#login_button").click();
+  }
+});
+
   }
 );
 

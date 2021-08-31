@@ -62,12 +62,12 @@ td:nth-child(3) {
     left: 30%;
     top: 10%;
 
-    background: #BECDFF;
+    background: #6200ef;
     border-radius: 20px;
   }
   .invite_input{
     border: 0px;
-    background-color: #BECDFF;
+    background-color: #6200ef;
     font-size: 18px;
     color:black;
     padding: 0px;

@@ -65,6 +65,9 @@ td:nth-child(3) {
     background: #6200ef;
     border-radius: 20px;
   }
+  ::placeholder{
+    color: #c5c5c5;
+  }
   .invite_input{
     border: 0px;
     background-color: #6200ef;

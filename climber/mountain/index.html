@@ -237,57 +237,82 @@
          </div>
       </div>
 
-      <div class="modal-content modalInvite modalAndes nomobile" id='modalInvite' style="display:block;top:5%;left:5%;width:90%;height: 90%;max-height: 800px;"/>
-      <button type="button" class="close exit" data-dismiss="modal" style="padding: 15px;">&times;</button>  
+      <div class="modal-content modalInvite modalAndes nomobile" id='modalInvite' style="display:block;top:5%;left:5%;width:90%;height: 560px;"/>
+      <button type="button" class="close exit" data-dismiss="modal" style="padding: 15px; position: fixed;
+      top: 30px;
+      left: 91%;">&times;</button>  
          <div class="modal-header" 
-         style="border-right:1px solid black;padding-left: 10px;padding-right: 10px;height: 100%;float:left;width: 10%;
+         style="border-right:1px solid black;padding-left: 10px;padding-right: 10px;height: 100%;float:left;width: 3%;
          ">
          <div>
             <p class="p3 modal-title" style="writing-mode: tb-rl;
-            transform: rotate(180deg);">Convide um amigo</p>
+            transform: rotate(180deg);color:white">Convide um amigo</p>
             </div>
-            <div style="padding-top: 800%;">
+            <div style="position: fixed;
+            top: 435px;">
                <p class="p3 modal-title" style="writing-mode: tb-rl;
-               transform: rotate(180deg);">Convide um amigo</p>
+               transform: rotate(180deg);color:white">Convide um amigo</p>
                </div>
          </div>
-         <div style="padding-left: 8%;padding-right: 8%;padding-bottom: 3%;
-            background-image: linear-gradient(to right, #6200ef 50%, black 0%);
-            background-position: right;
-            background-size: 8% 1px;
-            background-repeat: repeat-x;float: left;width: 50%;">
+         <div style="
+         background-image: linear-gradient(to bottom, black 50%,#6200ef 50%);
+         background-position-y: top;
+         background-size: 1px 50px;
+         background-position-x: right;
+         background-repeat: repeat-y;
+         float: left;
+         width: 65%;
+         height: 100%;
+         ">
+
+        
+         <div style="    padding-left: 8%;
+         padding-right: 1%;
+         padding-bottom: 3%;
+         padding-top: 25px;">
             <div class="rowcol">
-               <p class="h1" style="width: 30%;float: left;">Creative Climbing</p>
+               <p class="h1" style="width: 30%;float: left;color:white">Creative Climbing</p>
                <p class="h1" style="float: right;"><img src="./climber/mountain/images/black_seta.png"></p>
                <div style="float: right;">
-                  <p class="h2" style="margin-bottom: 0px;">Convite Nº</p>
-                  <p class="l2"><span id="invite_number">1</span>/<span id="num_invites_invite">5</span></p>
+                  <p class="h2" style="margin-bottom: 0px;color:white">Convite Nº</p>
+                  <p class="l2" style="color:white"><span id="invite_number">1</span>/<span id="num_invites_invite">5</span></p>
                </div>
             </div>
             <div>
-               <div style="padding-top: 30px; width: 60%;">
-                  <p class="p2">Cartão-convite para novos Climbers.
+               <div style="padding-top: 30px; width: 30%;">
+                  <p class="p3" style="color:white">Cartão-convite para novos Climbers.
+               </div>
+            </div>
+            <div style="padding-top: 15px;">
+               <div class="rowcol">
+                  <div style="float:left;width:60%">
+                  <p class="h2" style="margin-bottom: 0px;color:white">Convidado</p>
+                  <input id="invite_name" class="h2 invite_input" style="color:#c5c5c5;padding-top: 0;margin:0" placeholder="DIGITE">
+                  </div>
+                  <div style="float:left;width:40%">
+                  <p class="h2" style="margin-bottom: 0px; padding-top: 2%;color:white">E-mail</p>
+                  <input id="invite_email" class="h2 invite_input" style="color:#c5c5c5;padding-top: 0;margin:0" placeholder="DIGITE">
+                  </div>
+               </div>
+               <div style="padding-top: 15px;">
+               <p class="h2" style="margin-bottom: 0px; padding-top: 2%;color:white">Mensagem</p>
+               <input id="invite_msg" class="h2 invite_input" style="color:#c5c5c5;padding-top: 0;margin:0" placeholder="DIGITE UMA MENSAGEM PARA SEU AMIGO SABER PORQUE VOCÊ ADMIRA O TRABALHO DELE">
                </div>
             </div>
          </div>
-         <div style="padding-left: 8%;padding-right: 8%;padding-bottom: 3%;float: left;width: 40%;">
+      </div>
+         <div style="padding-left: 3%;padding-right: 3%;padding-bottom: 3%;float: left;width: 30%;padding-top: 25px;">
             <div class="rowcol" style="padding-top: 6%;">
                <div style="float: left;">
-                  <p class="h2" style="margin-bottom: 0px;">REQUISITOS</p>
-                  <p class="l2" style="width: 30%;">Criatividade</p>
+                  <p class="h2" style="margin-bottom: 0px;color:white;margin:0">REQUISITOS</p>
+                  <p class="l2" style="width: 30%;color:white;font-weight: bold;">Criatividade</p>
                </div>
                
             </div>
-            <div style="padding-top: 2%;">
-               <p class="h2" style="margin-bottom: 0px;">Convidado</p>
-               <input id="invite_name" class="invite_input" placeholder="Qual o nome do seu amigo?">
-               <p class="h2" style="margin-bottom: 0px; padding-top: 2%;">E-mail</p>
-               <input id="invite_email" class="invite_input" placeholder="Digite o e-mail onde seu amigo receberá o convite.">
-               <p class="h2" style="margin-bottom: 0px; padding-top: 2%;">Mensagem</p>
-               <input id="invite_msg" class="invite_input" placeholder="Escreva uma mensagem dizendo para o seu amigo porque você admira o trabalho dele.">
-            </div>
-            <div style="padding-top: 8%;padding-bottom: 8%;">
-               <p id='sendInvite' style="color: #000;text-decoration: underline;"><span style="padding-right: 20px;cursor: pointer;"><img src='./climber/mountain/images/send_black.png'></span>Enviar cartão-convite</p>
+            
+            <div style="position: fixed;
+            top: 530px;">
+               <p id='sendInvite' class='p3'style="color:#c5c5c5;cursor: pointer;;text-decoration: underline;"><span style="padding-right: 20px;cursor: pointer;"><img src='./climber/mountain/images/send_black.png'></span>Enviar cartão-convite</p>
             </div>
          </div>
       </div>

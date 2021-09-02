@@ -46,9 +46,10 @@ $("#inviteClimber").click(function(){
 
 function inviteClimber(){
     showmodal('modalInvite')
-    $("body").removeClass("modal-open");
     $("#invite_number").text((invites_used+1).toString())
     $("#num_invites_invite").text(invites_available.toString())
+    $("#invite_number_mobile").text((invites_used+1).toString())
+    $("#num_invites_invite_mobile").text(invites_available.toString())
 }
 
 function indProjects(data){
@@ -230,6 +231,48 @@ function invitesClimbers(data){
                     "user_email_to":$("#invite_email").val(),
                     "user_from":user['name'].split(" ")[0],
                     "message":$("#invite_msg").val()
+                        
+                    },
+                dataType: "json",
+                success:function (data){
+                    setTimeout(() => { console.log("Enviando..."); }, 2000);
+                    alert("Convite Enviado!")
+                    location.reload();              
+                },
+                fail:function (data){
+                  alert("error on sending invite! Check with administrator")
+                }
+              });
+            }
+    })
+
+    $("#sendInvite_mobile").click(function(){
+        filled = true
+            dict = {
+                "ID":next_invite,
+                "user_to":$("#invite_name_mobile").val(),
+                "user_email_to":$("#invite_email_mobile").val(),
+                "user_from":user['name'].split(" ")[0],
+                "message":$("#invite_msg_mobile").val()
+                    
+                },
+            $.each( dict, function( key, value ) {
+            if (value==""){
+            alert("Preecha todos os campos!");
+            filled=false
+            return false;
+            };
+            });
+            if (filled){
+            $.ajax({
+                type: "GET",
+                url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/inviteUser",
+                data: {
+                    "ID":next_invite,
+                    "user_to":$("#invite_name_mobile").val(),
+                    "user_email_to":$("#invite_email_mobile").val(),
+                    "user_from":user['name'].split(" ")[0],
+                    "message":$("#invite_msg_mobile").val()
                         
                     },
                 dataType: "json",

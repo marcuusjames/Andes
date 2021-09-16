@@ -10,10 +10,10 @@ $("#nav-placeholder").append('\
         <a class="navbar-brand" href="http://andescreation.com/" >\
             <img src="http://andescreation.com/images/logo.png" class="d-inline-block align-top logoimage" alt="">\
         </a>\
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">\
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="padding-right: 0;">\
         <span class="icon-bar" style="color:#FFF;z-index=4"><img src="http://andescreation.com/images/menu.png" height=30px></span>\
       </button>\
-        <div class="nav_andes collapse navbar-collapse"  id="myNavbar">\
+        <div class="nav_andes collapse navbar-collapse"  id="myNavbar" style="padding-right: 0;">\
             <div>\
                 <ul class="nav_andesul nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap">\
                     <li class="nav-item">\
@@ -42,18 +42,24 @@ $("#navClimber-placeholder").addClass('navbar_fixed')
 
 $("#navClimber-placeholder").append('\
     <nav class="padding_std_2 vis_desktop navbar fixed-top navbar-expand-lg py-md-3" style="border-radius: 0;justify-content: space-between;background-color: #000000;font-size:1.125rem;height:12vh;    margin-bottom: -20px;">\
-        <a class="navbar-brand" href="http://andescreation.com/" >\
+        <a class="navbar-brand" href="http://andescreation.com/climber" >\
             <img src="http://andescreation.com/images/logo.png" class="d-inline-block align-top logoimage" alt="">\
         </a>\
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">\
         <span class="icon-bar" style="color:#FFF;z-index=4"><img src="http://andescreation.com/images/menu.png" height=30px></span>\
         </button>\
-        <div class="nav_andes collapse navbar-collapse"  id="myNavbar">\
+        <div class="nav_andes collapse navbar-collapse"  id="myNavbar" style="padding-right: 0;">\
             <div>\
                 <ul class="nav_andesul nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap">\
-                    <li class="nav-item">\
-                        <a id="nav_contact" href="climber/conta" class="nav-link m-2 menu-item textmenu" style="display: table-cell;">Sua Conta</a>\
-                    </li>\
+                <li class="nav-item dropdown">\
+                    <a style="text-align: center;display: table-cell;padding-right: 0;" class="nav-link dropdown-toggle textmenu" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\
+                    Sua conta\
+                    </a>\
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">\
+                    <a id="nav_contact" href="climber/conta" class="dropdown-item" href="#">Configurações</a>\
+                    <a class="dropdown-item" href="#">Logout</a>\
+                    </div>\
+                </li>\
                 </ul>\
             </div>\
         </div>\

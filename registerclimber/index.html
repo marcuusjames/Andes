@@ -49,24 +49,36 @@
 </head>
 
 <body>
-    <div class="background"></div>
-    <div class="column" style="padding-left: 10.79vw;padding-top: 10vh;">
-        <div style="float: left;">
+    <div class="rowcol" style="padding-top: 10vw;padding-left: 5%;width:95%">
+        <div class="column1">
+            <div style="float: left;">
 
-        <p class="p5"><span style="padding-right: 20px;"><img src='./images/andesblack.png'></span>
-            <span style="text-decoration: underline;">
-        Seja um Climber  </span>   <span style="padding:0 0.5vw;">   >   </span> Cadastro
+                <p class="p5">
+                    <span style="padding-right: 20px;">
+                        <img src='./images/andesblack.png'>
+                    </span>
+                    <span class="nomobile">
+                        <span style="text-decoration: underline;">Seja um Climber  </span>   
+                        <span style="padding:0 0.5vw;">   >   </span> Cadastro
+                    </span>
+                </p>
+            </div>
+            <div style="float: right;">
+                <span class="menu_page menu_page_1 menu_page_active">[1]</span>
+                <span class="menu_page menu_page_2" >[2]</span>
+                <span class="menu_page menu_page_3">[3]</span>
+                <span class="menu_page menu_page_4">[4]</span>
+            </div>
         </div>
-        <div style="float: right;display: inline-block;"><span class="menu_page menu_page_1 menu_page_active">[1]</span><span class="menu_page menu_page_2" >[2]</span><span class="menu_page menu_page_3">[3]</span><span class="menu_page menu_page_4">[4]</span></div>
-    </p>
     </div>
-        <div class="rowcol" style="padding-top: 10vw;padding-left: 10.79vw;">
+        <div class="rowcol" style="padding-top: 7vw;padding-left: 5%;width:95%">
 
 
             <div class='column1' id="page1" >
-                <p class='h1'>Obrigada por acreditar nessa ideia. Você é um membro-fundador!</p>
+                <p class='h1'>Você é um membro fundador</p>
+                <p class='h2' style="font-weight: bold;">Obrigada por acreditar nessa ideia!</p>
                 <br><br>
-                <p class='p3'>Isso quer dizer que nossa cordilheira vai crescer e se constituir a partir de você, tendo para sempre uma herança sua. Essa é a magia dos Andes, ou melhor, da Andes: não sonhamos em ser a maior montanha, queremos ser a maior cordilheira, onde cada um enriquece o todo com seu monte.
+                <p class='p3'>Nossa cordilheira vai crescer e se constituir a partir de você, tendo para sempre uma herança sua. Essa é a magia dos Andes, ou melhor, da Andes: não sonhamos em ser a maior montanha, queremos ser a maior cordilheira, onde cada um enriquece o todo com seu monte.
                 <br><br><br></p>
                 <div>
                 <p class='h2'>Complete seu cadastro<br><br><br></p>
@@ -111,17 +123,17 @@
                 <p class='l2'> Qual tipo de Climber você quer ser?<span style="color:#666">*</span></p>
                 <div style="margin-right: 10px;">
                     <input type="checkbox" id="designer" class="regular-checkbox" />
-                    <label  for="designer">Designer</label>
+                    <label  class='p3' for="designer">Designer</label>
                 </div>
                 <div>
                     <input class="regular-checkbox" type="checkbox" id="ilustrador" value="WhatsApp" >
-                    <label  for="ilustrador">
+                    <label  class='p3' for="ilustrador">
                     Ilustrador
                     </label>
                 </div>
                 <div>
                     <input class="regular-checkbox" type="checkbox" id="fotografo">
-                    <label  for="fotografo">
+                    <label  class='p3' for="fotografo">
                     Fotógrafo
                     </label>
                 </div>
@@ -238,19 +250,19 @@
             <p class='p3' style="padding-bottom:5vh">Formação, seja técnica ou acadêmica, não é um pré-requisito para a gente. Essa, como todas as perguntas a seguir, tem a simples função de entender melhor seu repertório.</p>
 
                 <p class='l2' style="padding-top: 6vh;"> Curso</p>
-                <input class='textfield invite' id='curso'  >
+                <input class='textfield invite formation' id='curso'  >
                 <p class='l2' style="padding-top: 6vh;"> Nível</p>
                 <div class='textfield invite' id='curso_nivel'></div>
 
                 <div style="padding: 5vh 0;">
-                    <input class="regular-checkbox" type="checkbox" id="noformation" name="noformation" value="No_Formation">
+                    <input class="regular-checkbox nofield" type="checkbox" id="noformation" name="noformation" value="No_Formation">
                     <label for="noformation"> Não tenho formação</label><br>
                 </div>
                     
             <p class='l2' style="padding-top: 6vh;"> Qual é o seu Registro MEI?<span style="color:#666">*</span></p>
-            <input class='textfield invite' id='mei' type="text"  >
+            <input class='textfield invite mei' id='mei' type="text"  >
             <div style="padding: 5vh 0;">
-                <input class="regular-checkbox" type="checkbox" id="nomei" name="nomei" value="No_MEI">
+                <input class="regular-checkbox nofield" type="checkbox" id="nomei" name="nomei" value="No_MEI">
                 <label for="nomei"> Não tenho MEI</label><br>
             </div>
 
@@ -274,15 +286,15 @@
         <br><br><br></p>
         <div>            
         <p class='l2'> Onde você nasceu?<span style="color:#666">*</span></p>
-        <input class='textfield invite' id='birthtown' type="text"  >
+        <select class='select2tags invite places' id='birthtown' style="width: 100%;" ph=""></select>
         
         <p class='l2' style="padding-top: 6vh;"> Onde você mora e/ou já morou?<span style="color:#666">*</span></p>
-        <select multiple id="places_old" class="invite select2tags" style="width: 100%;" ph=""></select>
+        <select multiple id="places_old" class="invite select2tags places" style="width: 100%;" ph=""></select>
         
         <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Quem mora com você?<span style="color:#666">*</span></p>
         <div id='familyTags' class="tagsfield">
 
-            <p class="tagtext">Me, myself and I</p>
+            <p class="tagtext tagexclusive">Me, myself and I</p>
             <p class="tagtext">Mãe</p>
             <p class="tagtext">Pai</p>
             <p class="tagtext">Irmã(o)</p>
@@ -304,7 +316,7 @@
         <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Você tem filhos? Se sim, qual a faixa etária?<span style="color:#666">*</span></p>
         <div id='filhosTags' class="tagsfield">
 
-            <p class="tagtext">Não tenho filhos</p>
+            <p class="tagtext tagexclusive">Não tenho filhos</p>
             <p class="tagtext">Recém-nascido</p>
             <p class="tagtext">Bebê</p>
             <p class="tagtext">Criança</p>
@@ -316,7 +328,7 @@
         <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Ei, pet também é filho... Você tem? Se sim, qual?<span style="color:#666">*</span></p>
         <div id='petTags' class="tagsfield">
 
-            <p class="tagtext">Não</p>
+            <p class="tagtext tagexclusive">Não</p>
             <p class="tagtext">Cachorro</p>
             <p class="tagtext">Gato</p>
             <p class="tagtext">Peixe</p>
@@ -344,7 +356,7 @@
     <br><br><br></p>
     <div>            
     <p class='l2'> Para você, o que é sucesso?<span style="color:#666">*</span></p>
-    <textarea class="textfield invite" id="formNeed" rows="10" style="border-color: black; width: 100%; padding: 20px;display: block;border-width: 2px;height: 50px;"></textarea>
+    <textarea class="textfield invite" id="formNeed" rows="10" maxlength="1000" style="border-color: black; width: 100%; padding: 20px;display: block;border-width: 2px;height: 300px;"></textarea>
     
     <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Escolha 2 dos temas que você mais gosta<span style="color:#666">*</span></p>
     <div id='likesTags' class="tagsfield rowc">
@@ -367,7 +379,7 @@
     <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> Você não consome algum dos alimentos abaixo?<span style="color:#666">*</span></p>
     <div id='foodsTags' class="tagsfield">
 
-        <p class="tagtext">Como TUDO!</p>
+        <p class="tagtext tagexclusive">Como TUDO!</p>
         <p class="tagtext">Como, mas com moderação #fit</p>
         <p class="tagtext">Lactose </p>
         <p class="tagtext">Glúten</p>
@@ -409,23 +421,23 @@
     <div style="display: block;font-weight: normal;" class="radiofield" id='shopRadios_' >
     <div>
         <input class="regular-radio" type="radio" name="shopRadios" id="shopRadios" value="nunca" >
-        <label  class='p3' for="shopRadios" style="padding-right: 30%;">
+        <label  class='p3' for="shopRadios" style="padding-left: 5px;padding-right: 30%;">
             Nunca
         </label>
 
         <input class="regular-radio" type="radio" name="shopRadios" id="shopRadios" value="raramente">
-        <label  class='p3' for="shopRadios">
+        <label  class='p3' for="shopRadios"style="padding-left: 5px;">
             Raramente
         </label>
     </div>
     <div>
         <input class="regular-radio" type="radio" name="shopRadios" id="shopRadios" value="sometimes" >
-        <label  class='p3' for="shopRadios" style="padding-right: 26.8%;">
+        <label  class='p3' for="shopRadios" style="padding-left: 5px;padding-right: 26.8%;">
             Às vezes
         </label>
 
         <input class="regular-radio" type="radio" name="shopRadios" id="shopRadios" value="sempre">
-        <label  class='p3' for="shopRadios">
+        <label  class='p3' for="shopRadios" style="padding-left: 5px;">
             Sempre
         </label>
     </div>
@@ -439,23 +451,23 @@
     <div style="display: block;" class="radiofield" id='manualRadio_'>
         <div>
             <input class="regular-radio" type="radio" name="manualRadio" id="gridRadios2" value="nunca" >
-            <label  class='p3' for="gridRadios2" style="padding-right: 30%;">
+            <label  class='p3' for="gridRadios2" style="padding-left: 5px;padding-right: 30%;">
                 Nunca
             </label>
     
             <input class="regular-radio" type="radio" name="manualRadio" id="gridRadios2" value="raramente">
-            <label class='p3' for="gridRadios2">
+            <label class='p3' for="gridRadios2" style="padding-left: 5px;">
                 Raramente
             </label>
         </div>
         <div>
             <input class="regular-radio" type="radio" name="manualRadio" id="gridRadios2" value="sometimes" >
-            <label class='p3'  for="gridRadios2" style="padding-right: 26.8%;">
+            <label class='p3'  for="gridRadios2" style="padding-left: 5px;padding-right: 26.8%;">
                 Às vezes
             </label>
     
             <input class="regular-radio" type="radio" name="manualRadio" id="gridRadios2" value="sempre">
-            <label class='p3'  for="gridRadios2">
+            <label class='p3'  for="gridRadios2" style="padding-left: 5px;">
                 Sempre
             </label>
         </div>
@@ -467,23 +479,23 @@
     <div style="display: block;" class="radiofield" id="marketRadio_">
         <div style="padding-bottom:2vh">
             <input class="regular-radio" type="radio" name="marketRadio" id="gridRadios2" value="nunca" >
-            <label  class='p3' for="gridRadios2" style="padding-right: 30%;">
+            <label  class='p3' for="gridRadios2" style="padding-left: 5px;padding-right: 30%;">
                 Nunca
             </label>
     
             <input class="regular-radio" type="radio" name="marketRadio" id="gridRadios2" value="raramente">
-            <label  class='p3' for="gridRadios2">
+            <label  class='p3' for="gridRadios2" style="padding-left: 5px;">
                 Raramente
             </label>
         </div>
         <div>
             <input class="regular-radio" type="radio" name="marketRadio" id="gridRadios2" value="sometimes" >
-            <label  class='p3' for="gridRadios2" style="padding-right: 26.8%;">
+            <label  class='p3' for="gridRadios2" style="padding-left: 5px;padding-right: 26.8%;">
                 Às vezes
             </label>
     
             <input class="regular-radio" type="radio" name="marketRadio" id="gridRadios2" value="sempre">
-            <label  class='p3' for="gridRadios2">
+            <label  class='p3' for="gridRadios2" style="padding-left: 5px;">
                 Sempre
             </label>
         </div>
@@ -523,7 +535,7 @@
     <p class='l2' style="padding-top: 6vh;padding-bottom: 3vh;"> E como você costuma mexer esse esqueleto?<span style="color:#666">*</span></p>
     <div id='sportsTags' class="tagsfield">
 
-        <p class="tagtext">Nenhuma</p>
+        <p class="tagtext tagexclusive">Nenhuma</p>
         <p class="tagtext">Basquete</p>
         <p class="tagtext">Capoeira</p>
         <p class="tagtext">Ciclismo </p>
@@ -623,12 +635,7 @@
 </html>
 
 <script src="..\js\tabs.js"></script>
-<script>
-    $("#nav_about").addClass('actual')
-    $('.select2tags').select2({
-    placeholder: this.ph,
-    tags: true
-});
-</script>
+
 <script src="./js/register.js"></script> 
 <script src="./js/dropzone.js"></script> 
+

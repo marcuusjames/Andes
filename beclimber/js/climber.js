@@ -64,7 +64,11 @@ $("#pass_login").keyup(function(event) {
   }
 );
 
-
+$("#forgotPass").click(function(){
+  console.log('oi')
+  $("#loginSession").hide()
+  $("#passSession").show()
+})
 $("#login_button").click(function(){
   dict = {"email":$("#email_login").val(),
 "pass":$("#pass_login").val()
@@ -88,6 +92,42 @@ $.ajax({
     console.log(data)
     sessionStorage['user']=JSON.stringify(data)
     window.location.href = "http://andescreation.com/climber/";
+
+  },
+  error:function (data){
+    closeloader()
+    if (data['responseJSON']['error']=='email'){
+      alert('E-mail não encontrado')
+    } else {
+      alert('Senha incorreta')
+    }
+  }
+});
+
+}
+});
+
+$("#reset_button").click(function(){
+  dict = {"email":$("#email_reset").val()
+}
+filled = true
+$.each( dict, function( key, value ) {
+  if (value==""){
+  alert("Preecha todos os campos!");
+  filled=false
+  return false;
+  };
+});
+if (filled){
+$.ajax({
+  type: "GET",
+  url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/requestPass",
+  data: {'email':$("#email_pass").val()},
+  dataType: "json",
+  success:function (data){
+    alert("Enviamos um e-mail para você para recuperarmos sua senha!")
+    $("#loginSession").show()
+    $("#passSession").hide()
 
   },
   error:function (data){

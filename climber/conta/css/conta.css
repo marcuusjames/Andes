@@ -1,20 +1,20 @@
 td:nth-child(1) {
     width: 25%;
-    height: 25vh;
+    height: 80px;
 }
 
 /* the second */
 td:nth-child(2) {
 width: 69%;
 border-bottom: 0.5px solid #666666;
-height: 25vh;
+height: 80px;
 }
 
 /* the third */
 td:nth-child(3) {
 width: 10%;
 border-bottom: 0.5px solid #666666;
-height: 25vh;
+height: 80px;
 }
 
 .invite_rep{
@@ -171,4 +171,15 @@ height: 25vh;
 
 .saveEdit{
   cursor: pointer;
+}
+
+.vscomp-wrapper {
+  display: inline-flex;
+  position: relative;
+  width: 100%;
+  font-family: Archivo;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+  flex-wrap: wrap;
 }

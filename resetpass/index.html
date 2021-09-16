@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
+     
+
+    <!-- smart phone css  -->
+    <link href="assets/phone.css" rel="stylesheet" type="text/css" media="all and (min-width: 0px) and (max-width: 480px)" />
+
+    <!-- Tablet -->
+    <link href="assets/tablet.css" rel="stylesheet" type="text/css" media="all and (min-width: 481px) and (max-width: 800px)" />
+
+    <!-- Desktop -->
+    <link href="assets/desktop.css" rel="stylesheet" type="text/css" media="only screen and (min-width:801px)">
+<head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Epilogue&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Syne&display=swap" rel="stylesheet" />
+
+    <link href='https://fonts.googleapis.com/css?family=Archivo' rel='stylesheet'>
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+    
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="../css/main.css" rel="stylesheet" />
+    
+    <link href="./css/dropzone.css" rel="stylesheet" />
+    <script src="../js/virtual-select-master/dist/virtual-select.min.js"></script>
+    <link rel="stylesheet" href="../js/virtual-select-master/dist/virtual-select.min.css" />
+
+    
+    <link rel="stylesheet" href="./js/virtual-select-master/dist/virtual-select.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link href="./css/register.css" rel="stylesheet" />
+    
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="column" style="padding-left: 10.79vw;padding-top: 10vh;">
+        <div style="float: left;">
+
+        <p class="p5"><span style="padding-right: 20px;"><img src='./images/andesblack.png'></span>
+            <span style="text-decoration: underline;">
+        Climber  </span>   <span style="padding:0 0.5vw;">   >   </span> Redefinição de senha
+        </div>
+    </p>
+    </div>
+        <div id="resetpage" class="rowcol" style="padding-top: 60px;padding-left: 10.79vw;">
+
+
+            <div class='column1'>
+                <p class='h2'>Digite sua nova senha</p>
+
+                <p class='l2' style="padding-top: 30px;"> Senha<span style="color:#666">*</span></p>
+                <input class='textfield invite requiredfield pass' id='password' type="password"  >
+                
+                <p class='l2' style="padding-top: 6vh;"> Confirmar Senha<span style="color:#666">*</span></p>
+                <input class='textfield invite requiredfield pass' id='password_conf' type="password">
+                <p class='l2' id="confpass" style="display:none;font-size:14px;padding-top: 1vh;color:red;"> Ops! Senhas não coincidem</span></p>
+                <div style="padding:10vh 0vh;">
+                    <button class="button_orc button_finish">Concluir</button>
+                
+                </div>
+                
+      
+            </div>
+            
+        </div>
+
+        <div id="resetpage" class="rowcol" style="padding-top: 60px;padding-left: 10.79vw;">
+
+
+            <div class='column1'>
+                <p class='h2'>Solicitação Inválida</p>
+
+                <div style="padding:10vh 0vh;">
+                    <button class="homebut button_orc">Voltar para Home</button>
+                
+                </div>
+                
+      
+            </div>
+            
+        </div>
+
+        <div style="background-color: black;position: fixed;top:0;left:60%;height: 100%;" class="nomobile">
+            <div style="padding-top: 25vh;">
+                <img src="./images/banner.png" style="width:40vw">
+            </div>
+        </div>
+                
+        
+
+        <!-- Footer -->
+
+        
+
+        <div class="modal-content modalAndes" id='modalClimber'>
+            <div class="modal-header" style="border-bottom:0px">
+              <button type="button" class="close exit" data-dismiss="modal">&times;</button>
+            </div>
+            <div style="padding-left: 12%;padding-right: 12%;">
+                <p class="h1">Você é um Climber!<br><br></p>
+                <p class="p3 firstSession">Sua conta está criada e em breve entraremos em contato com você pelo Whatsapp para nos conhecermos um pouco melhor. Enquanto isso, conheça a nossa cordilheira! 
+                  <br><br>
+              </p>
+            </div>
+
+            <div class="firstSession" style="padding-left: 12%;padding-top: 10vh;">
+              <button id='ok_button' type="button" class="btn btn-dark button_orc homebut" data-dismiss="modal">IR PARA HOME</button>
+            </div>
+
+
+        </div>
+
+        
+
+</body>
+
+</html>
+
+<script src="..\js\tabs.js"></script>
+<script>
+    $("#nav_about").addClass('actual')
+    $('.select2tags').select2({
+    placeholder: this.ph,
+    tags: true
+});
+</script>
+<script src="./js/register.js"></script> 
+<script src="./js/dropzone.js"></script> 

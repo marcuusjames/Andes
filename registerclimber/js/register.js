@@ -1,5 +1,40 @@
 $(document).ready(function(){
+    showloader()
+    $("#nav_about").addClass('actual')
+    $('.select2tags').select2({
+    placeholder: this.ph,
+    tags: true,
+    language: {
+            noResults: function (params) {
+            return "Sem resultados";
+            }
+        }
+        });
+        https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/getCities
+            
+            // Append it to the select
+            $.ajax({
+                type: "GET",
+                url: "https://us-south.functions.appdomain.cloud/api/v1/web/marcus.james.pereira%40usp.br_dev/Users/getCities",
+                data: {},
+                dataType: "json",
+                success:function (data){
+                    console.log(data)
+                    $.each(data['cities'],function(i,j){
+                        var newOption = new Option(j, j, true, true);
+                        $('.places').append(newOption);
+                    })
+                    $('.places').val(null).trigger('change');
+                    closeloader()
+                },
+                error:function (data){
+                    alert("Erro!")
+                
+                }
+            });
+            
     $('#telefone').mask('(00)000000000');
+    $('#mwi').mask('00.000.000/0000-00');
     try {
         inviteID = localStorage['inviteID']
         email_to = localStorage['email_to']
@@ -33,6 +68,14 @@ $(".button_finish").click(function(){
     
 });
 
+$(".nofield").change(function(){
+    $("."+$(this).attr('id').slice(2,)).val('')
+    $("."+$(this).attr('id').slice(2,)).prop('disabled', $(this).prop('checked'));
+    if ($(this).attr('id').slice(2,)=='formation'){
+        document.querySelector('#curso_nivel').setValue('')
+    }
+}
+)
 
 
 
@@ -44,8 +87,17 @@ $(".button_finish").click(function(){
 })
 
 $(".tagtext").click(function(){
-    console.log('teste')
-    $(this).toggleClass('tagclick')
+    that=this
+    if ($(this).hasClass('tagexclusive')){
+        $.each($(this).parent().find('.tagtext'),function(){
+            $(this).removeClass('tagclick')
+        })
+    } else {
+        $.each($(this).parent().find('.tagexclusive'),function(){
+            $(this).removeClass('tagclick')
+        })
+    }
+    $(that).toggleClass('tagclick')
 })
 
 function checkFields(){
@@ -128,7 +180,7 @@ function registerClimber(){
             showmodal("modalClimber")
         },
         error:function (data){
-            hideloader()
+            closeloader()
             if (data['responseJSON']['status']=='Email'){
                 alert('E-mail já cadastrado!')
             } else {

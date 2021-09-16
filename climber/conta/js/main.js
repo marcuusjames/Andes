@@ -61,6 +61,9 @@ $(document).ready(function(){
         $("#"+n+"Edit").show()
         $("#"+n+"Save").hide()
     })
+    $("#delBut").click(function(){
+        showmodal("modalDel")
+    })
 
 
     function updateClimber(){
@@ -104,3 +107,17 @@ $(document).ready(function(){
         updateUser(data)
     
     }
+
+    $("#del_button").click(function(){
+        if($("#del_text").val()=="deletar"){
+            updates = {}
+            updates['status']='delete'
+            console.log(updates)
+            updateUser(updates)
+            sessionStorage.removeItem('user');
+            window.location.href = "http://andescreation.com/climber/";
+
+        } else {
+            "Texto não correto"
+        }
+    })

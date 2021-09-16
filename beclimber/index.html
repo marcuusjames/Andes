@@ -100,13 +100,13 @@
                 </div>
 
                 <div class="ac_menu" style="border-color: black;">
-                    <p class="h2  open_menu">SEU JOB, SEU DINHEIRO<span class="minus_menu" style="float:right;display: none;">-</span><span class="plus_menu" style="float:right">+</span></p>
+                    <p class="h2  open_menu">No Fee!<span class="minus_menu" style="float:right;display: none;">-</span><span class="plus_menu" style="float:right">+</span></p>
                     <div class="ac_menu_div">
                         <p class="p3" style="font-weight: 400;">
-                            <span style="font-weight: bold;">No fee!<br></span>
+                            <span style="font-weight: bold;">Seu trabalho, seu dinheiro!<br></span>
                             
                             Não temos interesse em ganhar parte do trabalho dos outros. Ao invés disso, nossa missão é colocar mais dinheiro no bolso de quem trabalha com a gente. Ser um Climber tem custo zero, porque a Andes ganha exclusivamente pelo trabalho que faz — que são outras etapas do projeto que você irá criar com a gente 
-                            (<a href="http://andescreation.com/howwework" style="text-decoration: underline;color: black;font-weight: bold;">veja nosso processo </a>).
+                            (<a href="http://andescreation.com/howwework" style="text-decoration: underline;color: black;font-weight: bold;">veja nosso processo</a>).
 
                     </div>
                 </div>
@@ -198,14 +198,23 @@
               </p>
             </p>
             </div>
-            <div class="firstSession" style="padding-left: 12%;padding-bottom: 10vh;padding-right: 12%;">
+            <div id="loginSession" class="firstSession" style="padding-left: 12%;padding-bottom: 10vh;padding-right: 12%;">
               <div style="padding-bottom: 10px;"><p class="l1">E-mail</p><input id='email_login' type="text" class="" style="width: 100%;"></div>
               <div style="padding-bottom: 10px;"><p class="l1">Senha</p><input id='pass_login' type="password" class="" style="width: 100%;"></div>
-              <div><p class="l1" style="color: #666;">Esqueci a senha</p></div>
+              <div><p id="forgotPass" class="l1" style="cursor:pointer;color: #666;">Esqueci a senha</p></div>
                 <br>
               <button id='login_button' type="button" class="btn btn-dark button_orc login_button" data-dismiss="modal">ENTRAR</button>
               
             </div>
+            
+            <div id="passSession" class="firstSession" style="display:none;padding-left: 12%;padding-bottom: 10vh;padding-right: 12%;">
+                <p class="p3 firstSession">Diga seu e-mail que vamos recuperar sua senha! 
+                    <br>
+                <div style="padding-bottom: 10px;"><p class="l1">E-mail</p><input id='email_pass' type="text" class="" style="width: 100%;"></div>
+                  <br>
+                <button id='reset_button' type="button" class="btn btn-dark button_orc pass_button" data-dismiss="modal">SOLICITAR</button>
+                
+              </div>
 
 
         </div>

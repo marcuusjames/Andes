@@ -172,9 +172,9 @@
                   <p class="l2w" style="padding-top: 30px;">Segurança</p>
                   <p class="p3" style="padding-top: 10px;"><a href="#" style="color: #666666;text-decoration: underline;">(LGPD) Entenda porque coletamos alguns dados seus e como protegemos eles</a></p>
 
-                  <p class="l2w" style="padding-top: 30px;">Excluir Conta</p>
+                  <p class="l2w" style="padding-top: 30px">Excluir Conta</p>
                   <p class="p3" style="padding-top: 10px;color: white;">Excluir sua conta fará você perder todos seus dados permanentemente.</p>
-                  <p class="p3" style="padding-top: 10px;"><a href="#" style="color: #666666;text-decoration: underline;">Excluir Conta</a></p>
+                  <p class="p3" style="padding-top: 10px;"><p id="delBut" style="color: #666666;text-decoration: underline;cursor:pointer">Excluir Conta</a></p>
 
                </div>
             </div>
@@ -184,6 +184,23 @@
       <!-- Footer -->
       
       <div id="footer"></div>
+      <div class="modal-content modalAndes" id='modalDel' style="z-index: 1000000000000;">
+         <div class="modal-header" style="border-bottom:0px">
+           <button type="button" class="close exit" data-dismiss="modal">&times;</button>
+         </div>
+         
+         <div id="delSession" class="firstSession" style="padding-left: 12%;padding-bottom: 10vh;padding-right: 12%;">
+            <p class="h1">Excluir conta.</p>
+             <p class="p3 firstSession">Que pena que está nos deixando! Digite <span style="text-decoration: underline">deletar</span> para confirmar a exclusão da sua conta!</p> 
+                 <br>
+             <div style="padding-bottom: 10px;"><p class="l1">Digite</p><input id='del_text' type="text" class="" style="width: 100%;color:black"></div>
+               <br>
+             <button id='del_button' type="button" class="btn btn-dark button_orc pass_button" data-dismiss="modal">DELETAR CONTA</button>
+             
+           </div>
+
+
+     </div>
    </body>
 </html>
 <script src="js/tabs.js"></script>

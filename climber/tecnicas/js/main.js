@@ -267,8 +267,9 @@ $("#fotografo").change(function() {
     }
 });
 
+
 $("#designer").change(function() {
-    if(this.checked) {
+    if((this.checked)|($("#ilustrador").checked)) {
         $("#designer_div").show()
     } else {
         $("#designer_div").hide()
@@ -276,7 +277,7 @@ $("#designer").change(function() {
 });
 
 $("#ilustrador").change(function() {
-    if(this.checked) {
+    if((this.checked)|($("#designer").checked)) {
         $("#designer_div").show()
     } else {
         $("#designer_div").hide()

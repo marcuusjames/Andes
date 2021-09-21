@@ -55,22 +55,29 @@ td:nth-child(3) {
     display: none;
   }
   
-
-  .modalInvite{
+  .modalInvite {
     position: absolute;
     width: 40%;
     left: 30%;
     top: 10%;
-
-    background: #4b806a;
+    /* background: #4b806a; */
     border-radius: 20px;
-  }
+    border: 0.01px solid white;
+    /* background-image: linear-gradient(to bottom left, gray, black); */
+    /* background-color: red; */
+    background: #000;
+    background: -moz-linear-gradient(45deg,  #333333 0%, #333333 24%, #333333 41%, #000000 59%, #000000 73%, #000000 88%, #000000 95%, #131313 100%);
+    background: -webkit-linear-gradient(45deg,  #333333 0%,#333333 24%,#333333 41%,#000000 59%,#000000 73%,#000000 88%,#000000 95%,#131313 100%);
+    background: linear-gradient(45deg,  #333333 0%,#333333 24%,#333333 41%,#000000 59%,#000000 73%,#000000 88%,#000000 95%,#131313 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#131313',GradientType=1 );
+}
+
   ::placeholder{
     color: #c5c5c5;
   }
   .invite_input{
     border: 0px;
-    background-color: #4b806a;
+    background-color: transparent;
     font-size: 18px;
     color:black;
     padding: 0px;

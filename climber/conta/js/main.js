@@ -57,6 +57,9 @@ $(document).ready(function(){
         updateUser(updates)
         $("#"+n).show()
         $("#i_"+n).hide()
+        if (n=="pass"){
+            $("#"+n).val("************")
+        }
 
         $("#"+n+"Edit").show()
         $("#"+n+"Save").hide()

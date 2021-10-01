@@ -38,7 +38,7 @@ $(".button_finish").click(function(){
     if (c){
     updateUser({'password':$("#password").val()});
     alert("Senha alterada com sucesso!")
-    window.location.replace("http://andescreation.com/beclimber/#");
+    window.location.replace("https://andescreation.com/beclimber/#");
     }
     
 });
@@ -48,7 +48,7 @@ $(".button_finish").click(function(){
 
   
   $(".homebut").click(function(){
-    window.location.replace("http://andescreation.com/beclimber/#");
+    window.location.replace("https://andescreation.com/beclimber/#");
 
 })
 

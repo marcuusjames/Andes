@@ -39,11 +39,11 @@ $(document).ready(function(){
         inviteID = localStorage['inviteID']
         email_to = localStorage['email_to']
         if (typeof localStorage['inviteID'] === 'undefined'){
-            window.location.replace("http://andescreation.com/");
+            window.location.replace("https://andescreation.com/");
         }
         $("#email").val(email_to)
     } catch (e){
-        window.location.replace("http://andescreation.com/");
+        window.location.replace("https://andescreation.com/");
     }
   });
 
@@ -82,7 +82,7 @@ $(".nofield").change(function(){
   
   $(".homebut").click(function(){
     sessionStorage['user']=JSON.stringify(data)
-    window.location.replace("http://andescreation.com/climber/#");
+    window.location.replace("https://andescreation.com/climber/#");
 
 })
 

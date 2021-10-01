@@ -19,7 +19,7 @@ $( "#button_invite" ).click(function() {
     success:function (data){
       localStorage['email_to']=data['email']
       localStorage['inviteID']=$("#inviteID").val()
-      window.location.href = "http://andescreation.com/registerclimber/#";
+      window.location.href = "https://andescreation.com/registerclimber/#";
       console.log(data)
     },
     error:function (xhr, textStatus, errorThrown){
@@ -91,7 +91,7 @@ $.ajax({
   success:function (data){
     console.log(data)
     sessionStorage['user']=JSON.stringify(data)
-    window.location.href = "http://andescreation.com/climber/";
+    window.location.href = "https://andescreation.com/climber/";
 
   },
   error:function (data){

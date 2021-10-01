@@ -9,7 +9,7 @@ try {
 getParameters(user)
 
 } catch (e){
-    window.location.replace("http://andescreation.com/beclimber");
+    window.location.replace("https://andescreation.com/beclimber");
 }
 
 $(".userVar").each(function() {
@@ -32,7 +32,7 @@ $(".userVar").each(function() {
         )
     }
     $('.editTag').click(function(){
-        window.location.replace("http://andescreation.com/climber/tecnicas");
+        window.location.replace("https://andescreation.com/climber/tecnicas");
     })
 })
 

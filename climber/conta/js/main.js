@@ -118,7 +118,7 @@ $(document).ready(function(){
             console.log(updates)
             updateUser(updates)
             sessionStorage.removeItem('user');
-            window.location.href = "http://andescreation.com/climber/";
+            window.location.href = "https://andescreation.com/climber/";
 
         } else {
             "Texto não correto"
